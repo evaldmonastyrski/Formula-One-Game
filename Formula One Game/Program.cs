@@ -18,6 +18,7 @@ namespace Formula_One_Game
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
             //Hello Friends
+            //Labas rytas
         }
     }
 }
