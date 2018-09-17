@@ -19,6 +19,7 @@ namespace Formula_One_Game
             Application.Run(new Form1());
             //Hello Friends
             //Labas rytas
+            //Viso Gero!
         }
     }
 }
