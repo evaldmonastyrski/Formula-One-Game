@@ -12,9 +12,12 @@ namespace Formula_One_Game
 {
     public partial class Form1 : Form
     {
+        private GameArea theGameArea;
+
         public Form1()
         {
             InitializeComponent();
+            theGameArea = new GameArea();
         }
     }
 }
