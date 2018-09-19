@@ -30,8 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBoxDrivers = new System.Windows.Forms.GroupBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +45,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(284, 261);
+            this.tabControl1.Size = new System.Drawing.Size(936, 651);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -54,35 +54,35 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(276, 235);
+            this.tabPage1.Size = new System.Drawing.Size(928, 625);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxDrivers
+            // 
+            this.groupBoxDrivers.Location = new System.Drawing.Point(15, 54);
+            this.groupBoxDrivers.Name = "groupBoxDrivers";
+            this.groupBoxDrivers.Size = new System.Drawing.Size(103, 516);
+            this.groupBoxDrivers.TabIndex = 0;
+            this.groupBoxDrivers.TabStop = false;
+            this.groupBoxDrivers.Text = "Drivers";
             // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
+            this.tabPage2.Size = new System.Drawing.Size(276, 235);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxDrivers
-            // 
-            this.groupBoxDrivers.Location = new System.Drawing.Point(18, 20);
-            this.groupBoxDrivers.Name = "groupBoxDrivers";
-            this.groupBoxDrivers.Size = new System.Drawing.Size(200, 100);
-            this.groupBoxDrivers.TabIndex = 0;
-            this.groupBoxDrivers.TabStop = false;
-            this.groupBoxDrivers.Text = "Drivers";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(936, 651);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
