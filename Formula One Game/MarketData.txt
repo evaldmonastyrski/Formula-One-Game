@@ -1,0 +1,4 @@
+﻿Sebastian     Vettel         Ferrari        Ferrari
+Kimi          Raikkonnen     Ferrari        Ferrari
+Lewis         Hamilton       Mercedes       Mercedes
+Valteri       Bottas         Mercedes       Mercedes
