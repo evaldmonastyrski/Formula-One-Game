@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Formula_One_Game.Team_Components
 {
-    class Driver : DreamTeamComponent
+    class Driver
     {
-        private string Name;
-        private string Surname;
+        private  string name;
+        private  string surname;
     }
 }
