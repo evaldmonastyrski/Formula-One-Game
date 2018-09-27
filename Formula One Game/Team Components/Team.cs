@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Formula_One_Game.Team_Components
 {
-    class Team : DreamTeamComponent
+    class Team
     {
     }
 }
