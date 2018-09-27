@@ -84,5 +84,15 @@ namespace Formula_One_Game
         {
 
         }
+
+        private void groupBoxTeam_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPointsThereshold_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

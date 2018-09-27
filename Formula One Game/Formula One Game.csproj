@@ -58,6 +58,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Team Components\DreamTeamComponent.cs" />
     <Compile Include="Team Components\Driver.cs" />
+    <Compile Include="Team Components\Engine.cs" />
+    <Compile Include="Team Components\Team.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
