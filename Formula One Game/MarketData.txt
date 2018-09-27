@@ -1,4 +1,21 @@
-﻿Sebastian     Vettel         Ferrari        Ferrari
-Kimi          Raikkonnen     Ferrari        Ferrari
-Lewis         Hamilton       Mercedes       Mercedes
+﻿Lewis         Hamilton       Mercedes       Mercedes
 Valteri       Bottas         Mercedes       Mercedes
+Sebastian     Vettel         Ferrari        Ferrari
+Kimi          Raikkonnen     Ferrari        Ferrari
+Daniel        Ricciardo      Red Bull       Renault
+Max           Verstappen     Red Bull       Renault
+Sergio        Perez          Force India    Mercedes
+Esteban       Ocon           Force India    Mercedes
+Lance         Stroll         Williams       Mercedes
+Sergey        Sirotkin       Williams       Mercedes
+Carlos        Sainz          Renault        Renault
+Nico          Hulkenberg     Renault        Renault
+Pierro        Gastly         Toro Rosso     Honda
+Brendon       Hartley        Toro Rosso     Honda
+Romain        Grosjean       Hass           Ferrari
+Kevin         Magnussen      Hass           Ferrari
+Fernando      Alonso         McLaren        Renault
+Stoffel       Vandoorne      McLaren        Renault
+Marcus        Ericsson       Sauber         Ferrari
+Charles       Leclerc        Sauber         Ferrari
+
