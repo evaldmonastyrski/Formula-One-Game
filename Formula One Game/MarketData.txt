@@ -10,7 +10,7 @@ Lance         Stroll         Williams       Mercedes
 Sergey        Sirotkin       Williams       Mercedes
 Carlos        Sainz          Renault        Renault
 Nico          Hulkenberg     Renault        Renault
-Pierro        Gastly         Toro Rosso     Honda
+Pierre        Gasly          Toro Rosso     Honda
 Brendon       Hartley        Toro Rosso     Honda
 Romain        Grosjean       Hass           Ferrari
 Kevin         Magnussen      Hass           Ferrari
@@ -18,4 +18,3 @@ Fernando      Alonso         McLaren        Renault
 Stoffel       Vandoorne      McLaren        Renault
 Marcus        Ericsson       Sauber         Ferrari
 Charles       Leclerc        Sauber         Ferrari
-
