@@ -75,5 +75,11 @@ namespace Formula_One_Game
             teamLabels[8] = this.label29;
             teamLabels[9] = this.label30;
         }
+
+        private void buttonPointSort_Click(object sender, EventArgs e)
+        {
+            DreamTeamOptionWindow dreamTeamOptionWindow = new DreamTeamOptionWindow(theGameArea.getAvailableOptions());
+            dreamTeamOptionWindow.Show();
+        }
     }
 }
