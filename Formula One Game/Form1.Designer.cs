@@ -167,6 +167,11 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBoxRaceControl = new System.Windows.Forms.GroupBox();
+            this.numericUpDownPointThreshold = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownBudget = new System.Windows.Forms.NumericUpDown();
+            this.checkBoxPointThreshold = new System.Windows.Forms.CheckBox();
+            this.labelPointsThereshold = new System.Windows.Forms.Label();
+            this.labelBudget = new System.Windows.Forms.Label();
             this.buttonSimulate = new System.Windows.Forms.Button();
             this.buttonReload = new System.Windows.Forms.Button();
             this.groupBoxDrivers = new System.Windows.Forms.GroupBox();
@@ -191,11 +196,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.labelBudget = new System.Windows.Forms.Label();
-            this.labelPointsThereshold = new System.Windows.Forms.Label();
-            this.checkBoxPointThreshold = new System.Windows.Forms.CheckBox();
-            this.numericUpDownBudget = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownPointThreshold = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBoxEnginesPriceChange.SuspendLayout();
@@ -209,9 +209,9 @@
             this.groupBoxRace.SuspendLayout();
             this.groupBoxQualification.SuspendLayout();
             this.groupBoxRaceControl.SuspendLayout();
-            this.groupBoxDrivers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBudget)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPointThreshold)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBudget)).BeginInit();
+            this.groupBoxDrivers.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -271,6 +271,7 @@
             this.buttonPointSort.TabIndex = 16;
             this.buttonPointSort.Text = "Point Sort";
             this.buttonPointSort.UseVisualStyleBackColor = true;
+            this.buttonPointSort.Click += new System.EventHandler(this.buttonPointSort_Click);
             // 
             // buttonFlushR
             // 
@@ -1750,6 +1751,70 @@
             this.groupBoxRaceControl.TabStop = false;
             this.groupBoxRaceControl.Text = "Race Control";
             // 
+            // numericUpDownPointThreshold
+            // 
+            this.numericUpDownPointThreshold.Location = new System.Drawing.Point(406, 13);
+            this.numericUpDownPointThreshold.Name = "numericUpDownPointThreshold";
+            this.numericUpDownPointThreshold.Size = new System.Drawing.Size(46, 20);
+            this.numericUpDownPointThreshold.TabIndex = 6;
+            this.numericUpDownPointThreshold.Value = new decimal(new int[] {
+            80,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownBudget
+            // 
+            this.numericUpDownBudget.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownBudget.Location = new System.Drawing.Point(143, 15);
+            this.numericUpDownBudget.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.numericUpDownBudget.Name = "numericUpDownBudget";
+            this.numericUpDownBudget.Size = new System.Drawing.Size(77, 20);
+            this.numericUpDownBudget.TabIndex = 5;
+            this.numericUpDownBudget.Value = new decimal(new int[] {
+            30000000,
+            0,
+            0,
+            0});
+            // 
+            // checkBoxPointThreshold
+            // 
+            this.checkBoxPointThreshold.AutoSize = true;
+            this.checkBoxPointThreshold.Checked = true;
+            this.checkBoxPointThreshold.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPointThreshold.Location = new System.Drawing.Point(458, 14);
+            this.checkBoxPointThreshold.Name = "checkBoxPointThreshold";
+            this.checkBoxPointThreshold.Size = new System.Drawing.Size(105, 17);
+            this.checkBoxPointThreshold.TabIndex = 4;
+            this.checkBoxPointThreshold.Text = "Points Threshold";
+            this.checkBoxPointThreshold.UseVisualStyleBackColor = true;
+            // 
+            // labelPointsThereshold
+            // 
+            this.labelPointsThereshold.AutoSize = true;
+            this.labelPointsThereshold.Location = new System.Drawing.Point(314, 17);
+            this.labelPointsThereshold.Name = "labelPointsThereshold";
+            this.labelPointsThereshold.Size = new System.Drawing.Size(86, 13);
+            this.labelPointsThereshold.TabIndex = 3;
+            this.labelPointsThereshold.Text = "Points Threshold";
+            // 
+            // labelBudget
+            // 
+            this.labelBudget.AutoSize = true;
+            this.labelBudget.Location = new System.Drawing.Point(87, 17);
+            this.labelBudget.Name = "labelBudget";
+            this.labelBudget.Size = new System.Drawing.Size(41, 13);
+            this.labelBudget.TabIndex = 2;
+            this.labelBudget.Text = "Budget";
+            // 
             // buttonSimulate
             // 
             this.buttonSimulate.Location = new System.Drawing.Point(15, 585);
@@ -1988,70 +2053,6 @@
             this.tabPage2.Text = "Help";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // labelBudget
-            // 
-            this.labelBudget.AutoSize = true;
-            this.labelBudget.Location = new System.Drawing.Point(87, 17);
-            this.labelBudget.Name = "labelBudget";
-            this.labelBudget.Size = new System.Drawing.Size(41, 13);
-            this.labelBudget.TabIndex = 2;
-            this.labelBudget.Text = "Budget";
-            // 
-            // labelPointsThereshold
-            // 
-            this.labelPointsThereshold.AutoSize = true;
-            this.labelPointsThereshold.Location = new System.Drawing.Point(314, 17);
-            this.labelPointsThereshold.Name = "labelPointsThereshold";
-            this.labelPointsThereshold.Size = new System.Drawing.Size(86, 13);
-            this.labelPointsThereshold.TabIndex = 3;
-            this.labelPointsThereshold.Text = "Points Threshold";
-            // 
-            // checkBoxPointThreshold
-            // 
-            this.checkBoxPointThreshold.AutoSize = true;
-            this.checkBoxPointThreshold.Checked = true;
-            this.checkBoxPointThreshold.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxPointThreshold.Location = new System.Drawing.Point(458, 14);
-            this.checkBoxPointThreshold.Name = "checkBoxPointThreshold";
-            this.checkBoxPointThreshold.Size = new System.Drawing.Size(105, 17);
-            this.checkBoxPointThreshold.TabIndex = 4;
-            this.checkBoxPointThreshold.Text = "Points Threshold";
-            this.checkBoxPointThreshold.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDownBudget
-            // 
-            this.numericUpDownBudget.Increment = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDownBudget.Location = new System.Drawing.Point(143, 15);
-            this.numericUpDownBudget.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.numericUpDownBudget.Name = "numericUpDownBudget";
-            this.numericUpDownBudget.Size = new System.Drawing.Size(77, 20);
-            this.numericUpDownBudget.TabIndex = 5;
-            this.numericUpDownBudget.Value = new decimal(new int[] {
-            30000000,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDownPointThreshold
-            // 
-            this.numericUpDownPointThreshold.Location = new System.Drawing.Point(406, 13);
-            this.numericUpDownPointThreshold.Name = "numericUpDownPointThreshold";
-            this.numericUpDownPointThreshold.Size = new System.Drawing.Size(46, 20);
-            this.numericUpDownPointThreshold.TabIndex = 6;
-            this.numericUpDownPointThreshold.Value = new decimal(new int[] {
-            80,
-            0,
-            0,
-            0});
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2076,10 +2077,10 @@
             this.groupBoxQualification.ResumeLayout(false);
             this.groupBoxRaceControl.ResumeLayout(false);
             this.groupBoxRaceControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPointThreshold)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBudget)).EndInit();
             this.groupBoxDrivers.ResumeLayout(false);
             this.groupBoxDrivers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBudget)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPointThreshold)).EndInit();
             this.ResumeLayout(false);
 
         }

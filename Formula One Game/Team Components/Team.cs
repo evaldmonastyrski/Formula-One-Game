@@ -9,7 +9,7 @@ namespace Formula_One_Game
     class Team : DreamTeamComponent, IComparable
     {
         private string name;
-        public List<Driver> drivers;
+        private List<Driver> drivers;
 
         public Team(string name)
         {

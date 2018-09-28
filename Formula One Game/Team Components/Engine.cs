@@ -9,7 +9,7 @@ namespace Formula_One_Game
     class Engine : DreamTeamComponent
     {
         private string name;
-        private List<Driver> drivers;
+        public List<Driver> drivers;
 
         public Engine(string name)
         {

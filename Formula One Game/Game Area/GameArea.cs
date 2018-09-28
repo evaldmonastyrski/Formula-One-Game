@@ -13,8 +13,8 @@ namespace Formula_One_Game
         private DataDeserializer dataDeserializer;
         private SortedSet<Driver> drivers;
         private SortedSet<Team> teams;
-        //   private SortedDictionary<string, Team> teams;
         private SortedSet<Engine> engines;
+        private Combinator combinator;
 
         public void addDriver(Driver driver)
         {
@@ -45,14 +45,23 @@ namespace Formula_One_Game
             dataDeserializer = new DataDeserializer(this);
             initializeLabels();
 
-            foreach(Team team in teams)
+            //Temporary Stuff
+            combinator = new Combinator(drivers, teams, engines);
+
+            foreach(Engine engine in engines)
             {
-                foreach(Driver driver in team.drivers)
+                foreach(Driver driver in engine.drivers)
                 {
                     Console.WriteLine(driver.ToString());
                 }
                 Console.WriteLine("--------");
             }
+        }
+
+        public string getAvailableOptions()
+        {
+            combinator.combineAll();
+            return combinator.createOptionsMessage();
         }
 
         private void initializeLabels()
