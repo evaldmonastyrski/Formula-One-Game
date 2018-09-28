@@ -1,17 +1,17 @@
 ﻿Lewis         Hamilton       Mercedes       Mercedes
 Valteri       Bottas         Mercedes       Mercedes
-Evald         Monastyrski    Ferrari        Ferrari
+Sebastian     Vettel         Ferrari        Ferrari
 Kimi          Raikkonnen     Ferrari        Ferrari
-Daniel        Ricciardo      Red Bull       Renault
-Max           Verstappen     Red Bull       Renault
-Sergio        Perez          Force India    Mercedes
-Esteban       Ocon           Force India    Mercedes
+Daniel        Ricciardo      Red_Bull       Renault
+Max           Verstappen     Red_Bull       Renault
+Sergio        Perez          Force_India    Mercedes
+Esteban       Ocon           Force_India    Mercedes
 Lance         Stroll         Williams       Mercedes
 Sergey        Sirotkin       Williams       Mercedes
 Carlos        Sainz          Renault        Renault
 Nico          Hulkenberg     Renault        Renault
-Pierre        Gasly          Toro Rosso     Honda
-Brendon       Hartley        Toro Rosso     Honda
+Pierre        Gasly          Toro_Rosso     Honda
+Brendon       Hartley        Toro_Rosso     Honda
 Romain        Grosjean       Hass           Ferrari
 Kevin         Magnussen      Hass           Ferrari
 Fernando      Alonso         McLaren        Renault

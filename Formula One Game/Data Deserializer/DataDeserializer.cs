@@ -28,7 +28,24 @@ namespace Formula_One_Game
                     {
                         String line = myStreamReader.ReadLine();
                         String[] lineWords = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                        gameArea.addDriver(new Driver(lineWords[0], lineWords[1]));
+                        Driver driver = new Driver(lineWords[0], lineWords[1]);
+                        gameArea.addDriver(driver);
+                        Team team = new Team(lineWords[2]);
+                        if(!gameArea.getTeams().Contains(team))
+                        {
+                            gameArea.addTeam(team);
+                            team.addDriver(driver);
+                        }
+                        else
+                        {
+                            foreach(Team teamInstance in gameArea.getTeams())
+                            {
+                                if(teamInstance.ToString().Equals(team.ToString()))
+                                {
+                                    teamInstance.addDriver(driver);
+                                }
+                            }
+                        }
                     }
                 }
             } 
