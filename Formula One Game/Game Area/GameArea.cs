@@ -3,32 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Formula_One_Game
 {
     class GameArea
     {
-        private DataDeserializer theDataDeserializer;
-        private HashSet<Driver> drivers;
-        private HashSet<Team> teams;
-        private HashSet<Engine> engines;
+        private Form1 form;
+        private DataDeserializer dataDeserializer;
+        private SortedSet<Driver> drivers;
+        private SortedSet<Team> teams;
+        private SortedSet<Engine> engines;
 
         public void addDriver(Driver driver)
         {
             drivers.Add(driver);
         }
 
-        public GameArea()
+        public GameArea(Form1 form)
         {
-            drivers = new HashSet<Driver>();
-            teams = new HashSet<Team>();
-            engines = new HashSet<Engine>();
-            theDataDeserializer = new DataDeserializer(this);
-            theDataDeserializer.initializeDreamTeamComponents();
+            this.form = form;
+            drivers = new SortedSet<Driver>();
+            teams = new SortedSet<Team>();
+            engines = new SortedSet<Engine>();
+            dataDeserializer = new DataDeserializer(this);
+            initializeLabels();
+        }
 
-            foreach (var driver in drivers)
+        private void initializeLabels()
+        {
+            int labelIndex = 0;
+
+            foreach(Driver driver in drivers)
             {
-                Console.WriteLine(driver.ToString());
+                form.getDriverLabels()[labelIndex].Text = driver.ToString();
+                labelIndex++;
             }
         }
     }

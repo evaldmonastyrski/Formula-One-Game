@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Formula_One_Game
 {
-    class Driver : DreamTeamComponent
+    class Driver : DreamTeamComponent, IComparable
     {
         private string name;
         private string surname;
@@ -17,10 +17,15 @@ namespace Formula_One_Game
             this.surname = surname;
         }
 
+        public int CompareTo(object obj)
+        {
+            Driver driver = (Driver) obj;
+            return name.CompareTo(driver.name);
+        }
+
         public override string ToString()
         {
             return (name + " " + surname);
         }
-       
     }
 }

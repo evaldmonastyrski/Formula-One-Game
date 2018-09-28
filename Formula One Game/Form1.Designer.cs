@@ -729,7 +729,6 @@
             this.groupBoxTeam.TabIndex = 8;
             this.groupBoxTeam.TabStop = false;
             this.groupBoxTeam.Text = "Teams";
-            this.groupBoxTeam.Enter += new System.EventHandler(this.groupBoxTeam_Enter);
             // 
             // label21
             // 
@@ -2006,7 +2005,6 @@
             this.labelPointsThereshold.Size = new System.Drawing.Size(86, 13);
             this.labelPointsThereshold.TabIndex = 3;
             this.labelPointsThereshold.Text = "Points Threshold";
-            this.labelPointsThereshold.Click += new System.EventHandler(this.labelPointsThereshold_Click);
             // 
             // checkBoxPointThreshold
             // 

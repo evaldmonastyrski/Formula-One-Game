@@ -14,8 +14,8 @@ namespace Formula_One_Game
 
         public DataDeserializer(GameArea gameArea)
         {
-            Console.WriteLine("Deserializer is starting...");
             this.gameArea = gameArea;
+            initializeDreamTeamComponents();
         }
 
         public void initializeDreamTeamComponents()
