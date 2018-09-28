@@ -6,15 +6,31 @@ using System.Threading.Tasks;
 
 namespace Formula_One_Game
 {
-    class Team : DreamTeamComponent
+    class Team : DreamTeamComponent, IComparable
     {
         private string name;
-        private List<Driver> drivers;
+        public List<Driver> drivers;
 
         public Team(string name)
         {
             this.name = name;
             drivers = new List<Driver>();
+        }
+
+        public void addDriver(Driver driver)
+        {
+            drivers.Add(driver);
+        }
+
+        public int CompareTo(object obj)
+        {
+            Team team = (Team)obj;
+            return name.CompareTo(team.name);
+        }
+
+        public override string ToString()
+        {
+            return (name).Replace("_", " ");
         }
     }
 }

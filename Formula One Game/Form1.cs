@@ -13,15 +13,18 @@ namespace Formula_One_Game
     public partial class Form1 : Form
     {
         private const int NUMBER_OF_DRIVERS = 20;
+        private const int NUMBER_OF_TEAMS = 10;
 
         private GameArea theGameArea;
-        private Label[] driverLabels = new Label[20];
+        private Label[] driverLabels = new Label[NUMBER_OF_DRIVERS];
+        private Label[] teamLabels = new Label[NUMBER_OF_TEAMS];
 
         public Form1()
         {
             InitializeComponent();
             driverLabels = new Label[NUMBER_OF_DRIVERS];
-            fillComponentLabels();
+            fillDriverLabels();
+            fillTeamLabels();
             theGameArea = new GameArea(this);
         }
 
@@ -30,8 +33,12 @@ namespace Formula_One_Game
             return driverLabels;
         }
 
+        public Label[] getTeamLabels()
+        {
+            return teamLabels;
+        }
 
-        private void fillComponentLabels()
+        private void fillDriverLabels()
         {
             driverLabels[0] = this.label1;
             driverLabels[1] = this.label2;
@@ -53,6 +60,20 @@ namespace Formula_One_Game
             driverLabels[17] = this.label18;
             driverLabels[18] = this.label19;
             driverLabels[19] = this.label20;
+        }
+
+        private void fillTeamLabels()
+        {
+            teamLabels[0] = this.label21;
+            teamLabels[1] = this.label22;
+            teamLabels[2] = this.label23;
+            teamLabels[3] = this.label24;
+            teamLabels[4] = this.label25;
+            teamLabels[5] = this.label26;
+            teamLabels[6] = this.label27;
+            teamLabels[7] = this.label28; 
+            teamLabels[8] = this.label29;
+            teamLabels[9] = this.label30;
         }
     }
 }
