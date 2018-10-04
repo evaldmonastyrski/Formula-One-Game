@@ -35,10 +35,10 @@ namespace Formula_One_Game
                     {
                         for (int k = 0; k < teams.Count; k++)
                         {
-                          //  for (int l = 0; l < engines.Count; l++)
-                          //  {
-                                dreamTeam.Add(new DreamTeam(drivers[i], drivers[j], teams[k]));
-                         //   }
+                            for (int l = 0; l < engines.Count; l++)
+                            {
+                                dreamTeam.Add(new DreamTeam(drivers[i], drivers[j], teams[k], engines[l]));
+                            }
                         }
                     }
                 }
@@ -58,6 +58,7 @@ namespace Formula_One_Game
                     dreamTeamMember.getDriver1Name(),
                     dreamTeamMember.getDriver2Name(),
                     dreamTeamMember.getTeamName());
+                    
                 lineNumber++;
             }
             return message;

@@ -46,6 +46,22 @@ namespace Formula_One_Game
                                 }
                             }
                         }
+                        Engine engine = new Engine(lineWords[3]);
+                        if(!gameArea.getEngines().Contains(engine))
+                        {
+                            gameArea.addEngine(engine);
+                            engine.addDriver(driver);
+                        }
+                        else
+                        {
+                            foreach(Engine engineInstance in gameArea.getEngines())
+                            {
+                                if(engineInstance.ToString().Equals(engine.ToString()))
+                                {
+                                    engineInstance.addDriver(driver);
+                                }
+                            }
+                        }
                     }
                 }
             } 

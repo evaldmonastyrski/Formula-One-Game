@@ -26,6 +26,10 @@ namespace Formula_One_Game
             teams.Add(team);
         }
 
+        public void addEngine(Engine engine)
+        {
+            engines.Add(engine);
+        }
         public SortedSet<Driver> getDrivers()
         {
             return drivers;
@@ -35,7 +39,10 @@ namespace Formula_One_Game
         {
             return teams;
         }
-
+        public SortedSet<Engine> getEngines()
+        {
+            return engines;
+        }
         public GameArea(Form1 form)
         {
             this.form = form;
@@ -79,6 +86,14 @@ namespace Formula_One_Game
             foreach (Team team in teams)
             {
                 form.getTeamLabels()[labelIndex].Text = team.ToString();
+                labelIndex++;
+            }
+
+            labelIndex = 0;
+
+            foreach (Engine engine in engines)
+            {
+                form.getEngineLabels()[labelIndex].Text = engine.ToString();
                 labelIndex++;
             }
         }
