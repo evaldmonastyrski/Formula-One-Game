@@ -14,10 +14,12 @@ namespace Formula_One_Game
     {
         private const int NUMBER_OF_DRIVERS = 20;
         private const int NUMBER_OF_TEAMS = 10;
+        private const int NUMBER_OF_ENGINES = 4;
 
         private GameArea theGameArea;
         private Label[] driverLabels = new Label[NUMBER_OF_DRIVERS];
         private Label[] teamLabels = new Label[NUMBER_OF_TEAMS];
+        private Label[] engineLabels = new Label[NUMBER_OF_ENGINES];
 
         public Form1()
         {
@@ -25,6 +27,7 @@ namespace Formula_One_Game
             driverLabels = new Label[NUMBER_OF_DRIVERS];
             fillDriverLabels();
             fillTeamLabels();
+            fillEngineLabels();
             theGameArea = new GameArea(this);
         }
 
@@ -36,6 +39,11 @@ namespace Formula_One_Game
         public Label[] getTeamLabels()
         {
             return teamLabels;
+        }
+
+        public Label[] getEngineLabels()
+        {
+            return engineLabels;
         }
 
         private void fillDriverLabels()
@@ -75,6 +83,14 @@ namespace Formula_One_Game
             teamLabels[8] = this.label29;
             teamLabels[9] = this.label30;
         }
+        private void fillEngineLabels()
+        {
+            engineLabels[0] = this.label31;
+            engineLabels[1] = this.label32;
+            engineLabels[2] = this.label33;
+            engineLabels[3] = this.label34;
+        }
+
 
         private void buttonPointSort_Click(object sender, EventArgs e)
         {

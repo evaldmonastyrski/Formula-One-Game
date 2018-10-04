@@ -13,11 +13,13 @@ namespace Formula_One_Game
         private Team team;
         private Engine engine;
 
-        public DreamTeam(Driver driver1, Driver driver2, Team team)
+        public DreamTeam(Driver driver1, Driver driver2, Team team, Engine engine)
         {
             this.driver1 = driver1;
             this.driver2 = driver2;
             this.team = team;
+            this.engine = engine;
+
         }
 
         public string getDriver1Name()
@@ -48,7 +50,7 @@ namespace Formula_One_Game
 
         public override string ToString()
         {
-            return (driver1.ToString() + " " + driver2.ToString() + " " + team.ToString());
+            return (driver1.ToString() + " " + driver2.ToString() + " " + team.ToString() + " " + engine.ToString());
         }
     }
 }
