@@ -15,6 +15,7 @@ namespace Formula_One_Game
         private Form1 Form;
         private DataDeserializer DataDeserializer;
         private Combinator Combinator;
+        private AvailableOptions AvailableOptions;
 
         public GameArea(Form1 form)
         {
@@ -24,6 +25,7 @@ namespace Formula_One_Game
             Engines = new SortedSet<Engine>();
             DataDeserializer = new DataDeserializer(this);
             Combinator = new Combinator(Drivers, Teams, Engines);
+            AvailableOptions = new AvailableOptions(Combinator.DreamTeams);
             InitializeLabels();
         }
 
@@ -45,7 +47,7 @@ namespace Formula_One_Game
         public string GetAvailableOptions()
         {
             Combinator.CombineAll();
-            return Combinator.CreateOptionsMessage();
+            return AvailableOptions.CreateOptionsMessage();
         }
 
         private void InitializeLabels()
