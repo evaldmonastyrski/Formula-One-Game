@@ -8,14 +8,14 @@ namespace Formula_One_Game
 {
     class Combinator
     {
-        private SortedSet<DreamTeam> DreamTeam;
+        public SortedSet<DreamTeam> DreamTeams { get; }
         private List<Driver> Drivers;
         private List<Team> Teams;
         private List<Engine> Engines;
 
         public Combinator(SortedSet<Driver> drivers, SortedSet<Team> teams, SortedSet<Engine> engines)
         {
-            DreamTeam = new SortedSet<DreamTeam>();
+            DreamTeams = new SortedSet<DreamTeam>();
             Drivers = drivers.ToList<Driver>();
             Teams = teams.ToList<Team>();
             Engines = engines.ToList<Engine>();
@@ -33,32 +33,12 @@ namespace Formula_One_Game
                         {
                             for (int l = 0; l < Engines.Count; l++)
                             {
-                                DreamTeam.Add(new DreamTeam(Drivers[i], Drivers[j], Teams[k], Engines[l]));
+                                DreamTeams.Add(new DreamTeam(Drivers[i], Drivers[j], Teams[k], Engines[l]));
                             }
                         }
                     }
                 }
             }
-        }
-
-        public string CreateOptionsMessage()
-        {
-            int lineNumber = 1;
-            string message = "";
-
-            foreach (DreamTeam dreamTeamMember in DreamTeam)
-            {
-                message += String.Format(
-                    "#{0, -6} {1, -14} {2, -13} {3, -13} {4, -13} \r\n",
-                    lineNumber,
-                    dreamTeamMember.GetDriver1Surname(),
-                    dreamTeamMember.GetDriver2Surname(),
-                    dreamTeamMember.GetTeamName().Replace("_", " "),
-                    dreamTeamMember.GetEngineName());
-
-                lineNumber++;
-            }
-            return message;
         }
     }
 }
