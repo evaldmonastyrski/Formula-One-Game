@@ -8,36 +8,32 @@ namespace Formula_One_Game
 {
     class Combinator
     {
-        private SortedSet<DreamTeam> dreamTeam = new SortedSet<DreamTeam>();
-        private List<Driver> drivers;
-        private List<Team> teams;
-        private List<Engine> engines;
+        private SortedSet<DreamTeam> DreamTeam;
+        private List<Driver> Drivers;
+        private List<Team> Teams;
+        private List<Engine> Engines;
 
         public Combinator(SortedSet<Driver> drivers, SortedSet<Team> teams, SortedSet<Engine> engines)
         {
-            this.drivers = drivers.ToList<Driver>();
-            this.teams = teams.ToList<Team>();
-            this.engines = engines.ToList<Engine>();
+            DreamTeam = new SortedSet<DreamTeam>();
+            Drivers = drivers.ToList<Driver>();
+            Teams = teams.ToList<Team>();
+            Engines = engines.ToList<Engine>();
         }
 
-        public SortedSet<DreamTeam> getCombinations()
+        public void CombineAll()
         {
-            return dreamTeam;
-        }
-
-        public void combineAll()
-        {
-            for (int i = 0; i < drivers.Count; i++)
+            for (int i = 0; i < Drivers.Count; i++)
             {
-                for (int j = 0; j < drivers.Count; j++)
+                for (int j = 0; j < Drivers.Count; j++)
                 {
                     if (j > i)
                     {
-                        for (int k = 0; k < teams.Count; k++)
+                        for (int k = 0; k < Teams.Count; k++)
                         {
-                            for (int l = 0; l < engines.Count; l++)
+                            for (int l = 0; l < Engines.Count; l++)
                             {
-                                dreamTeam.Add(new DreamTeam(drivers[i], drivers[j], teams[k], engines[l]));
+                                DreamTeam.Add(new DreamTeam(Drivers[i], Drivers[j], Teams[k], Engines[l]));
                             }
                         }
                     }
@@ -45,20 +41,21 @@ namespace Formula_One_Game
             }
         }
 
-        public string createOptionsMessage()
+        public string CreateOptionsMessage()
         {
             int lineNumber = 1;
             string message = "";
 
-            foreach (DreamTeam dreamTeamMember in dreamTeam)
+            foreach (DreamTeam dreamTeamMember in DreamTeam)
             {
                 message += String.Format(
-                    "#{0, -6} {1, -14} {2, -13} {3, -13} \r\n",
+                    "#{0, -6} {1, -14} {2, -13} {3, -13} {4, -13} \r\n",
                     lineNumber,
-                    dreamTeamMember.getDriver1Name(),
-                    dreamTeamMember.getDriver2Name(),
-                    dreamTeamMember.getTeamName());
-                    
+                    dreamTeamMember.GetDriver1Surname(),
+                    dreamTeamMember.GetDriver2Surname(),
+                    dreamTeamMember.GetTeamName().Replace("_", " "),
+                    dreamTeamMember.GetEngineName());
+
                 lineNumber++;
             }
             return message;

@@ -8,24 +8,25 @@ namespace Formula_One_Game
 {
     class Driver : DreamTeamComponent, IComparable
     {
-        private string name;
-        private string surname;
+        public string Name { get; }
+        public string Surname { get; }
+        public float Price { get; }
 
         public Driver(string name, string surname)
         {
-            this.name = name;
-            this.surname = surname;
+            Name = name;
+            Surname = surname;
         }
 
         public int CompareTo(object obj)
         {
             Driver driver = (Driver) obj;
-            return name.CompareTo(driver.name);
+            return Name.CompareTo(driver.Name);
         }
 
         public override string ToString()
         {
-            return (name + " " + surname);
+            return (Name + " " + Surname);
         }
     }
 }

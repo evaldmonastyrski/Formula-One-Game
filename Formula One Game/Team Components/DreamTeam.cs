@@ -8,38 +8,37 @@ namespace Formula_One_Game
 {
     class DreamTeam : IComparable
     {
-        private Driver driver1;
-        private Driver driver2;
-        private Team team;
-        private Engine engine;
+        private Driver Driver1;
+        private Driver Driver2;
+        private Team Team;
+        private Engine Engine;
 
         public DreamTeam(Driver driver1, Driver driver2, Team team, Engine engine)
         {
-            this.driver1 = driver1;
-            this.driver2 = driver2;
-            this.team = team;
-            this.engine = engine;
-
+            Driver1 = driver1;
+            Driver2 = driver2;
+            Team = team;
+            Engine = engine;
         }
 
-        public string getDriver1Name()
+        public string GetDriver1Surname()
         {
-            return driver1.ToString();
+            return Driver1.Surname;
         }
 
-        public string getDriver2Name()
+        public string GetDriver2Surname()
         {
-            return driver2.ToString();
+            return Driver2.Surname;
         }
 
-        public string getTeamName()
+        public string GetTeamName()
         {
-            return team.ToString();
+            return Team.Name;
         }
 
-        public string getEngineName()
+        public string GetEngineName()
         {
-            return engine.ToString();
+            return Engine.Name;
         }
 
         public int CompareTo(object obj)
@@ -50,7 +49,7 @@ namespace Formula_One_Game
 
         public override string ToString()
         {
-            return (driver1.ToString() + " " + driver2.ToString() + " " + team.ToString() + " " + engine.ToString());
+            return (Driver1.ToString() + " " + Driver2.ToString() + " " + Team.ToString() + " " + Engine.ToString());
         }
     }
 }

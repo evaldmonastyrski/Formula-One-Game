@@ -10,15 +10,15 @@ namespace Formula_One_Game
 {
     class DataDeserializer
     {
-        private GameArea gameArea;
+        private GameArea GameArea;
 
         public DataDeserializer(GameArea gameArea)
         {
-            this.gameArea = gameArea;
-            initializeDreamTeamComponents();
+            GameArea = gameArea;
+            InitializeDreamTeamComponents();
         }
 
-        public void initializeDreamTeamComponents()
+        public void InitializeDreamTeamComponents()
         {
             try
             {
@@ -29,36 +29,38 @@ namespace Formula_One_Game
                         String line = myStreamReader.ReadLine();
                         String[] lineWords = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                         Driver driver = new Driver(lineWords[0], lineWords[1]);
-                        gameArea.addDriver(driver);
+                        GameArea.AddDriver(driver);
                         Team team = new Team(lineWords[2]);
-                        if(!gameArea.getTeams().Contains(team))
+
+                        if(!GameArea.Teams.Contains(team))
                         {
-                            gameArea.addTeam(team);
-                            team.addDriver(driver);
+                            GameArea.AddTeam(team);
+                            team.AddDriver(driver);
                         }
                         else
                         {
-                            foreach(Team teamInstance in gameArea.getTeams())
+                            foreach(Team teamInstance in GameArea.Teams)
                             {
                                 if(teamInstance.ToString().Equals(team.ToString()))
                                 {
-                                    teamInstance.addDriver(driver);
+                                    teamInstance.AddDriver(driver);
                                 }
                             }
                         }
+
                         Engine engine = new Engine(lineWords[3]);
-                        if(!gameArea.getEngines().Contains(engine))
+                        if(!GameArea.Engines.Contains(engine))
                         {
-                            gameArea.addEngine(engine);
-                            engine.addDriver(driver);
+                            GameArea.AddEngine(engine);
+                            engine.AddDriver(driver);
                         }
                         else
                         {
-                            foreach(Engine engineInstance in gameArea.getEngines())
+                            foreach(Engine engineInstance in GameArea.Engines)
                             {
                                 if(engineInstance.ToString().Equals(engine.ToString()))
                                 {
-                                    engineInstance.addDriver(driver);
+                                    engineInstance.AddDriver(driver);
                                 }
                             }
                         }
