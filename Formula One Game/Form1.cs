@@ -12,89 +12,75 @@ namespace Formula_One_Game
 {
     public partial class Form1 : Form
     {
-        private const int NUMBER_OF_DRIVERS = 20;
-        private const int NUMBER_OF_TEAMS = 10;
-        private const int NUMBER_OF_ENGINES = 4;
+        private const int NumberOfDrivers = 20;
+        private const int NumberOfTeams = 10;
+        private const int NumberOfEngines = 4;
 
-        private GameArea theGameArea;
-        private Label[] driverLabels = new Label[NUMBER_OF_DRIVERS];
-        private Label[] teamLabels = new Label[NUMBER_OF_TEAMS];
-        private Label[] engineLabels = new Label[NUMBER_OF_ENGINES];
+        public Label[] DriverLabels { get; }
+        public Label[] TeamLabels { get; }
+        public Label[] EngineLabels { get; }
+        private GameArea GameArea;
 
         public Form1()
         {
             InitializeComponent();
-            driverLabels = new Label[NUMBER_OF_DRIVERS];
-            fillDriverLabels();
-            fillTeamLabels();
-            fillEngineLabels();
-            theGameArea = new GameArea(this);
+            DriverLabels = new Label[NumberOfDrivers];
+            TeamLabels = new Label[NumberOfTeams];
+            EngineLabels = new Label[NumberOfEngines];
+            FillDriverLabels();
+            FillTeamLabels();
+            FillEngineLabels();
+            GameArea = new GameArea(this);
         }
 
-        public Label[] getDriverLabels()
+        private void FillDriverLabels()
         {
-            return driverLabels;
+            DriverLabels[0] = this.label1;
+            DriverLabels[1] = this.label2;
+            DriverLabels[2] = this.label3;
+            DriverLabels[3] = this.label4;
+            DriverLabels[4] = this.label5;
+            DriverLabels[5] = this.label6;
+            DriverLabels[6] = this.label7;
+            DriverLabels[7] = this.label8;
+            DriverLabels[8] = this.label9;
+            DriverLabels[9] = this.label10;
+            DriverLabels[10] = this.label11;
+            DriverLabels[11] = this.label12;
+            DriverLabels[12] = this.label13;
+            DriverLabels[13] = this.label14;
+            DriverLabels[14] = this.label15;
+            DriverLabels[15] = this.label16;
+            DriverLabels[16] = this.label17;
+            DriverLabels[17] = this.label18;
+            DriverLabels[18] = this.label19;
+            DriverLabels[19] = this.label20;
         }
 
-        public Label[] getTeamLabels()
+        private void FillTeamLabels()
         {
-            return teamLabels;
+            TeamLabels[0] = this.label21;
+            TeamLabels[1] = this.label22;
+            TeamLabels[2] = this.label23;
+            TeamLabels[3] = this.label24;
+            TeamLabels[4] = this.label25;
+            TeamLabels[5] = this.label26;
+            TeamLabels[6] = this.label27;
+            TeamLabels[7] = this.label28; 
+            TeamLabels[8] = this.label29;
+            TeamLabels[9] = this.label30;
         }
-
-        public Label[] getEngineLabels()
+        private void FillEngineLabels()
         {
-            return engineLabels;
+            EngineLabels[0] = this.label31;
+            EngineLabels[1] = this.label32;
+            EngineLabels[2] = this.label33;
+            EngineLabels[3] = this.label34;
         }
-
-        private void fillDriverLabels()
-        {
-            driverLabels[0] = this.label1;
-            driverLabels[1] = this.label2;
-            driverLabels[2] = this.label3;
-            driverLabels[3] = this.label4;
-            driverLabels[4] = this.label5;
-            driverLabels[5] = this.label6;
-            driverLabels[6] = this.label7;
-            driverLabels[7] = this.label8;
-            driverLabels[8] = this.label9;
-            driverLabels[9] = this.label10;
-            driverLabels[10] = this.label11;
-            driverLabels[11] = this.label12;
-            driverLabels[12] = this.label13;
-            driverLabels[13] = this.label14;
-            driverLabels[14] = this.label15;
-            driverLabels[15] = this.label16;
-            driverLabels[16] = this.label17;
-            driverLabels[17] = this.label18;
-            driverLabels[18] = this.label19;
-            driverLabels[19] = this.label20;
-        }
-
-        private void fillTeamLabels()
-        {
-            teamLabels[0] = this.label21;
-            teamLabels[1] = this.label22;
-            teamLabels[2] = this.label23;
-            teamLabels[3] = this.label24;
-            teamLabels[4] = this.label25;
-            teamLabels[5] = this.label26;
-            teamLabels[6] = this.label27;
-            teamLabels[7] = this.label28; 
-            teamLabels[8] = this.label29;
-            teamLabels[9] = this.label30;
-        }
-        private void fillEngineLabels()
-        {
-            engineLabels[0] = this.label31;
-            engineLabels[1] = this.label32;
-            engineLabels[2] = this.label33;
-            engineLabels[3] = this.label34;
-        }
-
 
         private void buttonPointSort_Click(object sender, EventArgs e)
         {
-            DreamTeamOptionWindow dreamTeamOptionWindow = new DreamTeamOptionWindow(theGameArea.getAvailableOptions());
+            DreamTeamOptionWindow dreamTeamOptionWindow = new DreamTeamOptionWindow(GameArea.GetAvailableOptions());
             dreamTeamOptionWindow.Show();
         }
     }

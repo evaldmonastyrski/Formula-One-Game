@@ -8,29 +8,29 @@ namespace Formula_One_Game
 {
     class Team : DreamTeamComponent, IComparable
     {
-        private string name;
-        private List<Driver> drivers;
+        public string Name { get; }
+        private List<Driver> Drivers;
 
         public Team(string name)
         {
-            this.name = name;
-            drivers = new List<Driver>();
+            Name = name;
+            Drivers = new List<Driver>();
         }
 
-        public void addDriver(Driver driver)
+        public void AddDriver(Driver driver)
         {
-            drivers.Add(driver);
+            Drivers.Add(driver);
         }
 
         public int CompareTo(object obj)
         {
             Team team = (Team)obj;
-            return name.CompareTo(team.name);
+            return Name.CompareTo(team.Name);
         }
 
         public override string ToString()
         {
-            return (name).Replace("_", " ");
+            return Name.Replace("_", " ");
         }
     }
 }

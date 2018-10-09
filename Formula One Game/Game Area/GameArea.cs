@@ -9,91 +9,65 @@ namespace Formula_One_Game
 {
     class GameArea
     {
-        private Form1 form;
-        private DataDeserializer dataDeserializer;
-        private SortedSet<Driver> drivers;
-        private SortedSet<Team> teams;
-        private SortedSet<Engine> engines;
-        private Combinator combinator;
+        public SortedSet<Driver> Drivers { get; }
+        public SortedSet<Team> Teams { get; }
+        public SortedSet<Engine> Engines { get; }
+        private Form1 Form;
+        private DataDeserializer DataDeserializer;
+        private Combinator Combinator;
 
-        public void addDriver(Driver driver)
-        {
-            drivers.Add(driver);
-        }
-
-        public void addTeam(Team team)
-        {
-            teams.Add(team);
-        }
-
-        public void addEngine(Engine engine)
-        {
-            engines.Add(engine);
-        }
-        public SortedSet<Driver> getDrivers()
-        {
-            return drivers;
-        }
-
-        public SortedSet<Team> getTeams()
-        {
-            return teams;
-        }
-        public SortedSet<Engine> getEngines()
-        {
-            return engines;
-        }
         public GameArea(Form1 form)
         {
-            this.form = form;
-            drivers = new SortedSet<Driver>();
-            teams = new SortedSet<Team>();
-            engines = new SortedSet<Engine>();
-            dataDeserializer = new DataDeserializer(this);
-            initializeLabels();
-
-            //Temporary Stuff
-            combinator = new Combinator(drivers, teams, engines);
-
-            foreach(Engine engine in engines)
-            {
-                foreach(Driver driver in engine.drivers)
-                {
-                    Console.WriteLine(driver.ToString());
-                }
-                Console.WriteLine("--------");
-            }
+            Form = form;
+            Drivers = new SortedSet<Driver>();
+            Teams = new SortedSet<Team>();
+            Engines = new SortedSet<Engine>();
+            DataDeserializer = new DataDeserializer(this);
+            Combinator = new Combinator(Drivers, Teams, Engines);
+            InitializeLabels();
         }
 
-        public string getAvailableOptions()
+        public void AddDriver(Driver driver)
         {
-            combinator.combineAll();
-            return combinator.createOptionsMessage();
+            Drivers.Add(driver);
         }
 
-        private void initializeLabels()
+        public void AddTeam(Team team)
+        {
+            Teams.Add(team);
+        }
+
+        public void AddEngine(Engine engine)
+        {
+            Engines.Add(engine);
+        }
+        
+        public string GetAvailableOptions()
+        {
+            Combinator.CombineAll();
+            return Combinator.CreateOptionsMessage();
+        }
+
+        private void InitializeLabels()
         {
             int labelIndex = 0;
-
-            foreach(Driver driver in drivers)
+            foreach(Driver driver in Drivers)
             {
-                form.getDriverLabels()[labelIndex].Text = driver.ToString();
+                Form.DriverLabels[labelIndex].Text = driver.ToString();
                 labelIndex++;
             }
 
             labelIndex = 0;
-
-            foreach (Team team in teams)
+            foreach (Team team in Teams)
             {
-                form.getTeamLabels()[labelIndex].Text = team.ToString();
+                Form.TeamLabels[labelIndex].Text = team.ToString();
                 labelIndex++;
             }
 
             labelIndex = 0;
-
-            foreach (Engine engine in engines)
+            foreach (Engine engine in Engines)
             {
-                form.getEngineLabels()[labelIndex].Text = engine.ToString();
+                Form.EngineLabels[labelIndex].Text = engine.ToString();
                 labelIndex++;
             }
         }
