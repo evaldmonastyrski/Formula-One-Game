@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Formula_One_Game
 {
@@ -15,6 +14,7 @@ namespace Formula_One_Game
         private Form1 Form;
         private DataDeserializer DataDeserializer;
         private Combinator Combinator;
+        private Simulator Simulator;
         private AvailableOptions AvailableOptions;
 
         public GameArea(Form1 form)
@@ -25,6 +25,7 @@ namespace Formula_One_Game
             Engines = new SortedSet<Engine>();
             DataDeserializer = new DataDeserializer(this);
             Combinator = new Combinator(Drivers, Teams, Engines);
+            Simulator = new Simulator();
             AvailableOptions = new AvailableOptions(Combinator.DreamTeams);
             InitializeLabels();
         }

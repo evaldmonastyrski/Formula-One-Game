@@ -12,24 +12,25 @@ namespace Formula_One_Game
 {
     public partial class Form1 : Form
     {
-        private const int NumberOfDrivers = 20;
-        private const int NumberOfTeams = 10;
-        private const int NumberOfEngines = 4;
-
         public Label[] DriverLabels { get; }
         public Label[] TeamLabels { get; }
         public Label[] EngineLabels { get; }
+        public ComboBox[] DriverComboBoxes { get; }
         private GameArea GameArea;
+        private ComboBoxManager ComboBoxManager;
 
         public Form1()
         {
             InitializeComponent();
-            DriverLabels = new Label[NumberOfDrivers];
-            TeamLabels = new Label[NumberOfTeams];
-            EngineLabels = new Label[NumberOfEngines];
+            DriverLabels = new Label[Constants.NUMBER_OF_DRIVERS];
+            TeamLabels = new Label[Constants.NUMBER_OF_TEAMS];
+            EngineLabels = new Label[Constants.NUMBER_OF_ENGINES];
+            DriverComboBoxes = new ComboBox[Constants.NUMBER_OF_DRIVERS];
             FillDriverLabels();
+            FillDriverComboBoxes();
             FillTeamLabels();
             FillEngineLabels();
+            ComboBoxManager = new ComboBoxManager(this);
             GameArea = new GameArea(this);
         }
 
@@ -57,6 +58,30 @@ namespace Formula_One_Game
             DriverLabels[19] = this.label20;
         }
 
+        private void FillDriverComboBoxes()
+        {
+            DriverComboBoxes[0] = this.comboBox1;
+            DriverComboBoxes[1] = this.comboBox2;
+            DriverComboBoxes[2] = this.comboBox3;
+            DriverComboBoxes[3] = this.comboBox4; 
+            DriverComboBoxes[4] = this.comboBox5;
+            DriverComboBoxes[5] = this.comboBox6;
+            DriverComboBoxes[6] = this.comboBox7;
+            DriverComboBoxes[7] = this.comboBox8;
+            DriverComboBoxes[8] = this.comboBox9;
+            DriverComboBoxes[9] = this.comboBox10;
+            DriverComboBoxes[10] = this.comboBox11;
+            DriverComboBoxes[11] = this.comboBox12;
+            DriverComboBoxes[12] = this.comboBox13;
+            DriverComboBoxes[13] = this.comboBox14;
+            DriverComboBoxes[14] = this.comboBox15;
+            DriverComboBoxes[15] = this.comboBox16;
+            DriverComboBoxes[16] = this.comboBox17;
+            DriverComboBoxes[17] = this.comboBox18;
+            DriverComboBoxes[18] = this.comboBox19;
+            DriverComboBoxes[19] = this.comboBox20;
+        }
+
         private void FillTeamLabels()
         {
             TeamLabels[0] = this.label21;
@@ -82,6 +107,41 @@ namespace Formula_One_Game
         {
             DreamTeamOptionWindow dreamTeamOptionWindow = new DreamTeamOptionWindow(GameArea.GetAvailableOptions());
             dreamTeamOptionWindow.Show();
+        }
+
+        public void removeComboBoxSelectedItem(int comboBoxIndex)
+        {
+            DriverComboBoxes[comboBoxIndex].SelectedItem = null;
+        }
+
+        private void comboBoxQualification_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox senderComboBox = (ComboBox)sender;
+            int comboBoxIndex = whichComboBox(senderComboBox);
+        
+            if ((ModifierKeys & Keys.Control) != Keys.Control)
+            {
+                ComboBoxManager.AvailablePositionListUpdateOnAdding(comboBoxIndex, (int)senderComboBox.SelectedItem);
+            }
+            else
+            {
+                if (senderComboBox.SelectedItem != null)
+                {
+                    ComboBoxManager.AvailablePositionListUpdateOnRemoving(comboBoxIndex, (int)senderComboBox.SelectedItem);
+                }
+            }
+        }
+
+        private int whichComboBox(ComboBox sender)
+        {
+            for (int i = 0; i < DriverComboBoxes.Length; i++)
+            {
+                if (DriverComboBoxes[i].Equals(sender))
+                {
+                    return i;
+                }
+            }
+            return 0;
         }
     }
 }
