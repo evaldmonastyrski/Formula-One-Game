@@ -11,56 +11,87 @@ namespace Formula_One_Game
     {
         private Form1 Form;
         public SortedSet<int> QualificationPositions { get; }
+        public SortedSet<int> RacePositions { get; }
         private int[] SelectedQualificationPositions;
+        private int[] SelectedRacePositions;
 
         public ComboBoxManager(Form1 form)
         {
             Form = form;
             QualificationPositions = new SortedSet<int>(Enumerable.Range(1, Constants.NUMBER_OF_DRIVERS));
             SelectedQualificationPositions = new int[Constants.NUMBER_OF_DRIVERS];
-            UploadDriverComboBoxItems();
+            RacePositions = new SortedSet<int>(Enumerable.Range(1, Constants.NUMBER_OF_DRIVERS));
+            SelectedRacePositions = new int[Constants.NUMBER_OF_DRIVERS];
+            uploadDriverComboBoxItems(QualificationPositions, SessionType.QUALIFICATION);
+            uploadDriverComboBoxItems(RacePositions, SessionType.RACE);
         }
 
-        public void AvailablePositionListUpdateOnAdding(int comboBoxIndex, int selectedPosition)
+        public void AvailablePositionListUpdateOnAdding(int comboBoxIndex, int selectedPosition, SessionType sessionType)
         {
-            int cachedPosition = SelectedQualificationPositions[comboBoxIndex];
+            int[] selectedPositions = SelectedQualificationPositions;
+            SortedSet<int> positions = QualificationPositions;
+            whichPositions(sessionType, out selectedPositions, out positions);
+
+            int cachedPosition = selectedPositions[comboBoxIndex];
             if (cachedPosition != 0)
             {
-                QualificationPositions.Add(cachedPosition);
+                positions.Add(cachedPosition);
             }
-            SelectedQualificationPositions[comboBoxIndex] = selectedPosition;
-            QualificationPositions.Remove(selectedPosition);
-            RemoveDriverComboBoxItems();
-            UploadDriverComboBoxItems();
+            selectedPositions[comboBoxIndex] = selectedPosition;
+            positions.Remove(selectedPosition);
+            removeDriverComboBoxItems(positions, sessionType);
+            uploadDriverComboBoxItems(positions, sessionType);
         }
 
-        public void AvailablePositionListUpdateOnRemoving(int comboBoxIndex, int selectedPosition)
+        public void AvailablePositionListUpdateOnRemoving(int comboBoxIndex, int selectedPosition, SessionType sessionType)
         {
-            int cachedPosition = SelectedQualificationPositions[comboBoxIndex];
+            int[] selectedPositions = SelectedQualificationPositions;
+            SortedSet<int> positions = QualificationPositions;
+            whichPositions(sessionType, out selectedPositions, out positions);
+
+            int cachedPosition = selectedPositions[comboBoxIndex];
             if (cachedPosition != 0)
             {
-                QualificationPositions.Add(cachedPosition);
-                SelectedQualificationPositions[comboBoxIndex] = 0;
-                Form.removeComboBoxSelectedItem(comboBoxIndex);
-                RemoveDriverComboBoxItems();
-                UploadDriverComboBoxItems();
+                positions.Add(cachedPosition);
+                selectedPositions[comboBoxIndex] = 0;
+                removeComboBoxSelectedItem(comboBoxIndex, sessionType);
+                removeDriverComboBoxItems(positions, sessionType);
+                uploadDriverComboBoxItems(positions, sessionType);
             }
         }
 
-        private void UploadDriverComboBoxItems()
+        private void removeComboBoxSelectedItem(int comboBoxIndex, SessionType sessionType)
         {
-            foreach (ComboBox comboBox in Form.DriverComboBoxes)
+            ComboBox[] driverComboBoxes = whichSessionArray(sessionType);
+            driverComboBoxes[comboBoxIndex].SelectedItem = null;
+        }
+
+        private void uploadDriverComboBoxItems(SortedSet<int> positions, SessionType sessionType)
+        {
+            ComboBox[] driverComboBoxes = Form.DriverQualificationComboBoxes;
+            if (sessionType == SessionType.RACE)
             {
-                foreach (int number in QualificationPositions)
+                driverComboBoxes = Form.DriverRaceComboBoxes;
+            }
+
+            foreach (ComboBox comboBox in driverComboBoxes)
+            {
+                foreach (int number in positions)
                 {
                     comboBox.Items.Add(number);
                 }
             }
         }
 
-        private void RemoveDriverComboBoxItems()
+        private void removeDriverComboBoxItems(SortedSet<int> positions, SessionType sessionType)
         {
-            foreach (ComboBox comboBox in Form.DriverComboBoxes)
+            ComboBox[] driverComboBoxes = Form.DriverQualificationComboBoxes;
+            if (sessionType == SessionType.RACE)
+            {
+                driverComboBoxes = Form.DriverRaceComboBoxes;
+            }
+
+            foreach (ComboBox comboBox in driverComboBoxes)
             {
                 if (comboBox.SelectedItem == null)
                 {
@@ -78,6 +109,27 @@ namespace Formula_One_Game
                     }
                 }
             }
+        }
+
+        private void whichPositions(SessionType sessionType, out int[] selectedPositions, out SortedSet<int> positions)
+        {
+            selectedPositions = SelectedQualificationPositions;
+            positions = QualificationPositions;
+            if (sessionType == SessionType.RACE)
+            {
+                selectedPositions = SelectedRacePositions;
+                positions = RacePositions;
+            }
+        }
+
+        private ComboBox[] whichSessionArray(SessionType sessionType)
+        {
+            ComboBox[] driverComboBoxes = Form.DriverQualificationComboBoxes;
+            if (sessionType == SessionType.RACE)
+            {
+                driverComboBoxes = Form.DriverRaceComboBoxes;
+            }
+            return driverComboBoxes;
         }
     }
 }
