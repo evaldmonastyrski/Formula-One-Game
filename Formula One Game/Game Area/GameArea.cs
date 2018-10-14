@@ -12,10 +12,10 @@ namespace Formula_One_Game
         public SortedSet<Team> Teams { get; }
         public SortedSet<Engine> Engines { get; }
         private Form1 Form;
-        private DataDeserializer DataDeserializer;
-        private Combinator Combinator;
-        private Simulator Simulator;
-        private AvailableOptions AvailableOptions;
+        private DataDeserializer dataDeserializer;
+        private Combinator combinator;
+        private Simulator simulator;
+        private AvailableOptions availableOptions;
 
         public GameArea(Form1 form)
         {
@@ -23,11 +23,11 @@ namespace Formula_One_Game
             Drivers = new SortedSet<Driver>();
             Teams = new SortedSet<Team>();
             Engines = new SortedSet<Engine>();
-            DataDeserializer = new DataDeserializer(this);
-            Combinator = new Combinator(Drivers, Teams, Engines);
-            Simulator = new Simulator();
-            AvailableOptions = new AvailableOptions(Combinator.DreamTeams);
-            InitializeLabels();
+            dataDeserializer = new DataDeserializer(this);
+            combinator = new Combinator(Drivers, Teams, Engines);
+            simulator = new Simulator();
+            availableOptions = new AvailableOptions(combinator.DreamTeams);
+            initializeLabels();
         }
 
         public void AddDriver(Driver driver)
@@ -47,11 +47,11 @@ namespace Formula_One_Game
         
         public string GetAvailableOptions()
         {
-            Combinator.CombineAll();
-            return AvailableOptions.CreateOptionsMessage();
+            combinator.CombineAll();
+            return availableOptions.CreateOptionsMessage();
         }
 
-        private void InitializeLabels()
+        private void initializeLabels()
         {
             int labelIndex = 0;
             foreach(Driver driver in Drivers)
