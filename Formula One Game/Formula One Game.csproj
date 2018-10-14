@@ -62,6 +62,7 @@
     </Compile>
     <Compile Include="Game Area\Constants.cs" />
     <Compile Include="Game Area\GameArea.cs" />
+    <Compile Include="Game Area\SessionType.cs" />
     <Compile Include="GUI Interface\ComboBoxManager.cs" />
     <Compile Include="Message Service\AvailableOptions.cs" />
     <Compile Include="Program.cs" />

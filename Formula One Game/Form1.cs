@@ -15,7 +15,8 @@ namespace Formula_One_Game
         public Label[] DriverLabels { get; }
         public Label[] TeamLabels { get; }
         public Label[] EngineLabels { get; }
-        public ComboBox[] DriverComboBoxes { get; }
+        public ComboBox[] DriverQualificationComboBoxes { get; }
+        public ComboBox[] DriverRaceComboBoxes { get; }
         private GameArea GameArea;
         private ComboBoxManager ComboBoxManager;
 
@@ -25,9 +26,11 @@ namespace Formula_One_Game
             DriverLabels = new Label[Constants.NUMBER_OF_DRIVERS];
             TeamLabels = new Label[Constants.NUMBER_OF_TEAMS];
             EngineLabels = new Label[Constants.NUMBER_OF_ENGINES];
-            DriverComboBoxes = new ComboBox[Constants.NUMBER_OF_DRIVERS];
+            DriverQualificationComboBoxes = new ComboBox[Constants.NUMBER_OF_DRIVERS];
+            DriverRaceComboBoxes = new ComboBox[Constants.NUMBER_OF_DRIVERS];
             FillDriverLabels();
-            FillDriverComboBoxes();
+            FillDriverQualificationComboBoxes();
+            FillDriverRaceComboBoxes();
             FillTeamLabels();
             FillEngineLabels();
             ComboBoxManager = new ComboBoxManager(this);
@@ -58,28 +61,52 @@ namespace Formula_One_Game
             DriverLabels[19] = this.label20;
         }
 
-        private void FillDriverComboBoxes()
+        private void FillDriverQualificationComboBoxes()
         {
-            DriverComboBoxes[0] = this.comboBox1;
-            DriverComboBoxes[1] = this.comboBox2;
-            DriverComboBoxes[2] = this.comboBox3;
-            DriverComboBoxes[3] = this.comboBox4; 
-            DriverComboBoxes[4] = this.comboBox5;
-            DriverComboBoxes[5] = this.comboBox6;
-            DriverComboBoxes[6] = this.comboBox7;
-            DriverComboBoxes[7] = this.comboBox8;
-            DriverComboBoxes[8] = this.comboBox9;
-            DriverComboBoxes[9] = this.comboBox10;
-            DriverComboBoxes[10] = this.comboBox11;
-            DriverComboBoxes[11] = this.comboBox12;
-            DriverComboBoxes[12] = this.comboBox13;
-            DriverComboBoxes[13] = this.comboBox14;
-            DriverComboBoxes[14] = this.comboBox15;
-            DriverComboBoxes[15] = this.comboBox16;
-            DriverComboBoxes[16] = this.comboBox17;
-            DriverComboBoxes[17] = this.comboBox18;
-            DriverComboBoxes[18] = this.comboBox19;
-            DriverComboBoxes[19] = this.comboBox20;
+            DriverQualificationComboBoxes[0] = this.comboBox1;
+            DriverQualificationComboBoxes[1] = this.comboBox2;
+            DriverQualificationComboBoxes[2] = this.comboBox3;
+            DriverQualificationComboBoxes[3] = this.comboBox4; 
+            DriverQualificationComboBoxes[4] = this.comboBox5;
+            DriverQualificationComboBoxes[5] = this.comboBox6;
+            DriverQualificationComboBoxes[6] = this.comboBox7;
+            DriverQualificationComboBoxes[7] = this.comboBox8;
+            DriverQualificationComboBoxes[8] = this.comboBox9;
+            DriverQualificationComboBoxes[9] = this.comboBox10;
+            DriverQualificationComboBoxes[10] = this.comboBox11;
+            DriverQualificationComboBoxes[11] = this.comboBox12;
+            DriverQualificationComboBoxes[12] = this.comboBox13;
+            DriverQualificationComboBoxes[13] = this.comboBox14;
+            DriverQualificationComboBoxes[14] = this.comboBox15;
+            DriverQualificationComboBoxes[15] = this.comboBox16;
+            DriverQualificationComboBoxes[16] = this.comboBox17;
+            DriverQualificationComboBoxes[17] = this.comboBox18;
+            DriverQualificationComboBoxes[18] = this.comboBox19;
+            DriverQualificationComboBoxes[19] = this.comboBox20;
+        }
+
+        private void FillDriverRaceComboBoxes()
+        {
+            DriverRaceComboBoxes[0] = this.comboBox21;
+            DriverRaceComboBoxes[1] = this.comboBox22;
+            DriverRaceComboBoxes[2] = this.comboBox23;
+            DriverRaceComboBoxes[3] = this.comboBox24;
+            DriverRaceComboBoxes[4] = this.comboBox25;
+            DriverRaceComboBoxes[5] = this.comboBox26;
+            DriverRaceComboBoxes[6] = this.comboBox27;
+            DriverRaceComboBoxes[7] = this.comboBox28;
+            DriverRaceComboBoxes[8] = this.comboBox29;
+            DriverRaceComboBoxes[9] = this.comboBox30;
+            DriverRaceComboBoxes[10] = this.comboBox31;
+            DriverRaceComboBoxes[11] = this.comboBox32;
+            DriverRaceComboBoxes[12] = this.comboBox33;
+            DriverRaceComboBoxes[13] = this.comboBox34;
+            DriverRaceComboBoxes[14] = this.comboBox35;
+            DriverRaceComboBoxes[15] = this.comboBox36;
+            DriverRaceComboBoxes[16] = this.comboBox37;
+            DriverRaceComboBoxes[17] = this.comboBox38;
+            DriverRaceComboBoxes[18] = this.comboBox39;
+            DriverRaceComboBoxes[19] = this.comboBox40;
         }
 
         private void FillTeamLabels()
@@ -109,31 +136,45 @@ namespace Formula_One_Game
             dreamTeamOptionWindow.Show();
         }
 
-        public void removeComboBoxSelectedItem(int comboBoxIndex)
-        {
-            DriverComboBoxes[comboBoxIndex].SelectedItem = null;
-        }
-
         private void comboBoxQualification_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox senderComboBox = (ComboBox)sender;
-            int comboBoxIndex = whichComboBox(senderComboBox);
+            int comboBoxIndex = whichComboBox(senderComboBox, SessionType.QUALIFICATION);
         
             if ((ModifierKeys & Keys.Control) != Keys.Control)
             {
-                ComboBoxManager.AvailablePositionListUpdateOnAdding(comboBoxIndex, (int)senderComboBox.SelectedItem);
+                ComboBoxManager.AvailablePositionListUpdateOnAdding(comboBoxIndex, (int)senderComboBox.SelectedItem, SessionType.QUALIFICATION);
             }
             else
             {
                 if (senderComboBox.SelectedItem != null)
                 {
-                    ComboBoxManager.AvailablePositionListUpdateOnRemoving(comboBoxIndex, (int)senderComboBox.SelectedItem);
+                    ComboBoxManager.AvailablePositionListUpdateOnRemoving(comboBoxIndex, (int)senderComboBox.SelectedItem, SessionType.QUALIFICATION);
                 }
             }
         }
 
-        private int whichComboBox(ComboBox sender)
+        private void comboBoxRace_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ComboBox senderComboBox = (ComboBox)sender;
+            int comboBoxIndex = whichComboBox(senderComboBox, SessionType.RACE);
+
+            if ((ModifierKeys & Keys.Control) != Keys.Control)
+            {
+                ComboBoxManager.AvailablePositionListUpdateOnAdding(comboBoxIndex, (int)senderComboBox.SelectedItem, SessionType.RACE);
+            }
+            else
+            {
+                if (senderComboBox.SelectedItem != null)
+                {
+                    ComboBoxManager.AvailablePositionListUpdateOnRemoving(comboBoxIndex, (int)senderComboBox.SelectedItem, SessionType.RACE);
+                }
+            }
+        }
+
+        private int whichComboBox(ComboBox sender, SessionType sessionType)
+        {
+            ComboBox[] DriverComboBoxes = whichSessionArray(sessionType);
             for (int i = 0; i < DriverComboBoxes.Length; i++)
             {
                 if (DriverComboBoxes[i].Equals(sender))
@@ -142,6 +183,16 @@ namespace Formula_One_Game
                 }
             }
             return 0;
+        }
+
+        private ComboBox[] whichSessionArray(SessionType sessionType)
+        {
+            ComboBox[] driverComboBoxes = DriverQualificationComboBoxes;
+            if (sessionType == SessionType.RACE)
+            {
+                driverComboBoxes = DriverRaceComboBoxes;
+            }
+            return driverComboBoxes;
         }
     }
 }
