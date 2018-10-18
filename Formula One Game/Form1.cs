@@ -194,5 +194,20 @@ namespace Formula_One_Game
             }
             return driverComboBoxes;
         }
+
+        private void numericUpDownPointThreshold_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelBudget_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPointsThereshold_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

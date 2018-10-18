@@ -196,6 +196,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkBoxRaceSetup = new System.Windows.Forms.CheckBox();
+            this.comboBoxGPRace = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBoxEnginesPriceChange.SuspendLayout();
@@ -1779,6 +1781,8 @@
             // 
             // groupBoxRaceControl
             // 
+            this.groupBoxRaceControl.Controls.Add(this.comboBoxGPRace);
+            this.groupBoxRaceControl.Controls.Add(this.checkBoxRaceSetup);
             this.groupBoxRaceControl.Controls.Add(this.numericUpDownPointThreshold);
             this.groupBoxRaceControl.Controls.Add(this.numericUpDownBudget);
             this.groupBoxRaceControl.Controls.Add(this.checkBoxPointThreshold);
@@ -1793,7 +1797,7 @@
             // 
             // numericUpDownPointThreshold
             // 
-            this.numericUpDownPointThreshold.Location = new System.Drawing.Point(406, 13);
+            this.numericUpDownPointThreshold.Location = new System.Drawing.Point(498, 14);
             this.numericUpDownPointThreshold.Name = "numericUpDownPointThreshold";
             this.numericUpDownPointThreshold.Size = new System.Drawing.Size(46, 20);
             this.numericUpDownPointThreshold.TabIndex = 6;
@@ -1802,6 +1806,7 @@
             0,
             0,
             0});
+            this.numericUpDownPointThreshold.ValueChanged += new System.EventHandler(this.numericUpDownPointThreshold_ValueChanged);
             // 
             // numericUpDownBudget
             // 
@@ -1810,7 +1815,7 @@
             0,
             0,
             0});
-            this.numericUpDownBudget.Location = new System.Drawing.Point(143, 15);
+            this.numericUpDownBudget.Location = new System.Drawing.Point(111, 13);
             this.numericUpDownBudget.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -1830,7 +1835,7 @@
             this.checkBoxPointThreshold.AutoSize = true;
             this.checkBoxPointThreshold.Checked = true;
             this.checkBoxPointThreshold.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxPointThreshold.Location = new System.Drawing.Point(458, 14);
+            this.checkBoxPointThreshold.Location = new System.Drawing.Point(567, 14);
             this.checkBoxPointThreshold.Name = "checkBoxPointThreshold";
             this.checkBoxPointThreshold.Size = new System.Drawing.Size(105, 17);
             this.checkBoxPointThreshold.TabIndex = 4;
@@ -1840,20 +1845,22 @@
             // labelPointsThereshold
             // 
             this.labelPointsThereshold.AutoSize = true;
-            this.labelPointsThereshold.Location = new System.Drawing.Point(314, 17);
+            this.labelPointsThereshold.Location = new System.Drawing.Point(406, 16);
             this.labelPointsThereshold.Name = "labelPointsThereshold";
             this.labelPointsThereshold.Size = new System.Drawing.Size(86, 13);
             this.labelPointsThereshold.TabIndex = 3;
             this.labelPointsThereshold.Text = "Points Threshold";
+            this.labelPointsThereshold.Click += new System.EventHandler(this.labelPointsThereshold_Click);
             // 
             // labelBudget
             // 
             this.labelBudget.AutoSize = true;
-            this.labelBudget.Location = new System.Drawing.Point(87, 17);
+            this.labelBudget.Location = new System.Drawing.Point(64, 15);
             this.labelBudget.Name = "labelBudget";
             this.labelBudget.Size = new System.Drawing.Size(41, 13);
             this.labelBudget.TabIndex = 2;
             this.labelBudget.Text = "Budget";
+            this.labelBudget.Click += new System.EventHandler(this.labelBudget_Click);
             // 
             // buttonSimulate
             // 
@@ -2093,6 +2100,27 @@
             this.tabPage2.Text = "Help";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // checkBoxRaceSetup
+            // 
+            this.checkBoxRaceSetup.AutoEllipsis = true;
+            this.checkBoxRaceSetup.AutoSize = true;
+            this.checkBoxRaceSetup.Checked = true;
+            this.checkBoxRaceSetup.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRaceSetup.Location = new System.Drawing.Point(689, 15);
+            this.checkBoxRaceSetup.Name = "checkBoxRaceSetup";
+            this.checkBoxRaceSetup.Size = new System.Drawing.Size(81, 17);
+            this.checkBoxRaceSetup.TabIndex = 7;
+            this.checkBoxRaceSetup.Text = "Race setup";
+            this.checkBoxRaceSetup.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxGPRace
+            // 
+            this.comboBoxGPRace.FormattingEnabled = true;
+            this.comboBoxGPRace.Location = new System.Drawing.Point(210, 12);
+            this.comboBoxGPRace.Name = "comboBoxGPRace";
+            this.comboBoxGPRace.Size = new System.Drawing.Size(178, 21);
+            this.comboBoxGPRace.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2295,6 +2323,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDownPointThreshold;
         private System.Windows.Forms.NumericUpDown numericUpDownBudget;
         private System.Windows.Forms.CheckBox checkBoxPointThreshold;
+        private System.Windows.Forms.CheckBox checkBoxRaceSetup;
+        private System.Windows.Forms.ComboBox comboBoxGPRace;
     }
 }
 

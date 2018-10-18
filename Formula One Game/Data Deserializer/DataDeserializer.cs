@@ -28,7 +28,7 @@ namespace Formula_One_Game
                     {
                         String line = myStreamReader.ReadLine();
                         String[] lineWords = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                        Driver driver = new Driver(lineWords[0], lineWords[1]);
+                        Driver driver = new Driver(lineWords[0], lineWords[1], float.Parse(lineWords[4]));
                         GameArea.AddDriver(driver);
                         Team team = new Team(lineWords[2]);
 
