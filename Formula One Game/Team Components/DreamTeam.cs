@@ -12,7 +12,7 @@ namespace Formula_One_Game
         private Driver Driver2;
         private Team Team;
         private Engine Engine;
-        public float Price;
+        public float price;
 
         public DreamTeam(Driver driver1, Driver driver2, Team team, Engine engine)
         {
@@ -20,7 +20,7 @@ namespace Formula_One_Game
             Driver2 = driver2;
             Team = team;
             Engine = engine;
-            Price = calculatePrice();
+            price = CalculatePrice();
         }
 
         public string GetDriver1Surname()
@@ -43,7 +43,7 @@ namespace Formula_One_Game
             return Engine.Name;
         }
 
-        public float calculatePrice()
+        public float CalculatePrice()
         {
             return 0F;
         }
