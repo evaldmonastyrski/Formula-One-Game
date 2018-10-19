@@ -22,7 +22,9 @@ namespace Formula_One_Game
         public int CompareTo(object obj)
         {
             Driver driver = (Driver) obj;
-            return Price.CompareTo(driver.Price);
+            int compareByPrice = -Price.CompareTo(driver.Price);
+            int compareBySurname = Surname.CompareTo(driver.Surname);
+            return compareByPrice != 0 ? compareByPrice : compareBySurname;
         }
 
         public override string ToString()
