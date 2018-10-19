@@ -12,7 +12,7 @@ namespace Formula_One_Game
         private Driver Driver2;
         private Team Team;
         private Engine Engine;
-        public float price;
+        public float Price { get; }
 
         public DreamTeam(Driver driver1, Driver driver2, Team team, Engine engine)
         {
@@ -20,7 +20,7 @@ namespace Formula_One_Game
             Driver2 = driver2;
             Team = team;
             Engine = engine;
-            price = CalculatePrice();
+            Price = calculatePrice();
         }
 
         public string GetDriver1Surname()
@@ -43,20 +43,22 @@ namespace Formula_One_Game
             return Engine.Name;
         }
 
-        public float CalculatePrice()
-        {
-            return 0F;
-        }
-
         public int CompareTo(object obj)
         {
             DreamTeam dreamTeam = (DreamTeam) obj;
-            return this.ToString().CompareTo(dreamTeam.ToString());
+            int compareByPrice = -Price.CompareTo(dreamTeam.Price);
+            int compareByName = this.ToString().CompareTo(dreamTeam.ToString());
+            return compareByPrice != 0 ? compareByPrice : compareByName;
         }
 
         public override string ToString()
         {
             return (Driver1.ToString() + " " + Driver2.ToString() + " " + Team.ToString() + " " + Engine.ToString());
+        }
+
+        private float calculatePrice()
+        {
+            return Driver1.Price + Driver2.Price;
         }
     }
 }

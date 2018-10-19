@@ -23,12 +23,13 @@ namespace Formula_One_Game
             foreach (DreamTeam dreamTeamMember in DreamTeams)
             {
                 message += String.Format(
-                    "#{0, -6} {1, -14} {2, -13} {3, -13} {4, -13} \r\n",
+                    "#{0, -6} {1, -14} {2, -13} {3, -13} {4, -13} {5, -13} \r\n",
                     lineNumber,
                     dreamTeamMember.GetDriver1Surname(),
                     dreamTeamMember.GetDriver2Surname(),
                     dreamTeamMember.GetTeamName().Replace("_", " "),
-                    dreamTeamMember.GetEngineName());
+                    dreamTeamMember.GetEngineName(),
+                    dreamTeamMember.Price);
 
                 lineNumber++;
             }
