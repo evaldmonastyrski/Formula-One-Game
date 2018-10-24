@@ -37,6 +37,15 @@ namespace Formula_One_Game
             GameArea = new GameArea(this);
         }
 
+        public void SetGPCombo(List<string> gpStages)
+        {
+            foreach(string gpStage in gpStages)
+            {
+                comboBoxGPRace.Items.Add(gpStage);
+            }
+            comboBoxGPRace.SelectedIndex = 0;
+        }
+
         private void FillDriverLabels()
         {
             DriverLabels[0] = this.label1;
@@ -195,19 +204,14 @@ namespace Formula_One_Game
             return driverComboBoxes;
         }
 
-        private void numericUpDownPointThreshold_ValueChanged(object sender, EventArgs e)
+        private void comboBoxGPRace_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void labelBudget_Click(object sender, EventArgs e)
+        private void numericUpDownBudget_ValueChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void labelPointsThereshold_Click(object sender, EventArgs e)
-        {
-
+            GameArea.RecalculateCombinations();
         }
     }
 }

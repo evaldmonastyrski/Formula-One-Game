@@ -24,10 +24,16 @@ namespace Formula_One_Game
             {
                 using (StreamReader myStreamReader = new StreamReader("..\\..\\MarketData.txt"))
                 {
+                    string firstLine = myStreamReader.ReadLine();
+                    string[] firstLineWords = firstLine.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (string word in firstLineWords)
+                    {
+                        GameArea.AddGPStage(word);
+                    }
                     while (!myStreamReader.EndOfStream)
                     {
-                        String line = myStreamReader.ReadLine();
-                        String[] lineWords = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                        string line = myStreamReader.ReadLine();
+                        string[] lineWords = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                         Driver driver = new Driver(lineWords[0], lineWords[1], float.Parse(lineWords[4]));
                         GameArea.AddDriver(driver);
                         Team team = new Team(lineWords[2]);

@@ -167,6 +167,8 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBoxRaceControl = new System.Windows.Forms.GroupBox();
+            this.comboBoxGPRace = new System.Windows.Forms.ComboBox();
+            this.checkBoxRaceSetup = new System.Windows.Forms.CheckBox();
             this.numericUpDownPointThreshold = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownBudget = new System.Windows.Forms.NumericUpDown();
             this.checkBoxPointThreshold = new System.Windows.Forms.CheckBox();
@@ -196,8 +198,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.checkBoxRaceSetup = new System.Windows.Forms.CheckBox();
-            this.comboBoxGPRace = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBoxEnginesPriceChange.SuspendLayout();
@@ -1795,6 +1795,28 @@
             this.groupBoxRaceControl.TabStop = false;
             this.groupBoxRaceControl.Text = "Race Control";
             // 
+            // comboBoxGPRace
+            // 
+            this.comboBoxGPRace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGPRace.FormattingEnabled = true;
+            this.comboBoxGPRace.Location = new System.Drawing.Point(270, 12);
+            this.comboBoxGPRace.Name = "comboBoxGPRace";
+            this.comboBoxGPRace.Size = new System.Drawing.Size(118, 21);
+            this.comboBoxGPRace.TabIndex = 8;
+            this.comboBoxGPRace.SelectedIndexChanged += new System.EventHandler(this.comboBoxGPRace_SelectedIndexChanged);
+            // 
+            // checkBoxRaceSetup
+            // 
+            this.checkBoxRaceSetup.AutoSize = true;
+            this.checkBoxRaceSetup.Checked = true;
+            this.checkBoxRaceSetup.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRaceSetup.Location = new System.Drawing.Point(689, 15);
+            this.checkBoxRaceSetup.Name = "checkBoxRaceSetup";
+            this.checkBoxRaceSetup.Size = new System.Drawing.Size(81, 17);
+            this.checkBoxRaceSetup.TabIndex = 7;
+            this.checkBoxRaceSetup.Text = "Race setup";
+            this.checkBoxRaceSetup.UseVisualStyleBackColor = true;
+            // 
             // numericUpDownPointThreshold
             // 
             this.numericUpDownPointThreshold.Location = new System.Drawing.Point(498, 14);
@@ -1806,7 +1828,6 @@
             0,
             0,
             0});
-            this.numericUpDownPointThreshold.ValueChanged += new System.EventHandler(this.numericUpDownPointThreshold_ValueChanged);
             // 
             // numericUpDownBudget
             // 
@@ -1829,6 +1850,7 @@
             0,
             0,
             0});
+            this.numericUpDownBudget.ValueChanged += new System.EventHandler(this.numericUpDownBudget_ValueChanged);
             // 
             // checkBoxPointThreshold
             // 
@@ -1850,7 +1872,6 @@
             this.labelPointsThereshold.Size = new System.Drawing.Size(86, 13);
             this.labelPointsThereshold.TabIndex = 3;
             this.labelPointsThereshold.Text = "Points Threshold";
-            this.labelPointsThereshold.Click += new System.EventHandler(this.labelPointsThereshold_Click);
             // 
             // labelBudget
             // 
@@ -1860,7 +1881,6 @@
             this.labelBudget.Size = new System.Drawing.Size(41, 13);
             this.labelBudget.TabIndex = 2;
             this.labelBudget.Text = "Budget";
-            this.labelBudget.Click += new System.EventHandler(this.labelBudget_Click);
             // 
             // buttonSimulate
             // 
@@ -2099,27 +2119,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Help";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxRaceSetup
-            // 
-            this.checkBoxRaceSetup.AutoEllipsis = true;
-            this.checkBoxRaceSetup.AutoSize = true;
-            this.checkBoxRaceSetup.Checked = true;
-            this.checkBoxRaceSetup.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxRaceSetup.Location = new System.Drawing.Point(689, 15);
-            this.checkBoxRaceSetup.Name = "checkBoxRaceSetup";
-            this.checkBoxRaceSetup.Size = new System.Drawing.Size(81, 17);
-            this.checkBoxRaceSetup.TabIndex = 7;
-            this.checkBoxRaceSetup.Text = "Race setup";
-            this.checkBoxRaceSetup.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxGPRace
-            // 
-            this.comboBoxGPRace.FormattingEnabled = true;
-            this.comboBoxGPRace.Location = new System.Drawing.Point(210, 12);
-            this.comboBoxGPRace.Name = "comboBoxGPRace";
-            this.comboBoxGPRace.Size = new System.Drawing.Size(178, 21);
-            this.comboBoxGPRace.TabIndex = 8;
             // 
             // Form1
             // 
