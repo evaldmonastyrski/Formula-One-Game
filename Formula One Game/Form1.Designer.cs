@@ -1843,10 +1843,10 @@
             0,
             0});
             this.numericUpDownBudget.Name = "numericUpDownBudget";
-            this.numericUpDownBudget.Size = new System.Drawing.Size(77, 20);
+            this.numericUpDownBudget.Size = new System.Drawing.Size(55, 20);
             this.numericUpDownBudget.TabIndex = 5;
             this.numericUpDownBudget.Value = new decimal(new int[] {
-            30000000,
+            30,
             0,
             0,
             0});

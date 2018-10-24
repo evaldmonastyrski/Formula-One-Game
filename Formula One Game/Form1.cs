@@ -34,16 +34,16 @@ namespace Formula_One_Game
             FillTeamLabels();
             FillEngineLabels();
             ComboBoxManager = new ComboBoxManager(this);
-            GameArea = new GameArea(this);
+            GameArea = new GameArea(this, 0);
         }
 
         public void SetGPCombo(List<string> gpStages)
         {
+            comboBoxGPRace.Items.Clear();
             foreach(string gpStage in gpStages)
             {
                 comboBoxGPRace.Items.Add(gpStage);
             }
-            comboBoxGPRace.SelectedIndex = 0;
         }
 
         private void FillDriverLabels()
@@ -206,7 +206,7 @@ namespace Formula_One_Game
 
         private void comboBoxGPRace_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            GameArea = new GameArea(this, comboBoxGPRace.SelectedIndex);
         }
 
         private void numericUpDownBudget_ValueChanged(object sender, EventArgs e)

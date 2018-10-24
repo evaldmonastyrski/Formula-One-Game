@@ -18,14 +18,14 @@ namespace Formula_One_Game
         private Simulator simulator;
         private AvailableOptions availableOptions;
 
-        public GameArea(Form1 form)
+        public GameArea(Form1 form, int gpStageIndex)
         {
             Form = form;
             Drivers = new SortedSet<Driver>();
             Teams = new SortedSet<Team>();
             Engines = new SortedSet<Engine>();
             GPStages = new List<string>();
-            dataDeserializer = new DataDeserializer(this);
+            dataDeserializer = new DataDeserializer(this, gpStageIndex);
             combinator = new Combinator(Drivers, Teams, Engines);
             simulator = new Simulator();
             availableOptions = new AvailableOptions(combinator.DreamTeams);
@@ -53,9 +53,10 @@ namespace Formula_One_Game
             Engines.Add(engine);
         }
 
-        public void AddGPStage(string gpStage)
+        public void AddGPStages(string[] gpStages)
         {
-            GPStages.Add(gpStage);
+            GPStages.Clear();
+            GPStages.AddRange(gpStages);
         }
         
         public string GetAvailableOptions()

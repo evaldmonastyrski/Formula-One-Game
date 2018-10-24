@@ -10,11 +10,13 @@ namespace Formula_One_Game
 {
     class DataDeserializer
     {
+        private int gpStageIndex;
         private GameArea GameArea;
 
-        public DataDeserializer(GameArea gameArea)
+        public DataDeserializer(GameArea gameArea, int gpStageIndex)
         {
             GameArea = gameArea;
+            this.gpStageIndex = gpStageIndex;
             InitializeDreamTeamComponents();
         }
 
@@ -26,15 +28,12 @@ namespace Formula_One_Game
                 {
                     string firstLine = myStreamReader.ReadLine();
                     string[] firstLineWords = firstLine.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                    foreach (string word in firstLineWords)
-                    {
-                        GameArea.AddGPStage(word);
-                    }
+                    GameArea.AddGPStages(firstLineWords);
                     while (!myStreamReader.EndOfStream)
                     {
                         string line = myStreamReader.ReadLine();
                         string[] lineWords = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                        Driver driver = new Driver(lineWords[0], lineWords[1], float.Parse(lineWords[4]));
+                        Driver driver = new Driver(lineWords[0], lineWords[1], float.Parse(lineWords[gpStageIndex + 4]));
                         GameArea.AddDriver(driver);
                         Team team = new Team(lineWords[2]);
 

@@ -33,7 +33,11 @@ namespace Formula_One_Game
                         {
                             for (int l = 0; l < Engines.Count; l++)
                             {
-                                DreamTeams.Add(new DreamTeam(Drivers[i], Drivers[j], Teams[k], Engines[l]));
+                                DreamTeam dreamTeam = new DreamTeam(Drivers[i], Drivers[j], Teams[k], Engines[l]);
+                                if (dreamTeam.Price < 30.0F)
+                                {
+                                    DreamTeams.Add(dreamTeam);
+                                }
                             }
                         }
                     }
