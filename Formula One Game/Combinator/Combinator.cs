@@ -14,17 +14,14 @@ namespace Formula_One_Game
         private List<Engine> Engines;
         private float budget;
 
-        public Combinator(SortedSet<Driver> drivers, SortedSet<Team> teams, SortedSet<Engine> engines)
+        public Combinator(SortedSet<Driver> drivers, SortedSet<Team> teams, SortedSet<Engine> engines, float budget)
         {
             DreamTeams = new SortedSet<DreamTeam>();
             Drivers = drivers.ToList<Driver>();
             Teams = teams.ToList<Team>();
             Engines = engines.ToList<Engine>();
-           
-            
+            this.budget = budget;
         }
-
-
 
         public void CombineAll()
         {

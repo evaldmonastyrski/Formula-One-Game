@@ -20,7 +20,6 @@ namespace Formula_One_Game
         private GameArea GameArea;
         private ComboBoxManager ComboBoxManager;
         
-
         public Form1()
         {
             InitializeComponent();

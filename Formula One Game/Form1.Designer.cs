@@ -1831,17 +1831,13 @@
             // 
             // numericUpDownBudget
             // 
+            this.numericUpDownBudget.DecimalPlaces = 1;
             this.numericUpDownBudget.Increment = new decimal(new int[] {
-            1000,
+            1,
             0,
             0,
-            0});
+            65536});
             this.numericUpDownBudget.Location = new System.Drawing.Point(111, 13);
-            this.numericUpDownBudget.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
             this.numericUpDownBudget.Name = "numericUpDownBudget";
             this.numericUpDownBudget.Size = new System.Drawing.Size(55, 20);
             this.numericUpDownBudget.TabIndex = 5;
