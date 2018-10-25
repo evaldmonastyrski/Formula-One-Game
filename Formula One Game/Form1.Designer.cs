@@ -1846,7 +1846,7 @@
             this.numericUpDownBudget.Size = new System.Drawing.Size(55, 20);
             this.numericUpDownBudget.TabIndex = 5;
             this.numericUpDownBudget.Value = new decimal(new int[] {
-            30,
+            20,
             0,
             0,
             0});

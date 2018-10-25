@@ -33,7 +33,7 @@ namespace Formula_One_Game
             initializeLabels();
         }
 
-        public void RecalculateCombinations()
+        public void RecalculateCombinations(float budget)
         {
             combinator = new Combinator(Drivers, Teams, Engines);
         }
