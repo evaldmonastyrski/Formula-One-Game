@@ -19,6 +19,7 @@ namespace Formula_One_Game
         public ComboBox[] DriverRaceComboBoxes { get; }
         private GameArea GameArea;
         private ComboBoxManager ComboBoxManager;
+        
 
         public Form1()
         {
@@ -211,7 +212,7 @@ namespace Formula_One_Game
 
         private void numericUpDownBudget_ValueChanged(object sender, EventArgs e)
         {
-            GameArea.RecalculateCombinations();
+            GameArea.RecalculateCombinations((float) numericUpDownBudget.Value);
         }
     }
 }

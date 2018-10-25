@@ -12,6 +12,7 @@ namespace Formula_One_Game
         private List<Driver> Drivers;
         private List<Team> Teams;
         private List<Engine> Engines;
+        private float budget;
 
         public Combinator(SortedSet<Driver> drivers, SortedSet<Team> teams, SortedSet<Engine> engines)
         {
@@ -19,7 +20,11 @@ namespace Formula_One_Game
             Drivers = drivers.ToList<Driver>();
             Teams = teams.ToList<Team>();
             Engines = engines.ToList<Engine>();
+           
+            
         }
+
+
 
         public void CombineAll()
         {
@@ -33,8 +38,8 @@ namespace Formula_One_Game
                         {
                             for (int l = 0; l < Engines.Count; l++)
                             {
-                                DreamTeam dreamTeam = new DreamTeam(Drivers[i], Drivers[j], Teams[k], Engines[l]);
-                                if (dreamTeam.Price < 30.0F)
+                                DreamTeam dreamTeam = new DreamTeam(Drivers[i], Drivers[j], Teams[k], Engines[l], budget);
+                                if (dreamTeam.Price < budget)
                                 {
                                     DreamTeams.Add(dreamTeam);
                                 }
