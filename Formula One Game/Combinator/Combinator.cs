@@ -8,23 +8,13 @@ namespace Formula_One_Game
 {
     class Combinator
     {
-        public SortedSet<DreamTeam> DreamTeams { get; }
-        private List<Driver> Drivers;
-        private List<Team> Teams;
-        private List<Engine> Engines;
-        private float budget;
-
-        public Combinator(SortedSet<Driver> drivers, SortedSet<Team> teams, SortedSet<Engine> engines, float budget)
+        public static SortedSet<DreamTeam> CombineAll(SortedSet<Driver> drivers, SortedSet<Team> teams, SortedSet<Engine> engines, float budget)
         {
-            DreamTeams = new SortedSet<DreamTeam>();
-            Drivers = drivers.ToList<Driver>();
-            Teams = teams.ToList<Team>();
-            Engines = engines.ToList<Engine>();
-            this.budget = budget;
-        }
+            List<Driver> Drivers = drivers.ToList<Driver>();
+            List<Team> Teams = teams.ToList<Team>();
+            List<Engine> Engines = engines.ToList<Engine>();
+            SortedSet<DreamTeam> DreamTeams = new SortedSet<DreamTeam>();
 
-        public void CombineAll()
-        {
             for (int i = 0; i < Drivers.Count; i++)
             {
                 for (int j = 0; j < Drivers.Count; j++)
@@ -45,6 +35,7 @@ namespace Formula_One_Game
                     }
                 }
             }
+            return DreamTeams;
         }
     }
 }
