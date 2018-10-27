@@ -10,17 +10,14 @@ namespace Formula_One_Game
 {
     class DataDeserializer
     {
-        private int gpStageIndex;
         private GameArea GameArea;
 
-        public DataDeserializer(GameArea gameArea, int gpStageIndex)
+        public DataDeserializer(GameArea gameArea)
         {
             GameArea = gameArea;
-            this.gpStageIndex = gpStageIndex;
-            InitializeDreamTeamComponents();
         }
 
-        public void InitializeDreamTeamComponents()
+        public void InitializeDreamTeamComponents(int gpStageIndex)
         {
             try
             {

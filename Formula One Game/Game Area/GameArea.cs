@@ -9,36 +9,38 @@ namespace Formula_One_Game
     class GameArea
     {
         private const float INITIAL_BUDGET = 30.0F;
+        private const int INITIAL_GP_STAGE_INDEX = 0;
 
-        public SortedSet<Driver> Drivers { get; }
-        public SortedSet<Team> Teams { get; }
-        public SortedSet<Engine> Engines { get; }
+        public SortedSet<Driver> Drivers { get; private set; }
+        public SortedSet<Team> Teams { get; private set; }
+        public SortedSet<Engine> Engines { get; private set; }
         private List<String> GPStages { get; }
         private Form1 Form;
         private DataDeserializer dataDeserializer;
-        private Combinator combinator;
-        private Simulator simulator;
         private AvailableOptions availableOptions;
 
-        public GameArea(Form1 form, int gpStageIndex)
+        public GameArea(Form1 form)
         {
             Form = form;
+            dataDeserializer = new DataDeserializer(this);
+            GPStages = new List<string>();
+            initializeStageDependentGameAreaComponents(INITIAL_GP_STAGE_INDEX);
+            initializeGPStages();
+        }
+
+        public void initializeStageDependentGameAreaComponents(int gpStageIndex)
+        {
             Drivers = new SortedSet<Driver>();
             Teams = new SortedSet<Team>();
             Engines = new SortedSet<Engine>();
-            GPStages = new List<string>();
-            dataDeserializer = new DataDeserializer(this, gpStageIndex);
-            combinator = new Combinator(Drivers, Teams, Engines, INITIAL_BUDGET);
-            simulator = new Simulator();
-            availableOptions = new AvailableOptions(combinator.DreamTeams);
-            initializeGPStages();
+            dataDeserializer.InitializeDreamTeamComponents(gpStageIndex);
+            availableOptions = new AvailableOptions(Combinator.CombineAll(Drivers, Teams, Engines, INITIAL_BUDGET));
             initializeLabels();
         }
 
         public void RecalculateCombinations(float budget)
         {
-            combinator = new Combinator(Drivers, Teams, Engines, budget);
-            availableOptions = new AvailableOptions(combinator.DreamTeams);
+            availableOptions = new AvailableOptions(Combinator.CombineAll(Drivers, Teams, Engines, INITIAL_BUDGET));
         }
 
         public void AddDriver(Driver driver)
@@ -58,13 +60,11 @@ namespace Formula_One_Game
 
         public void AddGPStages(string[] gpStages)
         {
-            GPStages.Clear();
             GPStages.AddRange(gpStages);
         }
         
         public string GetAvailableOptions()
         {
-            combinator.CombineAll();
             return availableOptions.CreateOptionsMessage();
         }
 
