@@ -8,34 +8,62 @@ namespace Formula_One_Game
 {
     class Combinator
     {
-        public static SortedSet<DreamTeam> CombineAll(SortedSet<Driver> drivers, SortedSet<Team> teams, SortedSet<Engine> engines, float budget)
-        {
-            List<Driver> Drivers = drivers.ToList<Driver>();
-            List<Team> Teams = teams.ToList<Team>();
-            List<Engine> Engines = engines.ToList<Engine>();
-            SortedSet<DreamTeam> DreamTeams = new SortedSet<DreamTeam>();
+        public SortedSet<DreamTeam> DreamTeams { get; }
+        private List<Driver> drivers;
+        private List<Team> teams;
+        private List<Engine> engines;
 
-            for (int i = 0; i < Drivers.Count; i++)
+        public Combinator(SortedSet<Driver> drivers, SortedSet<Team> teams, SortedSet<Engine> engines)
+        {
+            DreamTeams = new SortedSet<DreamTeam>();
+            this.drivers = drivers.ToList();
+            this.teams = teams.ToList();
+            this.engines = engines.ToList();
+            CombineAll();
+        }
+
+        public SortedSet<DreamTeam> getAvailableDreamTeams(float budget)
+        {
+            SortedSet<DreamTeam> availableDreamTeams = copySet(DreamTeams); 
+            foreach (DreamTeam dreamTeam in DreamTeams)
             {
-                for (int j = 0; j < Drivers.Count; j++)
+                if (dreamTeam.Price > budget)
+                {
+                    availableDreamTeams.Remove(dreamTeam);
+                }
+            }
+            return availableDreamTeams;
+        }  
+
+        private void CombineAll()
+        {
+            for (int i = 0; i < drivers.Count; i++)
+            {
+                for (int j = 0; j < drivers.Count; j++)
                 {
                     if (j > i)
                     {
-                        for (int k = 0; k < Teams.Count; k++)
+                        for (int k = 0; k < teams.Count; k++)
                         {
-                            for (int l = 0; l < Engines.Count; l++)
+                            for (int l = 0; l < engines.Count; l++)
                             {
-                                DreamTeam dreamTeam = new DreamTeam(Drivers[i], Drivers[j], Teams[k], Engines[l], budget);
-                                if (dreamTeam.Price < budget)
-                                {
-                                    DreamTeams.Add(dreamTeam);
-                                }
+                                DreamTeams.Add(new DreamTeam(drivers[i], drivers[j], teams[k], engines[l]));    
                             }
                         }
                     }
                 }
             }
-            return DreamTeams;
         }
+
+        private SortedSet<DreamTeam> copySet(SortedSet<DreamTeam> copyFrom)
+        {
+            SortedSet<DreamTeam> copyTo = new SortedSet<DreamTeam>();
+            foreach (DreamTeam dreamTeamMember in copyFrom)
+            {
+                copyTo.Add(dreamTeamMember);
+            }
+            return copyTo;
+        }
+
     }
 }

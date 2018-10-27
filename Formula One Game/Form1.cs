@@ -206,15 +206,34 @@ namespace Formula_One_Game
 
         private void comboBoxGPRace_SelectedIndexChanged(object sender, EventArgs e)
         {
+            disableSortButtons();
             if (GameArea != null)
             {
                 GameArea.initializeStageDependentGameAreaComponents(comboBoxGPRace.SelectedIndex);
             }
         }
 
+        private void buttonSimulate_Click(object sender, EventArgs e)
+        {
+            enableSortButtons();
+            GameArea.CalculateCombinations((float)numericUpDownBudget.Value);
+        }
+
         private void numericUpDownBudget_ValueChanged(object sender, EventArgs e)
         {
-            GameArea.RecalculateCombinations((float) numericUpDownBudget.Value);
+            disableSortButtons();
+        }
+
+        private void enableSortButtons()
+        {
+            buttonPointSort.Enabled = true;
+            buttonPriceChangeSort.Enabled = true;
+        }
+
+        private void disableSortButtons()
+        {
+            buttonPointSort.Enabled = false;
+            buttonPriceChangeSort.Enabled = false;
         }
     }
 }

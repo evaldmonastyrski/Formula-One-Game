@@ -198,6 +198,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.labelGPStage = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBoxEnginesPriceChange.SuspendLayout();
@@ -258,6 +259,7 @@
             // 
             // buttonPriceChangeSort
             // 
+            this.buttonPriceChangeSort.Enabled = false;
             this.buttonPriceChangeSort.Location = new System.Drawing.Point(433, 583);
             this.buttonPriceChangeSort.Name = "buttonPriceChangeSort";
             this.buttonPriceChangeSort.Size = new System.Drawing.Size(116, 23);
@@ -267,6 +269,7 @@
             // 
             // buttonPointSort
             // 
+            this.buttonPointSort.Enabled = false;
             this.buttonPointSort.Location = new System.Drawing.Point(334, 583);
             this.buttonPointSort.Name = "buttonPointSort";
             this.buttonPointSort.Size = new System.Drawing.Size(80, 23);
@@ -1781,6 +1784,7 @@
             // 
             // groupBoxRaceControl
             // 
+            this.groupBoxRaceControl.Controls.Add(this.labelGPStage);
             this.groupBoxRaceControl.Controls.Add(this.comboBoxGPRace);
             this.groupBoxRaceControl.Controls.Add(this.checkBoxRaceSetup);
             this.groupBoxRaceControl.Controls.Add(this.numericUpDownPointThreshold);
@@ -1799,9 +1803,9 @@
             // 
             this.comboBoxGPRace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGPRace.FormattingEnabled = true;
-            this.comboBoxGPRace.Location = new System.Drawing.Point(270, 12);
+            this.comboBoxGPRace.Location = new System.Drawing.Point(256, 12);
             this.comboBoxGPRace.Name = "comboBoxGPRace";
-            this.comboBoxGPRace.Size = new System.Drawing.Size(118, 21);
+            this.comboBoxGPRace.Size = new System.Drawing.Size(103, 21);
             this.comboBoxGPRace.TabIndex = 8;
             this.comboBoxGPRace.SelectedIndexChanged += new System.EventHandler(this.comboBoxGPRace_SelectedIndexChanged);
             // 
@@ -1842,10 +1846,10 @@
             this.numericUpDownBudget.Size = new System.Drawing.Size(55, 20);
             this.numericUpDownBudget.TabIndex = 5;
             this.numericUpDownBudget.Value = new decimal(new int[] {
-            20,
+            300,
             0,
             0,
-            0});
+            65536});
             this.numericUpDownBudget.ValueChanged += new System.EventHandler(this.numericUpDownBudget_ValueChanged);
             // 
             // checkBoxPointThreshold
@@ -1886,6 +1890,7 @@
             this.buttonSimulate.TabIndex = 2;
             this.buttonSimulate.Text = "Simulate!";
             this.buttonSimulate.UseVisualStyleBackColor = true;
+            this.buttonSimulate.Click += new System.EventHandler(this.buttonSimulate_Click);
             // 
             // buttonReload
             // 
@@ -2116,6 +2121,15 @@
             this.tabPage2.Text = "Help";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // labelGPStage
+            // 
+            this.labelGPStage.AutoSize = true;
+            this.labelGPStage.Location = new System.Drawing.Point(194, 15);
+            this.labelGPStage.Name = "labelGPStage";
+            this.labelGPStage.Size = new System.Drawing.Size(56, 13);
+            this.labelGPStage.TabIndex = 20;
+            this.labelGPStage.Text = "Grand Prix";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2320,6 +2334,7 @@
         private System.Windows.Forms.CheckBox checkBoxPointThreshold;
         private System.Windows.Forms.CheckBox checkBoxRaceSetup;
         private System.Windows.Forms.ComboBox comboBoxGPRace;
+        private System.Windows.Forms.Label labelGPStage;
     }
 }
 
