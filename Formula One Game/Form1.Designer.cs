@@ -167,6 +167,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBoxRaceControl = new System.Windows.Forms.GroupBox();
+            this.labelGPStage = new System.Windows.Forms.Label();
             this.comboBoxGPRace = new System.Windows.Forms.ComboBox();
             this.checkBoxRaceSetup = new System.Windows.Forms.CheckBox();
             this.numericUpDownPointThreshold = new System.Windows.Forms.NumericUpDown();
@@ -258,6 +259,7 @@
             // 
             // buttonPriceChangeSort
             // 
+            this.buttonPriceChangeSort.Enabled = false;
             this.buttonPriceChangeSort.Location = new System.Drawing.Point(433, 583);
             this.buttonPriceChangeSort.Name = "buttonPriceChangeSort";
             this.buttonPriceChangeSort.Size = new System.Drawing.Size(116, 23);
@@ -267,6 +269,7 @@
             // 
             // buttonPointSort
             // 
+            this.buttonPointSort.Enabled = false;
             this.buttonPointSort.Location = new System.Drawing.Point(334, 583);
             this.buttonPointSort.Name = "buttonPointSort";
             this.buttonPointSort.Size = new System.Drawing.Size(80, 23);
@@ -277,6 +280,7 @@
             // 
             // buttonFlushR
             // 
+            this.buttonFlushR.Enabled = false;
             this.buttonFlushR.Location = new System.Drawing.Point(236, 583);
             this.buttonFlushR.Name = "buttonFlushR";
             this.buttonFlushR.Size = new System.Drawing.Size(80, 23);
@@ -286,6 +290,7 @@
             // 
             // buttonFlushQ
             // 
+            this.buttonFlushQ.Enabled = false;
             this.buttonFlushQ.Location = new System.Drawing.Point(137, 583);
             this.buttonFlushQ.Name = "buttonFlushQ";
             this.buttonFlushQ.Size = new System.Drawing.Size(80, 23);
@@ -1781,6 +1786,7 @@
             // 
             // groupBoxRaceControl
             // 
+            this.groupBoxRaceControl.Controls.Add(this.labelGPStage);
             this.groupBoxRaceControl.Controls.Add(this.comboBoxGPRace);
             this.groupBoxRaceControl.Controls.Add(this.checkBoxRaceSetup);
             this.groupBoxRaceControl.Controls.Add(this.numericUpDownPointThreshold);
@@ -1795,13 +1801,22 @@
             this.groupBoxRaceControl.TabStop = false;
             this.groupBoxRaceControl.Text = "Race Control";
             // 
+            // labelGPStage
+            // 
+            this.labelGPStage.AutoSize = true;
+            this.labelGPStage.Location = new System.Drawing.Point(194, 15);
+            this.labelGPStage.Name = "labelGPStage";
+            this.labelGPStage.Size = new System.Drawing.Size(56, 13);
+            this.labelGPStage.TabIndex = 20;
+            this.labelGPStage.Text = "Grand Prix";
+            // 
             // comboBoxGPRace
             // 
             this.comboBoxGPRace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGPRace.FormattingEnabled = true;
-            this.comboBoxGPRace.Location = new System.Drawing.Point(270, 12);
+            this.comboBoxGPRace.Location = new System.Drawing.Point(256, 12);
             this.comboBoxGPRace.Name = "comboBoxGPRace";
-            this.comboBoxGPRace.Size = new System.Drawing.Size(118, 21);
+            this.comboBoxGPRace.Size = new System.Drawing.Size(103, 21);
             this.comboBoxGPRace.TabIndex = 8;
             this.comboBoxGPRace.SelectedIndexChanged += new System.EventHandler(this.comboBoxGPRace_SelectedIndexChanged);
             // 
@@ -1810,6 +1825,7 @@
             this.checkBoxRaceSetup.AutoSize = true;
             this.checkBoxRaceSetup.Checked = true;
             this.checkBoxRaceSetup.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRaceSetup.Enabled = false;
             this.checkBoxRaceSetup.Location = new System.Drawing.Point(689, 15);
             this.checkBoxRaceSetup.Name = "checkBoxRaceSetup";
             this.checkBoxRaceSetup.Size = new System.Drawing.Size(81, 17);
@@ -1819,6 +1835,7 @@
             // 
             // numericUpDownPointThreshold
             // 
+            this.numericUpDownPointThreshold.Enabled = false;
             this.numericUpDownPointThreshold.Location = new System.Drawing.Point(498, 14);
             this.numericUpDownPointThreshold.Name = "numericUpDownPointThreshold";
             this.numericUpDownPointThreshold.Size = new System.Drawing.Size(46, 20);
@@ -1842,10 +1859,10 @@
             this.numericUpDownBudget.Size = new System.Drawing.Size(55, 20);
             this.numericUpDownBudget.TabIndex = 5;
             this.numericUpDownBudget.Value = new decimal(new int[] {
-            20,
+            300,
             0,
             0,
-            0});
+            65536});
             this.numericUpDownBudget.ValueChanged += new System.EventHandler(this.numericUpDownBudget_ValueChanged);
             // 
             // checkBoxPointThreshold
@@ -1853,6 +1870,7 @@
             this.checkBoxPointThreshold.AutoSize = true;
             this.checkBoxPointThreshold.Checked = true;
             this.checkBoxPointThreshold.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPointThreshold.Enabled = false;
             this.checkBoxPointThreshold.Location = new System.Drawing.Point(567, 14);
             this.checkBoxPointThreshold.Name = "checkBoxPointThreshold";
             this.checkBoxPointThreshold.Size = new System.Drawing.Size(105, 17);
@@ -1886,9 +1904,11 @@
             this.buttonSimulate.TabIndex = 2;
             this.buttonSimulate.Text = "Simulate!";
             this.buttonSimulate.UseVisualStyleBackColor = true;
+            this.buttonSimulate.Click += new System.EventHandler(this.buttonSimulate_Click);
             // 
             // buttonReload
             // 
+            this.buttonReload.Enabled = false;
             this.buttonReload.Location = new System.Drawing.Point(14, 16);
             this.buttonReload.Name = "buttonReload";
             this.buttonReload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2320,6 +2340,7 @@
         private System.Windows.Forms.CheckBox checkBoxPointThreshold;
         private System.Windows.Forms.CheckBox checkBoxRaceSetup;
         private System.Windows.Forms.ComboBox comboBoxGPRace;
+        private System.Windows.Forms.Label labelGPStage;
     }
 }
 

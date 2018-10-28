@@ -14,7 +14,7 @@ namespace Formula_One_Game
         private Engine Engine;
         public float Price { get; }
 
-        public DreamTeam(Driver driver1, Driver driver2, Team team, Engine engine, float budget)
+        public DreamTeam(Driver driver1, Driver driver2, Team team, Engine engine)
         {
             Driver1 = driver1;
             Driver2 = driver2;

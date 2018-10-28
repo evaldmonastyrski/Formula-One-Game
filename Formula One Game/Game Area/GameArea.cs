@@ -8,7 +8,6 @@ namespace Formula_One_Game
 {
     class GameArea
     {
-        private const float INITIAL_BUDGET = 30.0F;
         private const int INITIAL_GP_STAGE_INDEX = 0;
 
         public SortedSet<Driver> Drivers { get; private set; }
@@ -17,6 +16,7 @@ namespace Formula_One_Game
         private List<String> GPStages { get; }
         private Form1 Form;
         private DataDeserializer dataDeserializer;
+        private Combinator combinator;
         private AvailableOptions availableOptions;
 
         public GameArea(Form1 form)
@@ -34,13 +34,13 @@ namespace Formula_One_Game
             Teams = new SortedSet<Team>();
             Engines = new SortedSet<Engine>();
             dataDeserializer.InitializeDreamTeamComponents(gpStageIndex);
-            availableOptions = new AvailableOptions(Combinator.CombineAll(Drivers, Teams, Engines, INITIAL_BUDGET));
+            combinator = new Combinator(Drivers, Teams, Engines);
             initializeLabels();
         }
 
-        public void RecalculateCombinations(float budget)
+        public void CalculateCombinations(float budget)
         {
-            availableOptions = new AvailableOptions(Combinator.CombineAll(Drivers, Teams, Engines, INITIAL_BUDGET));
+            availableOptions = new AvailableOptions(combinator.getAvailableDreamTeams(budget));
         }
 
         public void AddDriver(Driver driver)
