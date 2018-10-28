@@ -167,6 +167,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBoxRaceControl = new System.Windows.Forms.GroupBox();
+            this.labelGPStage = new System.Windows.Forms.Label();
             this.comboBoxGPRace = new System.Windows.Forms.ComboBox();
             this.checkBoxRaceSetup = new System.Windows.Forms.CheckBox();
             this.numericUpDownPointThreshold = new System.Windows.Forms.NumericUpDown();
@@ -198,7 +199,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.labelGPStage = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBoxEnginesPriceChange.SuspendLayout();
@@ -280,6 +280,7 @@
             // 
             // buttonFlushR
             // 
+            this.buttonFlushR.Enabled = false;
             this.buttonFlushR.Location = new System.Drawing.Point(236, 583);
             this.buttonFlushR.Name = "buttonFlushR";
             this.buttonFlushR.Size = new System.Drawing.Size(80, 23);
@@ -289,6 +290,7 @@
             // 
             // buttonFlushQ
             // 
+            this.buttonFlushQ.Enabled = false;
             this.buttonFlushQ.Location = new System.Drawing.Point(137, 583);
             this.buttonFlushQ.Name = "buttonFlushQ";
             this.buttonFlushQ.Size = new System.Drawing.Size(80, 23);
@@ -1799,6 +1801,15 @@
             this.groupBoxRaceControl.TabStop = false;
             this.groupBoxRaceControl.Text = "Race Control";
             // 
+            // labelGPStage
+            // 
+            this.labelGPStage.AutoSize = true;
+            this.labelGPStage.Location = new System.Drawing.Point(194, 15);
+            this.labelGPStage.Name = "labelGPStage";
+            this.labelGPStage.Size = new System.Drawing.Size(56, 13);
+            this.labelGPStage.TabIndex = 20;
+            this.labelGPStage.Text = "Grand Prix";
+            // 
             // comboBoxGPRace
             // 
             this.comboBoxGPRace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1814,6 +1825,7 @@
             this.checkBoxRaceSetup.AutoSize = true;
             this.checkBoxRaceSetup.Checked = true;
             this.checkBoxRaceSetup.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRaceSetup.Enabled = false;
             this.checkBoxRaceSetup.Location = new System.Drawing.Point(689, 15);
             this.checkBoxRaceSetup.Name = "checkBoxRaceSetup";
             this.checkBoxRaceSetup.Size = new System.Drawing.Size(81, 17);
@@ -1823,6 +1835,7 @@
             // 
             // numericUpDownPointThreshold
             // 
+            this.numericUpDownPointThreshold.Enabled = false;
             this.numericUpDownPointThreshold.Location = new System.Drawing.Point(498, 14);
             this.numericUpDownPointThreshold.Name = "numericUpDownPointThreshold";
             this.numericUpDownPointThreshold.Size = new System.Drawing.Size(46, 20);
@@ -1857,6 +1870,7 @@
             this.checkBoxPointThreshold.AutoSize = true;
             this.checkBoxPointThreshold.Checked = true;
             this.checkBoxPointThreshold.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPointThreshold.Enabled = false;
             this.checkBoxPointThreshold.Location = new System.Drawing.Point(567, 14);
             this.checkBoxPointThreshold.Name = "checkBoxPointThreshold";
             this.checkBoxPointThreshold.Size = new System.Drawing.Size(105, 17);
@@ -1894,6 +1908,7 @@
             // 
             // buttonReload
             // 
+            this.buttonReload.Enabled = false;
             this.buttonReload.Location = new System.Drawing.Point(14, 16);
             this.buttonReload.Name = "buttonReload";
             this.buttonReload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2120,15 +2135,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Help";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // labelGPStage
-            // 
-            this.labelGPStage.AutoSize = true;
-            this.labelGPStage.Location = new System.Drawing.Point(194, 15);
-            this.labelGPStage.Name = "labelGPStage";
-            this.labelGPStage.Size = new System.Drawing.Size(56, 13);
-            this.labelGPStage.TabIndex = 20;
-            this.labelGPStage.Text = "Grand Prix";
             // 
             // Form1
             // 

@@ -35,6 +35,7 @@ namespace Formula_One_Game
             FillEngineLabels();
             ComboBoxManager = new ComboBoxManager(this);
             GameArea = new GameArea(this);
+            comboBoxGPRace.SelectedIndex = comboBoxGPRace.Items.Count - 1;
         }
 
         public void SetGPCombo(List<string> gpStages)
@@ -43,7 +44,7 @@ namespace Formula_One_Game
             {
                 comboBoxGPRace.Items.Add(gpStage.Replace("_", " "));
             }
-            comboBoxGPRace.SelectedIndex = 0;
+            //comboBoxGPRace.SelectedIndex = gpStages.Count - 1;
         }
 
         private void FillDriverLabels()
@@ -207,10 +208,7 @@ namespace Formula_One_Game
         private void comboBoxGPRace_SelectedIndexChanged(object sender, EventArgs e)
         {
             disableSortButtons();
-            if (GameArea != null)
-            {
-                GameArea.initializeStageDependentGameAreaComponents(comboBoxGPRace.SelectedIndex);
-            }
+            GameArea.initializeStageDependentGameAreaComponents(comboBoxGPRace.SelectedIndex);
         }
 
         private void buttonSimulate_Click(object sender, EventArgs e)
