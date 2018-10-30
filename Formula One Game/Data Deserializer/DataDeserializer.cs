@@ -11,17 +11,15 @@ namespace Formula_One_Game
     class DataDeserializer
     {
         private GameArea GameArea;
-        private SortedSet<Team> tempTeams;
 
         public DataDeserializer(GameArea gameArea)
         {
             GameArea = gameArea;
-            tempTeams = new SortedSet<Team>();
         }
 
         public void InitializeDreamTeamComponents(int gpStageIndex)
         {
-            tempTeams.Clear();
+            List<Team> tempTeams = new List<Team>();
             try
             {
                 using (StreamReader myStreamReader = new StreamReader("..\\..\\MarketData.txt"))
@@ -36,20 +34,14 @@ namespace Formula_One_Game
                         Driver driver = new Driver(lineWords[0], lineWords[1], float.Parse(lineWords[gpStageIndex + 4]));
                         GameArea.AddDriver(driver);
                         Team team = new Team(lineWords[2]);
-                        if (!tempTeams.Contains(team))
+                        if (tempTeams.Exists(x => x.Name.Equals(team.Name)))
                         {
-                            tempTeams.Add(team);
-                            team.AddDriver(driver);
+                            tempTeams.Find(x => x.Name.Contains(team.Name)).AddDriver(driver);
                         }
                         else
                         {
-                            foreach (Team teamInstance in tempTeams)
-                            {
-                                if (teamInstance.ToString().Equals(team.ToString()))
-                                {
-                                    teamInstance.AddDriver(driver);
-                                }
-                            }
+                            tempTeams.Add(team);
+                            team.AddDriver(driver);
                         }
                         Engine engine = new Engine(lineWords[3]);
                         if(!GameArea.Engines.Contains(engine))
@@ -79,7 +71,6 @@ namespace Formula_One_Game
             {
                 Console.WriteLine("IOException source: {0}", e.Source);
             }
-            
         }
     }
 }
