@@ -20,10 +20,7 @@ namespace Formula_One_Game
 
         public void SetPrice()
         {
-            foreach (Driver driver in drivers)
-            {
-                Price += Constants.TEAM_PRICE_RATIO * driver.Price;
-            }
+            Price = Constants.TEAM_PRICE_RATIO * drivers.Sum(driver => driver.Price);
         }
 
         public void AddDriver(Driver driver)
