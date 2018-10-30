@@ -8,19 +8,12 @@ namespace Formula_One_Game
 {
     class AvailableOptions
     {
-        private SortedSet<DreamTeam> DreamTeams;
-
-        public AvailableOptions(SortedSet<DreamTeam> dreamTeams)
-        {
-            DreamTeams = dreamTeams;
-        }
-
-        public string CreateOptionsMessage()
+        public static string CreateOptionsMessage(SortedSet<DreamTeam> dreamTeams)
         {
             int lineNumber = 1;
             string message = "";
 
-            foreach (DreamTeam dreamTeamMember in DreamTeams)
+            foreach (DreamTeam dreamTeamMember in dreamTeams)
             {
                 message += String.Format(
                     "#{0, -6} {1, -14} {2, -13} {3, -13} {4, -13} {5, -13} \r\n",

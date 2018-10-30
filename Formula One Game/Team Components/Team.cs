@@ -10,11 +10,20 @@ namespace Formula_One_Game
     {
         public string Name { get; }
         private List<Driver> drivers;
+        public float Price { get; private set; }
 
         public Team(string name)
         {
             Name = name;
             drivers = new List<Driver>();
+        }
+
+        public void SetPrice()
+        {
+            foreach (Driver driver in drivers)
+            {
+                Price += Constants.TEAM_PRICE_RATIO * driver.Price;
+            }
         }
 
         public void AddDriver(Driver driver)
@@ -25,7 +34,9 @@ namespace Formula_One_Game
         public int CompareTo(object obj)
         {
             Team team = (Team)obj;
-            return Name.CompareTo(team.Name);
+            int compareByPrice = -Price.CompareTo(team.Price);
+            int compareByName = Name.CompareTo(team.Name);
+            return compareByPrice != 0 ? compareByPrice : compareByName;
         }
 
         public override string ToString()
