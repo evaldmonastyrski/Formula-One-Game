@@ -17,6 +17,7 @@ namespace Formula_One_Game
         private Form1 Form;
         private DataDeserializer dataDeserializer;
         private Combinator combinator;
+        private SortedSet<DreamTeam> availableDreamTeams;
         private AvailableOptions availableOptions;
 
         public GameArea(Form1 form)
@@ -33,6 +34,7 @@ namespace Formula_One_Game
             Drivers = new SortedSet<Driver>();
             Teams = new SortedSet<Team>();
             Engines = new SortedSet<Engine>();
+            availableDreamTeams = new SortedSet<DreamTeam>();
             dataDeserializer.InitializeDreamTeamComponents(gpStageIndex);
             combinator = new Combinator(Drivers, Teams, Engines);
             initializeLabels();
@@ -40,7 +42,8 @@ namespace Formula_One_Game
 
         public void CalculateCombinations(float budget)
         {
-            availableOptions = new AvailableOptions(combinator.getAvailableDreamTeams(budget));
+            availableDreamTeams.Clear();
+            availableDreamTeams = combinator.getAvailableDreamTeams(budget);
         }
 
         public void AddDriver(Driver driver)
@@ -65,7 +68,7 @@ namespace Formula_One_Game
         
         public string GetAvailableOptions()
         {
-            return availableOptions.CreateOptionsMessage();
+            return AvailableOptions.CreateOptionsMessage(availableDreamTeams);
         }
 
         private void initializeGPStages()

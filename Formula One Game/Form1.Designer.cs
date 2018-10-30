@@ -304,6 +304,7 @@
             this.groupBoxEnginesPriceChange.Controls.Add(this.labelEnginePC3);
             this.groupBoxEnginesPriceChange.Controls.Add(this.labelEnginePC2);
             this.groupBoxEnginesPriceChange.Controls.Add(this.labelEnginePC1);
+            this.groupBoxEnginesPriceChange.Enabled = false;
             this.groupBoxEnginesPriceChange.Location = new System.Drawing.Point(789, 402);
             this.groupBoxEnginesPriceChange.Name = "groupBoxEnginesPriceChange";
             this.groupBoxEnginesPriceChange.Size = new System.Drawing.Size(124, 126);
@@ -361,6 +362,7 @@
             this.groupBoxEnginesPoints.Controls.Add(this.labelEngine3);
             this.groupBoxEnginesPoints.Controls.Add(this.labelEngine2);
             this.groupBoxEnginesPoints.Controls.Add(this.labelEngine1);
+            this.groupBoxEnginesPoints.Enabled = false;
             this.groupBoxEnginesPoints.Location = new System.Drawing.Point(691, 402);
             this.groupBoxEnginesPoints.Name = "groupBoxEnginesPoints";
             this.groupBoxEnginesPoints.Size = new System.Drawing.Size(80, 126);
@@ -473,6 +475,7 @@
             this.groupBoxTeamPriceChange.Controls.Add(this.labelTeamPC3);
             this.groupBoxTeamPriceChange.Controls.Add(this.labelTeamPC2);
             this.groupBoxTeamPriceChange.Controls.Add(this.labelTeamPC1);
+            this.groupBoxTeamPriceChange.Enabled = false;
             this.groupBoxTeamPriceChange.Location = new System.Drawing.Point(789, 54);
             this.groupBoxTeamPriceChange.Name = "groupBoxTeamPriceChange";
             this.groupBoxTeamPriceChange.Size = new System.Drawing.Size(124, 271);
@@ -602,6 +605,7 @@
             this.groupBoxTeamPoints.Controls.Add(this.labelTeam3);
             this.groupBoxTeamPoints.Controls.Add(this.labelTeam2);
             this.groupBoxTeamPoints.Controls.Add(this.labelTeam1);
+            this.groupBoxTeamPoints.Enabled = false;
             this.groupBoxTeamPoints.Location = new System.Drawing.Point(691, 54);
             this.groupBoxTeamPoints.Name = "groupBoxTeamPoints";
             this.groupBoxTeamPoints.Size = new System.Drawing.Size(80, 271);
@@ -850,6 +854,7 @@
             this.groupBoxPriceChange.Controls.Add(this.labelDriverPC3);
             this.groupBoxPriceChange.Controls.Add(this.labelDriverPC2);
             this.groupBoxPriceChange.Controls.Add(this.labelDriverPC1);
+            this.groupBoxPriceChange.Enabled = false;
             this.groupBoxPriceChange.Location = new System.Drawing.Point(433, 54);
             this.groupBoxPriceChange.Name = "groupBoxPriceChange";
             this.groupBoxPriceChange.Size = new System.Drawing.Size(116, 516);
@@ -1099,6 +1104,7 @@
             this.groupBoxPoints.Controls.Add(this.labelDriver3);
             this.groupBoxPoints.Controls.Add(this.labelDriver2);
             this.groupBoxPoints.Controls.Add(this.labelDriver1);
+            this.groupBoxPoints.Enabled = false;
             this.groupBoxPoints.Location = new System.Drawing.Point(334, 54);
             this.groupBoxPoints.Name = "groupBoxPoints";
             this.groupBoxPoints.Size = new System.Drawing.Size(80, 516);

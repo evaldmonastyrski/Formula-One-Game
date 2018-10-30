@@ -11,14 +11,17 @@ namespace Formula_One_Game
     class DataDeserializer
     {
         private GameArea GameArea;
+        private SortedSet<Team> tempTeams;
 
         public DataDeserializer(GameArea gameArea)
         {
             GameArea = gameArea;
+            tempTeams = new SortedSet<Team>();
         }
 
         public void InitializeDreamTeamComponents(int gpStageIndex)
         {
+            tempTeams.Clear();
             try
             {
                 using (StreamReader myStreamReader = new StreamReader("..\\..\\MarketData.txt"))
@@ -33,23 +36,21 @@ namespace Formula_One_Game
                         Driver driver = new Driver(lineWords[0], lineWords[1], float.Parse(lineWords[gpStageIndex + 4]));
                         GameArea.AddDriver(driver);
                         Team team = new Team(lineWords[2]);
-
-                        if(!GameArea.Teams.Contains(team))
+                        if (!tempTeams.Contains(team))
                         {
-                            GameArea.AddTeam(team);
+                            tempTeams.Add(team);
                             team.AddDriver(driver);
                         }
                         else
                         {
-                            foreach(Team teamInstance in GameArea.Teams)
+                            foreach (Team teamInstance in tempTeams)
                             {
-                                if(teamInstance.ToString().Equals(team.ToString()))
+                                if (teamInstance.ToString().Equals(team.ToString()))
                                 {
                                     teamInstance.AddDriver(driver);
                                 }
                             }
                         }
-
                         Engine engine = new Engine(lineWords[3]);
                         if(!GameArea.Engines.Contains(engine))
                         {
@@ -66,6 +67,11 @@ namespace Formula_One_Game
                                 }
                             }
                         }
+                    }
+                    foreach (Team teamInstance in tempTeams)
+                    {
+                        teamInstance.SetPrice();
+                        GameArea.AddTeam(teamInstance);
                     }
                 }
             } 
