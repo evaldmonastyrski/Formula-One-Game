@@ -58,7 +58,7 @@ namespace Formula_One_Game
 
         private float calculatePrice()
         {
-            return Driver1.Price + Driver2.Price + Team.Price;
+            return Driver1.Price + Driver2.Price + Team.Price + Engine.Price;
         }
     }
 }

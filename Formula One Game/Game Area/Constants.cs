@@ -12,5 +12,6 @@ namespace Formula_One_Game
         public const int NUMBER_OF_TEAMS = 10;
         public const int NUMBER_OF_ENGINES = 4;
         public const float TEAM_PRICE_RATIO = 0.8F;
+        public const float ENGINE_PRICE_RATIO = 0.2F;
     }
 }
