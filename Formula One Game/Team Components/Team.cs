@@ -8,13 +8,11 @@ namespace Formula_One_Game
 {
     class Team : DreamTeamComponent, IComparable
     {
-        public string Name { get; }
         private List<Driver> drivers;
-        public float Price { get; private set; }
 
         public Team(string name)
+            : base(name)
         {
-            Name = name;
             drivers = new List<Driver>();
         }
 
@@ -26,14 +24,6 @@ namespace Formula_One_Game
         public void AddDriver(Driver driver)
         {
             drivers.Add(driver);
-        }
-
-        public int CompareTo(object obj)
-        {
-            Team team = (Team)obj;
-            int compareByPrice = -Price.CompareTo(team.Price);
-            int compareByName = Name.CompareTo(team.Name);
-            return compareByPrice != 0 ? compareByPrice : compareByName;
         }
 
         public override string ToString()
