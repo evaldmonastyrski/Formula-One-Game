@@ -20,6 +20,7 @@ namespace Formula_One_Game
         public void InitializeDreamTeamComponents(int gpStageIndex)
         {
             List<Team> tempTeams = new List<Team>();
+            List<Engine> tempEngines = new List<Engine>();
             try
             {
                 using (StreamReader myStreamReader = new StreamReader("..\\..\\MarketData.txt"))
@@ -44,26 +45,25 @@ namespace Formula_One_Game
                             team.AddDriver(driver);
                         }
                         Engine engine = new Engine(lineWords[3]);
-                        if(!GameArea.Engines.Contains(engine))
+                        if (tempEngines.Exists(x => x.Name.Equals(engine.Name)))
                         {
-                            GameArea.AddEngine(engine);
-                            engine.AddDriver(driver);
+                            tempEngines.Find(x => x.Name.Contains(engine.Name)).AddDriver(driver);
                         }
                         else
                         {
-                            foreach(Engine engineInstance in GameArea.Engines)
-                            {
-                                if(engineInstance.ToString().Equals(engine.ToString()))
-                                {
-                                    engineInstance.AddDriver(driver);
-                                }
-                            }
+                            tempEngines.Add(engine);
+                            engine.AddDriver(driver);
                         }
                     }
                     foreach (Team teamInstance in tempTeams)
                     {
                         teamInstance.SetPrice();
                         GameArea.AddTeam(teamInstance);
+                    }
+                    foreach (Engine engineInstance in tempEngines)
+                    {
+                        engineInstance.SetPrice();
+                        GameArea.AddEngine(engineInstance);
                     }
                 }
             } 
