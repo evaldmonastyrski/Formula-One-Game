@@ -67,9 +67,6 @@
     <Compile Include="Message Service\AvailableOptions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Simulator\Qualification.cs" />
-    <Compile Include="Simulator\RaceWeekend.cs" />
-    <Compile Include="Simulator\Simulator.cs" />
     <Compile Include="Team Components\DreamTeam.cs" />
     <Compile Include="Team Components\DreamTeamComponent.cs" />
     <Compile Include="Team Components\Driver.cs" />

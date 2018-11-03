@@ -18,7 +18,6 @@ namespace Formula_One_Game
         private DataDeserializer dataDeserializer;
         private Combinator combinator;
         private SortedSet<DreamTeam> availableDreamTeams;
-        private AvailableOptions availableOptions;
 
         public GameArea(Form1 form)
         {
@@ -64,6 +63,13 @@ namespace Formula_One_Game
         public void AddGPStages(string[] gpStages)
         {
             GPStages.AddRange(gpStages);
+        }
+
+        public void UpdatePoints(int driverIndex, int qPosition, int rPosition)
+        {
+            float points = Constants.qualificationPositionToPointsMap[qPosition] + Constants.racePositionToPointsMap[rPosition];
+            Drivers.ElementAt(driverIndex).Points = points;
+            Form.DriverPointsLabels[driverIndex].Text = points != 0 ? points.ToString() : "";
         }
         
         public string GetAvailableOptions()

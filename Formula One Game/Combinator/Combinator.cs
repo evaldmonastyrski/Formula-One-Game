@@ -27,6 +27,7 @@ namespace Formula_One_Game
             SortedSet<DreamTeam> availableDreamTeams = copySet(DreamTeams); 
             foreach (DreamTeam dreamTeam in DreamTeams)
             {
+                dreamTeam.CalculatePoints();
                 if (dreamTeam.Price > budget)
                 {
                     availableDreamTeams.Remove(dreamTeam);

@@ -10,14 +10,16 @@ namespace Formula_One_Game
     class ComboBoxManager
     {
         private Form1 Form;
+        private GameArea GameArea;
         public SortedSet<int> QualificationPositions { get; }
         public SortedSet<int> RacePositions { get; }
         private int[] selectedQualificationPositions;
         private int[] selectedRacePositions;
 
-        public ComboBoxManager(Form1 form)
+        public ComboBoxManager(Form1 form, GameArea gameArea)
         {
             Form = form;
+            GameArea = gameArea;
             QualificationPositions = new SortedSet<int>(Enumerable.Range(1, Constants.NUMBER_OF_DRIVERS));
             selectedQualificationPositions = new int[Constants.NUMBER_OF_DRIVERS];
             RacePositions = new SortedSet<int>(Enumerable.Range(1, Constants.NUMBER_OF_DRIVERS));
@@ -38,6 +40,7 @@ namespace Formula_One_Game
                 positions.Add(cachedPosition);
             }
             selectedPositions[comboBoxIndex] = selectedPosition;
+            GameArea.UpdatePoints(comboBoxIndex, selectedQualificationPositions[comboBoxIndex], selectedRacePositions[comboBoxIndex]);
             positions.Remove(selectedPosition);
             removeDriverComboBoxItems(positions, sessionType);
             uploadDriverComboBoxItems(positions, sessionType);
@@ -58,6 +61,7 @@ namespace Formula_One_Game
                 removeDriverComboBoxItems(positions, sessionType);
                 uploadDriverComboBoxItems(positions, sessionType);
             }
+            GameArea.UpdatePoints(comboBoxIndex, selectedQualificationPositions[comboBoxIndex], selectedRacePositions[comboBoxIndex]);
         }
 
         public void restoreQualificationPositions()
