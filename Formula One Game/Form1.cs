@@ -233,5 +233,17 @@ namespace Formula_One_Game
             buttonPointSort.Enabled = false;
             buttonPriceChangeSort.Enabled = false;
         }
+
+        private void buttonFlushQ_Click(object sender, EventArgs e)
+        {
+            ComboBoxManager.restoreQualificationPositions();
+            disableSortButtons();
+        }
+
+        private void buttonFlushR_Click(object sender, EventArgs e)
+        {
+            ComboBoxManager.restoreRacePositions();
+            disableSortButtons();
+        }
     }
 }

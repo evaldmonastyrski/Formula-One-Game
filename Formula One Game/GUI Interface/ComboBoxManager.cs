@@ -12,23 +12,23 @@ namespace Formula_One_Game
         private Form1 Form;
         public SortedSet<int> QualificationPositions { get; }
         public SortedSet<int> RacePositions { get; }
-        private int[] SelectedQualificationPositions;
-        private int[] SelectedRacePositions;
+        private int[] selectedQualificationPositions;
+        private int[] selectedRacePositions;
 
         public ComboBoxManager(Form1 form)
         {
             Form = form;
             QualificationPositions = new SortedSet<int>(Enumerable.Range(1, Constants.NUMBER_OF_DRIVERS));
-            SelectedQualificationPositions = new int[Constants.NUMBER_OF_DRIVERS];
+            selectedQualificationPositions = new int[Constants.NUMBER_OF_DRIVERS];
             RacePositions = new SortedSet<int>(Enumerable.Range(1, Constants.NUMBER_OF_DRIVERS));
-            SelectedRacePositions = new int[Constants.NUMBER_OF_DRIVERS];
+            selectedRacePositions = new int[Constants.NUMBER_OF_DRIVERS];
             uploadDriverComboBoxItems(QualificationPositions, SessionType.QUALIFICATION);
             uploadDriverComboBoxItems(RacePositions, SessionType.RACE);
         }
 
         public void AvailablePositionListUpdateOnAdding(int comboBoxIndex, int selectedPosition, SessionType sessionType)
         {
-            int[] selectedPositions = SelectedQualificationPositions;
+            int[] selectedPositions = selectedQualificationPositions;
             SortedSet<int> positions = QualificationPositions;
             whichPositions(sessionType, out selectedPositions, out positions);
 
@@ -45,7 +45,7 @@ namespace Formula_One_Game
 
         public void AvailablePositionListUpdateOnRemoving(int comboBoxIndex, int selectedPosition, SessionType sessionType)
         {
-            int[] selectedPositions = SelectedQualificationPositions;
+            int[] selectedPositions = selectedQualificationPositions;
             SortedSet<int> positions = QualificationPositions;
             whichPositions(sessionType, out selectedPositions, out positions);
 
@@ -58,6 +58,34 @@ namespace Formula_One_Game
                 removeDriverComboBoxItems(positions, sessionType);
                 uploadDriverComboBoxItems(positions, sessionType);
             }
+        }
+
+        public void restoreQualificationPositions()
+        {
+            for (int i = 1; i <= Constants.NUMBER_OF_DRIVERS; i++)
+            {
+                if(!QualificationPositions.Contains(i))
+                {
+                    QualificationPositions.Add(i);
+                }
+            }
+            selectedQualificationPositions = new int[Constants.NUMBER_OF_DRIVERS];
+            clearComboBoxes(Form.DriverQualificationComboBoxes);
+            uploadDriverComboBoxItems(QualificationPositions, SessionType.QUALIFICATION);
+        }
+
+        public void restoreRacePositions()
+        {
+            for (int i = 1; i <= Constants.NUMBER_OF_DRIVERS; i++)
+            {
+                if (!RacePositions.Contains(i))
+                {
+                    RacePositions.Add(i);
+                }
+            }
+            selectedRacePositions = new int[Constants.NUMBER_OF_DRIVERS];
+            clearComboBoxes(Form.DriverRaceComboBoxes);
+            uploadDriverComboBoxItems(RacePositions, SessionType.RACE);
         }
 
         private void removeComboBoxSelectedItem(int comboBoxIndex, SessionType sessionType)
@@ -113,11 +141,11 @@ namespace Formula_One_Game
 
         private void whichPositions(SessionType sessionType, out int[] selectedPositions, out SortedSet<int> positions)
         {
-            selectedPositions = SelectedQualificationPositions;
+            selectedPositions = selectedQualificationPositions;
             positions = QualificationPositions;
             if (sessionType == SessionType.RACE)
             {
-                selectedPositions = SelectedRacePositions;
+                selectedPositions = selectedRacePositions;
                 positions = RacePositions;
             }
         }
@@ -130,6 +158,14 @@ namespace Formula_One_Game
                 driverComboBoxes = Form.DriverRaceComboBoxes;
             }
             return driverComboBoxes;
+        }
+
+        private void clearComboBoxes(ComboBox[] comboBoxes)
+        {
+            foreach (ComboBox comboBox in comboBoxes)
+            {
+                comboBox.Items.Clear();
+            }
         }
     }
 }
