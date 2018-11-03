@@ -280,23 +280,23 @@
             // 
             // buttonFlushR
             // 
-            this.buttonFlushR.Enabled = false;
             this.buttonFlushR.Location = new System.Drawing.Point(236, 583);
             this.buttonFlushR.Name = "buttonFlushR";
             this.buttonFlushR.Size = new System.Drawing.Size(80, 23);
             this.buttonFlushR.TabIndex = 15;
             this.buttonFlushR.Text = "Flush R";
             this.buttonFlushR.UseVisualStyleBackColor = true;
+            this.buttonFlushR.Click += new System.EventHandler(this.buttonFlushR_Click);
             // 
             // buttonFlushQ
             // 
-            this.buttonFlushQ.Enabled = false;
             this.buttonFlushQ.Location = new System.Drawing.Point(137, 583);
             this.buttonFlushQ.Name = "buttonFlushQ";
             this.buttonFlushQ.Size = new System.Drawing.Size(80, 23);
             this.buttonFlushQ.TabIndex = 14;
             this.buttonFlushQ.Text = "Flush Q";
             this.buttonFlushQ.UseVisualStyleBackColor = true;
+            this.buttonFlushQ.Click += new System.EventHandler(this.buttonFlushQ_Click);
             // 
             // groupBoxEnginesPriceChange
             // 
