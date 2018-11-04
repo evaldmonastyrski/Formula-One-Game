@@ -13,6 +13,7 @@ namespace Formula_One_Game
         private Team Team;
         private Engine Engine;
         public float Price { get; }
+        public float Points { get; private set; }
 
         public DreamTeam(Driver driver1, Driver driver2, Team team, Engine engine)
         {
@@ -41,6 +42,11 @@ namespace Formula_One_Game
         public string GetEngineName()
         {
             return Engine.Name;
+        }
+
+        public void CalculatePoints()
+        {
+            Points = Driver1.Points + Driver2.Points + Team.Points + Engine.Points;
         }
 
         public int CompareTo(object obj)

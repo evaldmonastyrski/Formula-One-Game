@@ -1104,7 +1104,6 @@
             this.groupBoxPoints.Controls.Add(this.labelDriver3);
             this.groupBoxPoints.Controls.Add(this.labelDriver2);
             this.groupBoxPoints.Controls.Add(this.labelDriver1);
-            this.groupBoxPoints.Enabled = false;
             this.groupBoxPoints.Location = new System.Drawing.Point(334, 54);
             this.groupBoxPoints.Name = "groupBoxPoints";
             this.groupBoxPoints.Size = new System.Drawing.Size(80, 516);

@@ -10,6 +10,7 @@ namespace Formula_One_Game
     {
         public string Name { get; }
         public float Price { get; protected set; }
+        public float Points { get; set; }
 
         public DreamTeamComponent(string name, float price)
         {
