@@ -248,6 +248,7 @@ namespace Formula_One_Game
             disableSortButtons();
             GameArea.initializeStageDependentGameAreaComponents(comboBoxGPRace.SelectedIndex);
             resetDriverPointsLabels();
+            resetEnginePointsLabels();
             ComboBoxManager.restoreQualificationPositions();
             ComboBoxManager.restoreRacePositions();
         }
@@ -290,6 +291,14 @@ namespace Formula_One_Game
         private void resetDriverPointsLabels()
         {
             foreach (Label label in DriverPointsLabels)
+            {
+                label.Text = "";
+            }
+        }
+
+        private void resetEnginePointsLabels()
+        {
+            foreach (Label label in EnginePointsLabels)
             {
                 label.Text = "";
             }
