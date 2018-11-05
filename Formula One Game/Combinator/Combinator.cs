@@ -24,7 +24,7 @@ namespace Formula_One_Game
 
         public SortedSet<DreamTeam> getAvailableDreamTeams(float budget)
         {
-            SortedSet<DreamTeam> availableDreamTeams = copySet(DreamTeams); 
+            SortedSet<DreamTeam> availableDreamTeams = copySet(DreamTeams);
             foreach (DreamTeam dreamTeam in DreamTeams)
             {
                 dreamTeam.CalculatePoints();
