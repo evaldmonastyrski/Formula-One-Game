@@ -8,11 +8,12 @@ namespace Formula_One_Game
 {
     class AvailableOptions
     {
-        public static string CreateOptionsMessage(SortedSet<DreamTeam> dreamTeams)
+        public static string CreateOptionsMessage(List<DreamTeam> dreamTeams)
         {
             int lineNumber = 1;
-            string message = "";
-
+            string message = "No.     Name           Surname       Team          Engine        Price         Points \r\n";
+            message += "------------------------------------------------------------------------------------- \r\n";
+            dreamTeams = dreamTeams.OrderByDescending(i => i.Points).ToList();
             foreach (DreamTeam dreamTeamMember in dreamTeams)
             {
                 message += String.Format(

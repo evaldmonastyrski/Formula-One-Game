@@ -22,9 +22,9 @@ namespace Formula_One_Game
             CombineAll();
         }
 
-        public SortedSet<DreamTeam> getAvailableDreamTeams(float budget)
+        public List<DreamTeam> getAvailableDreamTeams(float budget)
         {
-            SortedSet<DreamTeam> availableDreamTeams = copySet(DreamTeams);
+            List<DreamTeam> availableDreamTeams = copySet(DreamTeams);
             foreach (DreamTeam dreamTeam in DreamTeams)
             {
                 dreamTeam.CalculatePoints();
@@ -56,15 +56,14 @@ namespace Formula_One_Game
             }
         }
 
-        private SortedSet<DreamTeam> copySet(SortedSet<DreamTeam> copyFrom)
+        private List<DreamTeam> copySet(SortedSet<DreamTeam> copyFrom)
         {
-            SortedSet<DreamTeam> copyTo = new SortedSet<DreamTeam>();
+            List<DreamTeam> copyTo = new List<DreamTeam>();
             foreach (DreamTeam dreamTeamMember in copyFrom)
             {
                 copyTo.Add(dreamTeamMember);
             }
             return copyTo;
         }
-
     }
 }
