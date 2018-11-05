@@ -18,6 +18,7 @@ namespace Formula_One_Game
         public ComboBox[] DriverQualificationComboBoxes { get; }
         public ComboBox[] DriverRaceComboBoxes { get; }
         public Label[] DriverPointsLabels { get; }
+        public Label[] EnginePointsLabels { get; }
         private GameArea GameArea;
         private ComboBoxManager ComboBoxManager;
         
@@ -30,12 +31,14 @@ namespace Formula_One_Game
             DriverQualificationComboBoxes = new ComboBox[Constants.NUMBER_OF_DRIVERS];
             DriverRaceComboBoxes = new ComboBox[Constants.NUMBER_OF_DRIVERS];
             DriverPointsLabels = new Label[Constants.NUMBER_OF_DRIVERS];
-            FillDriverLabels();
-            FillDriverQualificationComboBoxes();
-            FillDriverRaceComboBoxes();
-            FillDriverPointsLabels();
-            FillTeamLabels();
-            FillEngineLabels();
+            EnginePointsLabels = new Label[Constants.NUMBER_OF_ENGINES];
+            fillDriverLabels();
+            fillDriverQualificationComboBoxes();
+            fillDriverRaceComboBoxes();
+            fillDriverPointsLabels();
+            fillTeamLabels();
+            fillEngineLabels();
+            fillEnginePointsLabels();
             GameArea = new GameArea(this);
             ComboBoxManager = new ComboBoxManager(this, GameArea);
             comboBoxGPRace.SelectedIndex = comboBoxGPRace.Items.Count - 1;
@@ -49,7 +52,7 @@ namespace Formula_One_Game
             }
         }
 
-        private void FillDriverLabels()
+        private void fillDriverLabels()
         {
             DriverLabels[0] = this.label1;
             DriverLabels[1] = this.label2;
@@ -73,7 +76,7 @@ namespace Formula_One_Game
             DriverLabels[19] = this.label20;
         }
 
-        private void FillDriverQualificationComboBoxes()
+        private void fillDriverQualificationComboBoxes()
         {
             DriverQualificationComboBoxes[0] = this.comboBox1;
             DriverQualificationComboBoxes[1] = this.comboBox2;
@@ -97,7 +100,7 @@ namespace Formula_One_Game
             DriverQualificationComboBoxes[19] = this.comboBox20;
         }
 
-        private void FillDriverRaceComboBoxes()
+        private void fillDriverRaceComboBoxes()
         {
             DriverRaceComboBoxes[0] = this.comboBox21;
             DriverRaceComboBoxes[1] = this.comboBox22;
@@ -121,7 +124,7 @@ namespace Formula_One_Game
             DriverRaceComboBoxes[19] = this.comboBox40;
         }
 
-        private void FillDriverPointsLabels()
+        private void fillDriverPointsLabels()
         {
             DriverPointsLabels[0] = this.labelDriver1;
             DriverPointsLabels[1] = this.labelDriver2;
@@ -145,7 +148,7 @@ namespace Formula_One_Game
             DriverPointsLabels[19] = this.labelDriver20;
         }
 
-        private void FillTeamLabels()
+        private void fillTeamLabels()
         {
             TeamLabels[0] = this.label21;
             TeamLabels[1] = this.label22;
@@ -158,7 +161,16 @@ namespace Formula_One_Game
             TeamLabels[8] = this.label29;
             TeamLabels[9] = this.label30;
         }
-        private void FillEngineLabels()
+
+        private void fillEnginePointsLabels()
+        {
+            EnginePointsLabels[0] = this.labelEngine1;
+            EnginePointsLabels[1] = this.labelEngine2;
+            EnginePointsLabels[2] = this.labelEngine3;
+            EnginePointsLabels[3] = this.labelEngine4;
+        }
+
+        private void fillEngineLabels()
         {
             EngineLabels[0] = this.label31;
             EngineLabels[1] = this.label32;

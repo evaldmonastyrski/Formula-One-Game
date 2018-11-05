@@ -362,7 +362,6 @@
             this.groupBoxEnginesPoints.Controls.Add(this.labelEngine3);
             this.groupBoxEnginesPoints.Controls.Add(this.labelEngine2);
             this.groupBoxEnginesPoints.Controls.Add(this.labelEngine1);
-            this.groupBoxEnginesPoints.Enabled = false;
             this.groupBoxEnginesPoints.Location = new System.Drawing.Point(691, 402);
             this.groupBoxEnginesPoints.Name = "groupBoxEnginesPoints";
             this.groupBoxEnginesPoints.Size = new System.Drawing.Size(80, 126);

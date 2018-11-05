@@ -70,6 +70,12 @@ namespace Formula_One_Game
             float points = Constants.qualificationPositionToPointsMap[qPosition] + Constants.racePositionToPointsMap[rPosition];
             Drivers.ElementAt(driverIndex).Points = points;
             Form.DriverPointsLabels[driverIndex].Text = points != 0 ? points.ToString() : "";
+            for (int i = 0; i < Constants.NUMBER_OF_ENGINES; i++)
+            {
+                Engine engine = Engines.ElementAt(i);
+                engine.UpdatePoints();
+                Form.EnginePointsLabels[i].Text = engine.Points != 0 ? engine.Points.ToString() : "";
+            }
         }
         
         public string GetAvailableOptions()
