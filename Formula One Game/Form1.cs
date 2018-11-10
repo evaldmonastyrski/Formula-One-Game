@@ -252,7 +252,13 @@ namespace Formula_One_Game
        
         private void buttonPointSort_Click(object sender, EventArgs e)
         {
-            DreamTeamOptionWindow dreamTeamOptionWindow = new DreamTeamOptionWindow(GameArea.GetAvailableOptions());
+            DreamTeamOptionWindow dreamTeamOptionWindow = new DreamTeamOptionWindow(GameArea.GetAvailableOptions(SortType.POINTS));
+            dreamTeamOptionWindow.Show();
+        }
+
+        private void buttonPriceChangeSort_Click(object sender, EventArgs e)
+        {
+            DreamTeamOptionWindow dreamTeamOptionWindow = new DreamTeamOptionWindow(GameArea.GetAvailableOptions(SortType.PRICE_CHANGE));
             dreamTeamOptionWindow.Show();
         }
 

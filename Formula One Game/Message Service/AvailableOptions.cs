@@ -13,7 +13,6 @@ namespace Formula_One_Game
             int lineNumber = 1;
             string message = "No.     Name           Surname       Team          Engine        Price         Points        Price Change \r\n";
             message += "--------------------------------------------------------------------------------------------------------- \r\n";
-            dreamTeams = dreamTeams.OrderByDescending(i => i.Points).ToList();
             foreach (DreamTeam dreamTeamMember in dreamTeams)
             {
                 message += String.Format(

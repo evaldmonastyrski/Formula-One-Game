@@ -266,6 +266,7 @@
             this.buttonPriceChangeSort.TabIndex = 17;
             this.buttonPriceChangeSort.Text = "Price Change Sort";
             this.buttonPriceChangeSort.UseVisualStyleBackColor = true;
+            this.buttonPriceChangeSort.Click += new System.EventHandler(this.buttonPriceChangeSort_Click);
             // 
             // buttonPointSort
             // 
@@ -304,7 +305,6 @@
             this.groupBoxEnginesPriceChange.Controls.Add(this.labelEnginePC3);
             this.groupBoxEnginesPriceChange.Controls.Add(this.labelEnginePC2);
             this.groupBoxEnginesPriceChange.Controls.Add(this.labelEnginePC1);
-            this.groupBoxEnginesPriceChange.Enabled = false;
             this.groupBoxEnginesPriceChange.Location = new System.Drawing.Point(789, 402);
             this.groupBoxEnginesPriceChange.Name = "groupBoxEnginesPriceChange";
             this.groupBoxEnginesPriceChange.Size = new System.Drawing.Size(124, 126);
@@ -474,7 +474,6 @@
             this.groupBoxTeamPriceChange.Controls.Add(this.labelTeamPC3);
             this.groupBoxTeamPriceChange.Controls.Add(this.labelTeamPC2);
             this.groupBoxTeamPriceChange.Controls.Add(this.labelTeamPC1);
-            this.groupBoxTeamPriceChange.Enabled = false;
             this.groupBoxTeamPriceChange.Location = new System.Drawing.Point(789, 54);
             this.groupBoxTeamPriceChange.Name = "groupBoxTeamPriceChange";
             this.groupBoxTeamPriceChange.Size = new System.Drawing.Size(124, 271);

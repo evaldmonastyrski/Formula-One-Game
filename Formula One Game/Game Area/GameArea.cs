@@ -44,7 +44,6 @@ namespace Formula_One_Game
         {
             availableDreamTeams.Clear();
             availableDreamTeams = combinator.getAvailableDreamTeams(budget);
-            availableDreamTeams = availableDreamTeams.OrderBy(i => i.Points).ToList();
         }
 
         public void AddDriver(Driver driver)
@@ -125,8 +124,16 @@ namespace Formula_One_Game
             }
         }
         
-        public string GetAvailableOptions()
+        public string GetAvailableOptions(SortType sortType)
         {
+            if (sortType == SortType.POINTS)
+            {
+                availableDreamTeams = availableDreamTeams.OrderByDescending(i => i.Points).ToList();
+            }
+            if (sortType == SortType.PRICE_CHANGE)
+            {
+                availableDreamTeams = availableDreamTeams.OrderByDescending(i => i.PriceChange).ToList();
+            }
             return AvailableOptions.CreateOptionsMessage(availableDreamTeams);
         }
 
