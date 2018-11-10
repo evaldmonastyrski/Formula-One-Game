@@ -26,13 +26,13 @@ namespace Formula_One_Game
 
         public float Points
         {
-            get { return RoundFloat.round(points); }
+            get { return RoundFloat.roundTo2(points); }
             set { this.points = value; }
         }
 
         public float PriceChange
         {
-            get { return RoundFloat.round(priceChange); }
+            get { return RoundFloat.roundTo2(priceChange); }
             set { this.priceChange = value; }
         }
 

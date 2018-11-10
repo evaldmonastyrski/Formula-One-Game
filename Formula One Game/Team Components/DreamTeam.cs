@@ -50,9 +50,9 @@ namespace Formula_One_Game
             Points = Driver1.Points + Driver2.Points + Team.Points + Engine.Points;
         }
 
-        public void CalculatePriceChange()
+        public void CalculatePriceChange(float budget)
         {
-            PriceChange = Driver1.PriceChange + Driver2.PriceChange + Team.PriceChange + Engine.PriceChange;
+            PriceChange = Driver1.PriceChange + Driver2.PriceChange + Team.PriceChange + Engine.PriceChange + 0.1F * (budget - Price);
         }
 
         public int CompareTo(object obj)
