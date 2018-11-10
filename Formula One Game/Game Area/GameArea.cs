@@ -69,11 +69,14 @@ namespace Formula_One_Game
         public void UpdateDreamTeamComponents(int driverIndex, int qPosition, int rPosition)
         {
             float points = Constants.qualificationPositionToPointsMap[qPosition] + Constants.racePositionToPointsMap[rPosition];
-            float priceChange = Constants.PRICING_PRICE_COEFFICIENT * Drivers.ElementAt(driverIndex).Price + Constants.PRICING_POINTS_COEFFICIENT * points - Drivers.ElementAt(driverIndex).Price;
+            float newPrice = Constants.PRICING_PRICE_COEFFICIENT * Drivers.ElementAt(driverIndex).Price + Constants.PRICING_POINTS_COEFFICIENT * points;
+            newPrice = newPrice >= 0.5 ? newPrice : 0.5F;
+            float priceChange = newPrice - Drivers.ElementAt(driverIndex).Price;
+            priceChange = RoundFloat.round(priceChange);
             Drivers.ElementAt(driverIndex).Points = points;
             Drivers.ElementAt(driverIndex).PriceChange = priceChange;
             Form.DriverPointsLabels[driverIndex].Text = points != 0 ? points.ToString() : "";
-            Form.DriverPriceChangeLabels[driverIndex].Text = RoundFloat.round(priceChange).ToString();
+            Form.DriverPriceChangeLabels[driverIndex].Text = priceChange.ToString();
             Form.ColorLabels(Form.DriverPriceChangeLabels[driverIndex], priceChange);
 
             for (int i = 0; i < Constants.NUMBER_OF_TEAMS; i++)
@@ -82,7 +85,7 @@ namespace Formula_One_Game
                 team.UpdatePoints();
                 team.UpdatePriceChange();
                 Form.TeamPointsLabels[i].Text = team.Points != 0 ? team.Points.ToString() : "";
-                Form.TeamPriceChangeLabels[i].Text = RoundFloat.round(team.PriceChange).ToString();
+                Form.TeamPriceChangeLabels[i].Text = team.PriceChange.ToString();
                 Form.ColorLabels(Form.TeamPriceChangeLabels[i], team.PriceChange);
             }
             for (int i = 0; i < Constants.NUMBER_OF_ENGINES; i++)
@@ -91,7 +94,7 @@ namespace Formula_One_Game
                 engine.UpdatePoints();
                 engine.UpdatePriceChange();
                 Form.EnginePointsLabels[i].Text = engine.Points != 0 ? engine.Points.ToString() : "";
-                Form.EnginePriceChangeLabels[i].Text = RoundFloat.round(engine.PriceChange).ToString();
+                Form.EnginePriceChangeLabels[i].Text = engine.PriceChange.ToString();
                 Form.ColorLabels(Form.EnginePriceChangeLabels[i], engine.PriceChange);
             }
         }
@@ -101,26 +104,27 @@ namespace Formula_One_Game
             for (int i = 0; i < Constants.NUMBER_OF_DRIVERS; i++)
             {
                 Driver driver = Drivers.ElementAt(i);
-                float initialPriceChange = (Constants.PRICING_PRICE_COEFFICIENT - 1) * driver.Price;
+                float initialNewPrice = Constants.PRICING_PRICE_COEFFICIENT * driver.Price;
+                initialNewPrice = initialNewPrice >= 0.5 ? initialNewPrice : 0.5F;
+                float initialPriceChange = initialNewPrice - driver.Price;
+                initialPriceChange = RoundFloat.round(initialPriceChange);
                 Drivers.ElementAt(i).PriceChange = initialPriceChange;
-                Form.DriverPriceChangeLabels[i].Text = RoundFloat.round(initialPriceChange).ToString();
+                Form.DriverPriceChangeLabels[i].Text = initialPriceChange.ToString();
                 Form.ColorLabels(Form.DriverPriceChangeLabels[i], initialPriceChange);
             }
             for (int i = 0; i < Constants.NUMBER_OF_TEAMS; i++)
             {
                 Team team = Teams.ElementAt(i);
-                float initialPriceChange = (Constants.PRICING_PRICE_COEFFICIENT - 1) * team.Price;
-                Teams.ElementAt(i).PriceChange = initialPriceChange;
-                Form.TeamPriceChangeLabels[i].Text = RoundFloat.round(initialPriceChange).ToString();
-                Form.ColorLabels(Form.TeamPriceChangeLabels[i], initialPriceChange);
+                team.UpdatePriceChange();
+                Form.TeamPriceChangeLabels[i].Text = team.PriceChange.ToString();
+                Form.ColorLabels(Form.TeamPriceChangeLabels[i], team.PriceChange);
             }
             for (int i = 0; i < Constants.NUMBER_OF_ENGINES; i++)
             {
                 Engine engine = Engines.ElementAt(i);
-                float initialPriceChange = (Constants.PRICING_PRICE_COEFFICIENT - 1) * engine.Price;
-                Engines.ElementAt(i).PriceChange = initialPriceChange;
-                Form.EnginePriceChangeLabels[i].Text = RoundFloat.round(initialPriceChange).ToString();
-                Form.ColorLabels(Form.EnginePriceChangeLabels[i], initialPriceChange);
+                engine.UpdatePriceChange();
+                Form.EnginePriceChangeLabels[i].Text = engine.PriceChange.ToString();
+                Form.ColorLabels(Form.EnginePriceChangeLabels[i], engine.PriceChange);
             }
         }
         

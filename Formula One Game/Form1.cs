@@ -403,7 +403,7 @@ namespace Formula_One_Game
                 label.BackColor = Color.SpringGreen;
                 label.ForeColor = Color.Black;
             }
-            else if (priceChange > 0F)
+            else if (priceChange >= 0F)
             {
                 label.BackColor = Color.PaleGreen;
                 label.ForeColor = Color.Black;
