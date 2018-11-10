@@ -604,7 +604,6 @@
             this.groupBoxTeamPoints.Controls.Add(this.labelTeam3);
             this.groupBoxTeamPoints.Controls.Add(this.labelTeam2);
             this.groupBoxTeamPoints.Controls.Add(this.labelTeam1);
-            this.groupBoxTeamPoints.Enabled = false;
             this.groupBoxTeamPoints.Location = new System.Drawing.Point(691, 54);
             this.groupBoxTeamPoints.Name = "groupBoxTeamPoints";
             this.groupBoxTeamPoints.Size = new System.Drawing.Size(80, 271);

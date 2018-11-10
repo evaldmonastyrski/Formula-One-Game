@@ -18,6 +18,7 @@ namespace Formula_One_Game
         public ComboBox[] DriverQualificationComboBoxes { get; }
         public ComboBox[] DriverRaceComboBoxes { get; }
         public Label[] DriverPointsLabels { get; }
+        public Label[] TeamPointsLabels { get; }
         public Label[] EnginePointsLabels { get; }
         private GameArea GameArea;
         private ComboBoxManager ComboBoxManager;
@@ -31,6 +32,7 @@ namespace Formula_One_Game
             DriverQualificationComboBoxes = new ComboBox[Constants.NUMBER_OF_DRIVERS];
             DriverRaceComboBoxes = new ComboBox[Constants.NUMBER_OF_DRIVERS];
             DriverPointsLabels = new Label[Constants.NUMBER_OF_DRIVERS];
+            TeamPointsLabels = new Label[Constants.NUMBER_OF_TEAMS];
             EnginePointsLabels = new Label[Constants.NUMBER_OF_ENGINES];
             fillDriverLabels();
             fillDriverQualificationComboBoxes();
@@ -38,6 +40,7 @@ namespace Formula_One_Game
             fillDriverPointsLabels();
             fillTeamLabels();
             fillEngineLabels();
+            fillTeamPointsLabels();
             fillEnginePointsLabels();
             GameArea = new GameArea(this);
             ComboBoxManager = new ComboBoxManager(this, GameArea);
@@ -162,6 +165,20 @@ namespace Formula_One_Game
             TeamLabels[9] = this.label30;
         }
 
+        private void fillTeamPointsLabels()
+        {
+            TeamPointsLabels[0] = this.labelTeam1;
+            TeamPointsLabels[1] = this.labelTeam2;
+            TeamPointsLabels[2] = this.labelTeam3;
+            TeamPointsLabels[3] = this.labelTeam4;
+            TeamPointsLabels[4] = this.labelTeam5;
+            TeamPointsLabels[5] = this.labelTeam6;
+            TeamPointsLabels[6] = this.labelTeam7;
+            TeamPointsLabels[7] = this.labelTeam8;
+            TeamPointsLabels[8] = this.labelTeam9;
+            TeamPointsLabels[9] = this.labelTeam10;
+        }
+
         private void fillEnginePointsLabels()
         {
             EnginePointsLabels[0] = this.labelEngine1;
@@ -246,8 +263,9 @@ namespace Formula_One_Game
         private void comboBoxGPRace_SelectedIndexChanged(object sender, EventArgs e)
         {
             disableSortButtons();
-            GameArea.initializeStageDependentGameAreaComponents(comboBoxGPRace.SelectedIndex);
+            GameArea.InitializeStageDependentGameAreaComponents(comboBoxGPRace.SelectedIndex);
             resetDriverPointsLabels();
+            resetTeamPointsLabels();
             resetEnginePointsLabels();
             ComboBoxManager.restoreQualificationPositions();
             ComboBoxManager.restoreRacePositions();
@@ -291,6 +309,14 @@ namespace Formula_One_Game
         private void resetDriverPointsLabels()
         {
             foreach (Label label in DriverPointsLabels)
+            {
+                label.Text = "";
+            }
+        }
+
+        private void resetTeamPointsLabels()
+        {
+            foreach (Label label in TeamPointsLabels)
             {
                 label.Text = "";
             }

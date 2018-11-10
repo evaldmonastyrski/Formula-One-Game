@@ -24,11 +24,11 @@ namespace Formula_One_Game
             Form = form;
             dataDeserializer = new DataDeserializer(this);
             GPStages = new List<string>();
-            initializeStageDependentGameAreaComponents(INITIAL_GP_STAGE_INDEX);
+            InitializeStageDependentGameAreaComponents(INITIAL_GP_STAGE_INDEX);
             initializeGPStages();
         }
 
-        public void initializeStageDependentGameAreaComponents(int gpStageIndex)
+        public void InitializeStageDependentGameAreaComponents(int gpStageIndex)
         {
             Drivers = new SortedSet<Driver>();
             Teams = new SortedSet<Team>();
@@ -71,6 +71,12 @@ namespace Formula_One_Game
             float points = Constants.qualificationPositionToPointsMap[qPosition] + Constants.racePositionToPointsMap[rPosition];
             Drivers.ElementAt(driverIndex).Points = points;
             Form.DriverPointsLabels[driverIndex].Text = points != 0 ? points.ToString() : "";
+            for (int i = 0; i < Constants.NUMBER_OF_TEAMS; i++)
+            {
+                Team team = Teams.ElementAt(i);
+                team.UpdatePoints();
+                Form.TeamPointsLabels[i].Text = team.Points != 0 ? team.Points.ToString() : "";
+            }
             for (int i = 0; i < Constants.NUMBER_OF_ENGINES; i++)
             {
                 Engine engine = Engines.ElementAt(i);
