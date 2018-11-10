@@ -20,6 +20,9 @@ namespace Formula_One_Game
         public Label[] DriverPointsLabels { get; }
         public Label[] TeamPointsLabels { get; }
         public Label[] EnginePointsLabels { get; }
+        public Label[] DriverPriceChangeLabels { get; }
+        public Label[] TeamPriceChangeLabels { get; }
+        public Label[] EnginePriceChangeLabels { get; }
         private GameArea GameArea;
         private ComboBoxManager ComboBoxManager;
         
@@ -34,14 +37,20 @@ namespace Formula_One_Game
             DriverPointsLabels = new Label[Constants.NUMBER_OF_DRIVERS];
             TeamPointsLabels = new Label[Constants.NUMBER_OF_TEAMS];
             EnginePointsLabels = new Label[Constants.NUMBER_OF_ENGINES];
-            fillDriverLabels();
+            DriverPriceChangeLabels = new Label[Constants.NUMBER_OF_DRIVERS];
+            TeamPriceChangeLabels = new Label[Constants.NUMBER_OF_TEAMS];
+            EnginePriceChangeLabels = new Label[Constants.NUMBER_OF_ENGINES];
             fillDriverQualificationComboBoxes();
             fillDriverRaceComboBoxes();
-            fillDriverPointsLabels();
+            fillDriverLabels();
             fillTeamLabels();
             fillEngineLabels();
+            fillDriverPointsLabels();
             fillTeamPointsLabels();
             fillEnginePointsLabels();
+            fillDriverPriceChangeLabels();
+            fillTeamPriceChangeLabels();
+            fillEnginePriceChangeLabels();
             GameArea = new GameArea(this);
             ComboBoxManager = new ComboBoxManager(this, GameArea);
             comboBoxGPRace.SelectedIndex = comboBoxGPRace.Items.Count - 1;
@@ -195,6 +204,52 @@ namespace Formula_One_Game
             EngineLabels[3] = this.label34;
         }
 
+        private void fillDriverPriceChangeLabels()
+        {
+            DriverPriceChangeLabels[0] = this.labelDriverPC1;
+            DriverPriceChangeLabels[1] = this.labelDriverPC2;
+            DriverPriceChangeLabels[2] = this.labelDriverPC3;
+            DriverPriceChangeLabels[3] = this.labelDriverPC4;
+            DriverPriceChangeLabels[4] = this.labelDriverPC5;
+            DriverPriceChangeLabels[5] = this.labelDriverPC6;
+            DriverPriceChangeLabels[6] = this.labelDriverPC7;
+            DriverPriceChangeLabels[7] = this.labelDriverPC8;
+            DriverPriceChangeLabels[8] = this.labelDriverPC9;
+            DriverPriceChangeLabels[9] = this.labelDriverPC10;
+            DriverPriceChangeLabels[10] = this.labelDriverPC11;
+            DriverPriceChangeLabels[11] = this.labelDriverPC12;
+            DriverPriceChangeLabels[12] = this.labelDriverPC13;
+            DriverPriceChangeLabels[13] = this.labelDriverPC14;
+            DriverPriceChangeLabels[14] = this.labelDriverPC15;
+            DriverPriceChangeLabels[15] = this.labelDriverPC16;
+            DriverPriceChangeLabels[16] = this.labelDriverPC17;
+            DriverPriceChangeLabels[17] = this.labelDriverPC18;
+            DriverPriceChangeLabels[18] = this.labelDriverPC19;
+            DriverPriceChangeLabels[19] = this.labelDriverPC20;
+        }
+
+        private void fillTeamPriceChangeLabels()
+        {
+            TeamPriceChangeLabels[0] = this.labelTeamPC1;
+            TeamPriceChangeLabels[1] = this.labelTeamPC2;
+            TeamPriceChangeLabels[2] = this.labelTeamPC3;
+            TeamPriceChangeLabels[3] = this.labelTeamPC4;
+            TeamPriceChangeLabels[4] = this.labelTeamPC5;
+            TeamPriceChangeLabels[5] = this.labelTeamPC6;
+            TeamPriceChangeLabels[6] = this.labelTeamPC7;
+            TeamPriceChangeLabels[7] = this.labelTeamPC8;
+            TeamPriceChangeLabels[8] = this.labelTeamPC9;
+            TeamPriceChangeLabels[9] = this.labelTeamPC10;
+        }
+
+        private void fillEnginePriceChangeLabels()
+        {
+            EnginePriceChangeLabels[0] = this.labelEnginePC1;
+            EnginePriceChangeLabels[1] = this.labelEnginePC2;
+            EnginePriceChangeLabels[2] = this.labelEnginePC3;
+            EnginePriceChangeLabels[3] = this.labelEnginePC4;
+        }
+       
         private void buttonPointSort_Click(object sender, EventArgs e)
         {
             DreamTeamOptionWindow dreamTeamOptionWindow = new DreamTeamOptionWindow(GameArea.GetAvailableOptions());
