@@ -360,12 +360,20 @@ namespace Formula_One_Game
         private void buttonFlushQ_Click(object sender, EventArgs e)
         {
             ComboBoxManager.restoreQualificationPositions();
+            for(int i = 0; i < Constants.NUMBER_OF_DRIVERS; i++)
+            {
+                ComboBoxManager.AvailablePositionListUpdateOnRemoving(i, 0, SessionType.QUALIFICATION);
+            }
             disableSortButtons();
         }
 
         private void buttonFlushR_Click(object sender, EventArgs e)
         {
             ComboBoxManager.restoreRacePositions();
+            for (int i = 0; i < Constants.NUMBER_OF_DRIVERS; i++)
+            {
+                ComboBoxManager.AvailablePositionListUpdateOnRemoving(i, 0, SessionType.RACE);
+            }
             disableSortButtons();
         }
 
