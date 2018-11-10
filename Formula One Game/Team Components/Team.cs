@@ -31,6 +31,11 @@ namespace Formula_One_Game
             Points = Constants.TEAM_PRICE_RATIO * drivers.Sum(Driver => Driver.Points);
         }
 
+        public void UpdatePriceChange()
+        {
+            PriceChange = Constants.TEAM_PRICE_RATIO * drivers.Sum(Driver => Driver.PriceChange);
+        }
+
         public override string ToString()
         {
             return Name.Replace("_", " ");
