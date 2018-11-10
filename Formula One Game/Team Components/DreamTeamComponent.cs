@@ -10,7 +10,8 @@ namespace Formula_One_Game
     {
         public string Name { get; }
         public float Price { get; protected set; }
-        public float Points { get; set; }
+        private float points;
+        public float priceChange;
 
         public DreamTeamComponent(string name, float price)
         {
@@ -21,6 +22,18 @@ namespace Formula_One_Game
         public DreamTeamComponent(string name)
         {
             Name = name;
+        }
+
+        public float Points
+        {
+            get { return RoundFloat.round(points); }
+            set { this.points = value; }
+        }
+
+        public float PriceChange
+        {
+            get { return RoundFloat.round(priceChange); }
+            set { this.priceChange = value; }
         }
 
         public int CompareTo(object obj)

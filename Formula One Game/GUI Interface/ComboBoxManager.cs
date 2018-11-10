@@ -40,7 +40,7 @@ namespace Formula_One_Game
                 positions.Add(cachedPosition);
             }
             selectedPositions[comboBoxIndex] = selectedPosition;
-            GameArea.UpdatePoints(comboBoxIndex, selectedQualificationPositions[comboBoxIndex], selectedRacePositions[comboBoxIndex]);
+            GameArea.UpdateDreamTeamComponents(comboBoxIndex, selectedQualificationPositions[comboBoxIndex], selectedRacePositions[comboBoxIndex]);
             positions.Remove(selectedPosition);
             removeDriverComboBoxItems(positions, sessionType);
             uploadDriverComboBoxItems(positions, sessionType);
@@ -61,7 +61,7 @@ namespace Formula_One_Game
                 removeDriverComboBoxItems(positions, sessionType);
                 uploadDriverComboBoxItems(positions, sessionType);
             }
-            GameArea.UpdatePoints(comboBoxIndex, selectedQualificationPositions[comboBoxIndex], selectedRacePositions[comboBoxIndex]);
+            GameArea.UpdateDreamTeamComponents(comboBoxIndex, selectedQualificationPositions[comboBoxIndex], selectedRacePositions[comboBoxIndex]);
         }
 
         public void restoreQualificationPositions()

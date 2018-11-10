@@ -384,5 +384,39 @@ namespace Formula_One_Game
                 label.Text = "";
             }
         }
+
+        public void ColorLabels(Label label, float priceChange)
+        {
+            if (priceChange > 1.5F)
+            {
+                label.BackColor = Color.Chartreuse;
+                label.ForeColor = Color.Black;
+            }
+            else if (priceChange > 0.5F)
+            {
+                label.BackColor = Color.SpringGreen;
+                label.ForeColor = Color.Black;
+            }
+            else if (priceChange > 0F)
+            {
+                label.BackColor = Color.PaleGreen;
+                label.ForeColor = Color.Black;
+            }
+            else if (priceChange > -0.5F)
+            {
+                label.BackColor = Color.Yellow;
+                label.ForeColor = Color.Black;
+            }
+            else if (priceChange > -1F)
+            {
+                label.BackColor = Color.Red;
+                label.ForeColor = Color.White;
+            }
+            else
+            {
+                label.BackColor = Color.Firebrick;
+                label.ForeColor = Color.White;
+            }
+        }
     }
 }

@@ -852,7 +852,6 @@
             this.groupBoxPriceChange.Controls.Add(this.labelDriverPC3);
             this.groupBoxPriceChange.Controls.Add(this.labelDriverPC2);
             this.groupBoxPriceChange.Controls.Add(this.labelDriverPC1);
-            this.groupBoxPriceChange.Enabled = false;
             this.groupBoxPriceChange.Location = new System.Drawing.Point(433, 54);
             this.groupBoxPriceChange.Name = "groupBoxPriceChange";
             this.groupBoxPriceChange.Size = new System.Drawing.Size(116, 516);

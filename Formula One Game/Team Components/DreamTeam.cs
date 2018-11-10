@@ -14,6 +14,7 @@ namespace Formula_One_Game
         private Engine Engine;
         public float Price { get; }
         public float Points { get; private set; }
+        public float PriceChange { get; private set; }
 
         public DreamTeam(Driver driver1, Driver driver2, Team team, Engine engine)
         {
@@ -47,6 +48,11 @@ namespace Formula_One_Game
         public void CalculatePoints()
         {
             Points = Driver1.Points + Driver2.Points + Team.Points + Engine.Points;
+        }
+
+        public void CalculatePriceChange()
+        {
+            PriceChange = Driver1.PriceChange + Driver2.PriceChange + Team.PriceChange + Engine.PriceChange;
         }
 
         public int CompareTo(object obj)
