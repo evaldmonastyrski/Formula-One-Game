@@ -1909,7 +1909,6 @@
             // 
             // buttonReload
             // 
-            this.buttonReload.Enabled = false;
             this.buttonReload.Location = new System.Drawing.Point(14, 16);
             this.buttonReload.Name = "buttonReload";
             this.buttonReload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1917,6 +1916,7 @@
             this.buttonReload.TabIndex = 1;
             this.buttonReload.Text = "Reload";
             this.buttonReload.UseVisualStyleBackColor = true;
+            this.buttonReload.Click += new System.EventHandler(this.buttonReload_Click);
             // 
             // groupBoxDrivers
             // 
