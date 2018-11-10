@@ -264,6 +264,7 @@ namespace Formula_One_Game
 
         private void comboBoxQualification_SelectedIndexChanged(object sender, EventArgs e)
         {
+            disableSortButtons();
             ComboBox senderComboBox = (ComboBox)sender;
             int comboBoxIndex = whichComboBox(senderComboBox, SessionType.QUALIFICATION);
         
@@ -335,7 +336,8 @@ namespace Formula_One_Game
         private void buttonSimulate_Click(object sender, EventArgs e)
         {
             enableSortButtons();
-            GameArea.CalculateCombinations((float)numericUpDownBudget.Value);
+            int combinationLimit = checkBoxPointThreshold.Checked ? (int)numericUpDownPointThreshold.Value : 0;
+            GameArea.CalculateCombinations((float) numericUpDownBudget.Value, combinationLimit);
         }
 
         private void numericUpDownBudget_ValueChanged(object sender, EventArgs e)
@@ -423,6 +425,17 @@ namespace Formula_One_Game
                 label.BackColor = Color.Firebrick;
                 label.ForeColor = Color.White;
             }
+        }
+
+        private void checkBoxPointThreshold_CheckedChanged(object sender, EventArgs e)
+        {
+            numericUpDownPointThreshold.Enabled = checkBoxPointThreshold.Checked ? true : false;
+            disableSortButtons();
+        }
+
+        private void numericUpDownPointThreshold_ValueChanged(object sender, EventArgs e)
+        {
+            disableSortButtons();
         }
     }
 }

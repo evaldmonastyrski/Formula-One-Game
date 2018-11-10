@@ -40,10 +40,10 @@ namespace Formula_One_Game
             initializeLabels();
         }
 
-        public void CalculateCombinations(float budget)
+        public void CalculateCombinations(float budget, int combinationLimit)
         {
             availableDreamTeams.Clear();
-            availableDreamTeams = combinator.getAvailableDreamTeams(budget);
+            availableDreamTeams = combinator.getAvailableDreamTeams(budget, combinationLimit);
         }
 
         public void AddDriver(Driver driver)

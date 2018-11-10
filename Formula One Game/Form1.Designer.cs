@@ -1836,7 +1836,6 @@
             // 
             // numericUpDownPointThreshold
             // 
-            this.numericUpDownPointThreshold.Enabled = false;
             this.numericUpDownPointThreshold.Location = new System.Drawing.Point(498, 14);
             this.numericUpDownPointThreshold.Name = "numericUpDownPointThreshold";
             this.numericUpDownPointThreshold.Size = new System.Drawing.Size(46, 20);
@@ -1846,6 +1845,7 @@
             0,
             0,
             0});
+            this.numericUpDownPointThreshold.ValueChanged += new System.EventHandler(this.numericUpDownPointThreshold_ValueChanged);
             // 
             // numericUpDownBudget
             // 
@@ -1871,13 +1871,13 @@
             this.checkBoxPointThreshold.AutoSize = true;
             this.checkBoxPointThreshold.Checked = true;
             this.checkBoxPointThreshold.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxPointThreshold.Enabled = false;
             this.checkBoxPointThreshold.Location = new System.Drawing.Point(567, 14);
             this.checkBoxPointThreshold.Name = "checkBoxPointThreshold";
             this.checkBoxPointThreshold.Size = new System.Drawing.Size(105, 17);
             this.checkBoxPointThreshold.TabIndex = 4;
             this.checkBoxPointThreshold.Text = "Points Threshold";
             this.checkBoxPointThreshold.UseVisualStyleBackColor = true;
+            this.checkBoxPointThreshold.CheckedChanged += new System.EventHandler(this.checkBoxPointThreshold_CheckedChanged);
             // 
             // labelPointsThereshold
             // 
