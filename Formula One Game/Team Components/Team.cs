@@ -26,6 +26,11 @@ namespace Formula_One_Game
             drivers.Add(driver);
         }
 
+        public void UpdatePoints()
+        {
+            Points = Constants.TEAM_PRICE_RATIO * drivers.Sum(Driver => Driver.Points);
+        }
+
         public override string ToString()
         {
             return Name.Replace("_", " ");
