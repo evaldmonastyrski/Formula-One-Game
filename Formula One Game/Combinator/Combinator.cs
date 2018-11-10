@@ -28,6 +28,7 @@ namespace Formula_One_Game
             foreach (DreamTeam dreamTeam in DreamTeams)
             {
                 dreamTeam.CalculatePoints();
+                dreamTeam.CalculatePriceChange();
                 if (dreamTeam.Price > budget)
                 {
                     availableDreamTeams.Remove(dreamTeam);

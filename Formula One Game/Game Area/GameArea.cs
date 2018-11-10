@@ -36,6 +36,7 @@ namespace Formula_One_Game
             availableDreamTeams = new List<DreamTeam>();
             dataDeserializer.InitializeDreamTeamComponents(gpStageIndex);
             combinator = new Combinator(Drivers, Teams, Engines);
+            initializePriceChangeValues();
             initializeLabels();
         }
 
@@ -66,11 +67,16 @@ namespace Formula_One_Game
             GPStages.AddRange(gpStages);
         }
 
-        public void UpdatePoints(int driverIndex, int qPosition, int rPosition)
+        public void UpdateDreamTeamComponents(int driverIndex, int qPosition, int rPosition)
         {
             float points = Constants.qualificationPositionToPointsMap[qPosition] + Constants.racePositionToPointsMap[rPosition];
+            float priceChange = Constants.PRICING_PRICE_COEFFICIENT * Drivers.ElementAt(driverIndex).Price + Constants.PRICING_POINTS_COEFFICIENT * points - Drivers.ElementAt(driverIndex).Price;
             Drivers.ElementAt(driverIndex).Points = points;
+            Drivers.ElementAt(driverIndex).PriceChange = priceChange;
             Form.DriverPointsLabels[driverIndex].Text = points != 0 ? points.ToString() : "";
+            Form.DriverPriceChangeLabels[driverIndex].Text = RoundFloat.round(priceChange).ToString();
+            Form.ColorLabels(Form.DriverPriceChangeLabels[driverIndex], priceChange);
+
             for (int i = 0; i < Constants.NUMBER_OF_TEAMS; i++)
             {
                 Team team = Teams.ElementAt(i);
@@ -82,6 +88,18 @@ namespace Formula_One_Game
                 Engine engine = Engines.ElementAt(i);
                 engine.UpdatePoints();
                 Form.EnginePointsLabels[i].Text = engine.Points != 0 ? engine.Points.ToString() : "";
+            }
+        }
+
+        private void initializePriceChangeValues()
+        {
+            for (int i = 0; i < Constants.NUMBER_OF_DRIVERS; i++)
+            {
+                Driver driver = Drivers.ElementAt(i);
+                float initialPriceChange = (Constants.PRICING_PRICE_COEFFICIENT - 1) * driver.Price;
+                Drivers.ElementAt(i).PriceChange = initialPriceChange;
+                Form.DriverPriceChangeLabels[i].Text = RoundFloat.round(initialPriceChange).ToString();
+                Form.ColorLabels(Form.DriverPriceChangeLabels[i], initialPriceChange);
             }
         }
         
