@@ -445,5 +445,16 @@ namespace Formula_One_Game
         {
             disableSortButtons();
         }
+
+        private void buttonReload_Click(object sender, EventArgs e)
+        {
+            disableSortButtons();
+            GameArea.InitializeStageDependentGameAreaComponents(comboBoxGPRace.SelectedIndex);
+            resetDriverPointsLabels();
+            resetTeamPointsLabels();
+            resetEnginePointsLabels();
+            ComboBoxManager.restoreQualificationPositions();
+            ComboBoxManager.restoreRacePositions();
+        }
     }
 }
