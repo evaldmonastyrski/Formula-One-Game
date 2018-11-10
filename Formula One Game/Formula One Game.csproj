@@ -64,6 +64,7 @@
     <Compile Include="Game Area\GameArea.cs" />
     <Compile Include="Game Area\RoundFloat.cs" />
     <Compile Include="Game Area\SessionType.cs" />
+    <Compile Include="Game Area\SortType.cs" />
     <Compile Include="GUI Interface\ComboBoxManager.cs" />
     <Compile Include="Message Service\AvailableOptions.cs" />
     <Compile Include="Program.cs" />
