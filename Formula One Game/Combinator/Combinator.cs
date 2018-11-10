@@ -22,7 +22,7 @@ namespace Formula_One_Game
             CombineAll();
         }
 
-        public List<DreamTeam> getAvailableDreamTeams(float budget)
+        public List<DreamTeam> getAvailableDreamTeams(float budget, int combinationLimit)
         {
             List<DreamTeam> availableDreamTeams = copySet(DreamTeams);
             foreach (DreamTeam dreamTeam in DreamTeams)
@@ -30,6 +30,14 @@ namespace Formula_One_Game
                 dreamTeam.CalculatePoints();
                 dreamTeam.CalculatePriceChange(budget);
                 if (dreamTeam.Price > budget)
+                {
+                    availableDreamTeams.Remove(dreamTeam);
+                }
+            }
+            float maxPoints = availableDreamTeams.Max(team => team.Points);
+            foreach (DreamTeam dreamTeam in DreamTeams)
+            {
+                if (dreamTeam.Points < (combinationLimit / 100F) * maxPoints)
                 {
                     availableDreamTeams.Remove(dreamTeam);
                 }
