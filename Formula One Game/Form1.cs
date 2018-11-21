@@ -54,6 +54,7 @@ namespace Formula_One_Game
             GameArea = new GameArea(this);
             ComboBoxManager = new ComboBoxManager(this, GameArea);
             comboBoxGPRace.SelectedIndex = comboBoxGPRace.Items.Count - 1;
+            checkBoxRaceSetup.Checked = false;
         }
 
         public void SetGPCombo(List<string> gpStages)
@@ -329,8 +330,8 @@ namespace Formula_One_Game
             resetDriverPointsLabels();
             resetTeamPointsLabels();
             resetEnginePointsLabels();
-            ComboBoxManager.restoreQualificationPositions();
-            ComboBoxManager.restoreRacePositions();
+            ComboBoxManager.RestoreQualificationPositions();
+            ComboBoxManager.RestoreRacePositions();
         }
 
         private void buttonSimulate_Click(object sender, EventArgs e)
@@ -359,7 +360,7 @@ namespace Formula_One_Game
 
         private void buttonFlushQ_Click(object sender, EventArgs e)
         {
-            ComboBoxManager.restoreQualificationPositions();
+            ComboBoxManager.RestoreQualificationPositions();
             for(int i = 0; i < Constants.NUMBER_OF_DRIVERS; i++)
             {
                 ComboBoxManager.AvailablePositionListUpdateOnRemoving(i, 0, SessionType.QUALIFICATION);
@@ -369,7 +370,7 @@ namespace Formula_One_Game
 
         private void buttonFlushR_Click(object sender, EventArgs e)
         {
-            ComboBoxManager.restoreRacePositions();
+            ComboBoxManager.RestoreRacePositions();
             for (int i = 0; i < Constants.NUMBER_OF_DRIVERS; i++)
             {
                 ComboBoxManager.AvailablePositionListUpdateOnRemoving(i, 0, SessionType.RACE);
@@ -435,6 +436,11 @@ namespace Formula_One_Game
             }
         }
 
+        public bool RaceSetupCheckBoxIsChecked()
+        {
+            return checkBoxRaceSetup.Checked; 
+        }
+
         private void checkBoxPointThreshold_CheckedChanged(object sender, EventArgs e)
         {
             numericUpDownPointThreshold.Enabled = checkBoxPointThreshold.Checked ? true : false;
@@ -453,8 +459,35 @@ namespace Formula_One_Game
             resetDriverPointsLabels();
             resetTeamPointsLabels();
             resetEnginePointsLabels();
-            ComboBoxManager.restoreQualificationPositions();
-            ComboBoxManager.restoreRacePositions();
+            ComboBoxManager.RestoreQualificationPositions();
+            ComboBoxManager.RestoreRacePositions();
+            checkBoxRaceSetup.Checked = false;
+            checkBoxPointThreshold.Checked = true;
+            groupBoxRace.Enabled = true;
+            buttonFlushR.Enabled = true;
+            groupBoxQualification.Text = "Qualification";
+            buttonFlushQ.Text = "Flush Q";
+        }
+
+        private void checkBoxRaceSetup_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxRaceSetup.Checked)
+            {
+                groupBoxRace.Enabled = false;
+                buttonFlushR.Enabled = false;
+                groupBoxQualification.Text = "Q && R";
+                buttonFlushQ.Text = "Flush Q && R";
+                ComboBoxManager.UpdatePositions();
+            }
+            else
+            {
+                groupBoxRace.Enabled = true;
+                buttonFlushR.Enabled = true;
+                groupBoxQualification.Text = "Qualification";
+                buttonFlushQ.Text = "Flush Q";
+                ComboBoxManager.UpdatePositions();
+            }
+            disableSortButtons();
         }
     }
 }

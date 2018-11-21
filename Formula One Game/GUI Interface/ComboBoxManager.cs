@@ -40,7 +40,14 @@ namespace Formula_One_Game
                 positions.Add(cachedPosition);
             }
             selectedPositions[comboBoxIndex] = selectedPosition;
-            GameArea.UpdateDreamTeamComponents(comboBoxIndex, selectedQualificationPositions[comboBoxIndex], selectedRacePositions[comboBoxIndex]);
+            if (!Form.RaceSetupCheckBoxIsChecked())
+            {
+                GameArea.UpdateDreamTeamComponents(comboBoxIndex, selectedQualificationPositions[comboBoxIndex], selectedRacePositions[comboBoxIndex]);
+            }
+            else
+            {
+                GameArea.UpdateDreamTeamComponents(comboBoxIndex, selectedQualificationPositions[comboBoxIndex], selectedQualificationPositions[comboBoxIndex]);
+            }
             positions.Remove(selectedPosition);
             removeDriverComboBoxItems(positions, sessionType);
             uploadDriverComboBoxItems(positions, sessionType);
@@ -61,10 +68,17 @@ namespace Formula_One_Game
                 removeDriverComboBoxItems(positions, sessionType);
                 uploadDriverComboBoxItems(positions, sessionType);
             }
-            GameArea.UpdateDreamTeamComponents(comboBoxIndex, selectedQualificationPositions[comboBoxIndex], selectedRacePositions[comboBoxIndex]);
+            if (!Form.RaceSetupCheckBoxIsChecked())
+            {
+                GameArea.UpdateDreamTeamComponents(comboBoxIndex, selectedQualificationPositions[comboBoxIndex], selectedRacePositions[comboBoxIndex]);
+            }
+            else
+            {
+                GameArea.UpdateDreamTeamComponents(comboBoxIndex, selectedQualificationPositions[comboBoxIndex], selectedQualificationPositions[comboBoxIndex]);
+            }
         }
 
-        public void restoreQualificationPositions()
+        public void RestoreQualificationPositions()
         {
             for (int i = 1; i <= Constants.NUMBER_OF_DRIVERS; i++)
             {
@@ -78,7 +92,7 @@ namespace Formula_One_Game
             uploadDriverComboBoxItems(QualificationPositions, SessionType.QUALIFICATION);
         }
 
-        public void restoreRacePositions()
+        public void RestoreRacePositions()
         {
             for (int i = 1; i <= Constants.NUMBER_OF_DRIVERS; i++)
             {
@@ -90,6 +104,21 @@ namespace Formula_One_Game
             selectedRacePositions = new int[Constants.NUMBER_OF_DRIVERS];
             clearComboBoxes(Form.DriverRaceComboBoxes);
             uploadDriverComboBoxItems(RacePositions, SessionType.RACE);
+        }
+
+        public void UpdatePositions()
+        {
+            for (int i = 0; i < Constants.NUMBER_OF_DRIVERS; i++)
+            {
+                if (!Form.RaceSetupCheckBoxIsChecked())
+                {
+                    GameArea.UpdateDreamTeamComponents(i, selectedQualificationPositions[i], selectedRacePositions[i]);
+                }
+                else
+                {
+                    GameArea.UpdateDreamTeamComponents(i, selectedQualificationPositions[i], selectedQualificationPositions[i]);
+                }
+            }
         }
 
         private void removeComboBoxSelectedItem(int comboBoxIndex, SessionType sessionType)
