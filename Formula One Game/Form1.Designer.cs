@@ -1826,13 +1826,13 @@
             this.checkBoxRaceSetup.AutoSize = true;
             this.checkBoxRaceSetup.Checked = true;
             this.checkBoxRaceSetup.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxRaceSetup.Enabled = false;
             this.checkBoxRaceSetup.Location = new System.Drawing.Point(689, 15);
             this.checkBoxRaceSetup.Name = "checkBoxRaceSetup";
             this.checkBoxRaceSetup.Size = new System.Drawing.Size(81, 17);
             this.checkBoxRaceSetup.TabIndex = 7;
             this.checkBoxRaceSetup.Text = "Race setup";
             this.checkBoxRaceSetup.UseVisualStyleBackColor = true;
+            this.checkBoxRaceSetup.CheckedChanged += new System.EventHandler(this.checkBoxRaceSetup_CheckedChanged);
             // 
             // numericUpDownPointThreshold
             // 
