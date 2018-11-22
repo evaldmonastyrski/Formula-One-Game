@@ -776,7 +776,6 @@
             this.label24.Size = new System.Drawing.Size(41, 13);
             this.label24.TabIndex = 16;
             this.label24.Text = "label24";
-            this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // label25
             // 
@@ -813,7 +812,6 @@
             this.label28.Size = new System.Drawing.Size(41, 13);
             this.label28.TabIndex = 12;
             this.label28.Text = "label28";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // label29
             // 
@@ -823,7 +821,6 @@
             this.label29.Size = new System.Drawing.Size(41, 13);
             this.label29.TabIndex = 11;
             this.label29.Text = "label29";
-            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // label30
             // 
@@ -1901,7 +1898,6 @@
             this.labelBudget.Size = new System.Drawing.Size(41, 13);
             this.labelBudget.TabIndex = 2;
             this.labelBudget.Text = "Budget";
-            this.labelBudget.Click += new System.EventHandler(this.labelBudget_Click);
             // 
             // buttonSimulate
             // 
@@ -2132,7 +2128,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tabPage2
             // 
