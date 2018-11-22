@@ -199,6 +199,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBoxEnginesPriceChange.SuspendLayout();
@@ -221,12 +222,13 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(936, 651);
+            this.tabControl1.Size = new System.Drawing.Size(936, 641);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -252,7 +254,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(928, 625);
+            this.tabPage1.Size = new System.Drawing.Size(928, 615);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Simulation";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -260,7 +262,7 @@
             // buttonPriceChangeSort
             // 
             this.buttonPriceChangeSort.Enabled = false;
-            this.buttonPriceChangeSort.Location = new System.Drawing.Point(433, 583);
+            this.buttonPriceChangeSort.Location = new System.Drawing.Point(433, 586);
             this.buttonPriceChangeSort.Name = "buttonPriceChangeSort";
             this.buttonPriceChangeSort.Size = new System.Drawing.Size(116, 23);
             this.buttonPriceChangeSort.TabIndex = 17;
@@ -271,7 +273,7 @@
             // buttonPointSort
             // 
             this.buttonPointSort.Enabled = false;
-            this.buttonPointSort.Location = new System.Drawing.Point(334, 583);
+            this.buttonPointSort.Location = new System.Drawing.Point(334, 586);
             this.buttonPointSort.Name = "buttonPointSort";
             this.buttonPointSort.Size = new System.Drawing.Size(80, 23);
             this.buttonPointSort.TabIndex = 16;
@@ -281,7 +283,7 @@
             // 
             // buttonFlushR
             // 
-            this.buttonFlushR.Location = new System.Drawing.Point(236, 583);
+            this.buttonFlushR.Location = new System.Drawing.Point(236, 586);
             this.buttonFlushR.Name = "buttonFlushR";
             this.buttonFlushR.Size = new System.Drawing.Size(80, 23);
             this.buttonFlushR.TabIndex = 15;
@@ -291,7 +293,7 @@
             // 
             // buttonFlushQ
             // 
-            this.buttonFlushQ.Location = new System.Drawing.Point(137, 583);
+            this.buttonFlushQ.Location = new System.Drawing.Point(137, 586);
             this.buttonFlushQ.Name = "buttonFlushQ";
             this.buttonFlushQ.Size = new System.Drawing.Size(80, 23);
             this.buttonFlushQ.TabIndex = 14;
@@ -305,9 +307,9 @@
             this.groupBoxEnginesPriceChange.Controls.Add(this.labelEnginePC3);
             this.groupBoxEnginesPriceChange.Controls.Add(this.labelEnginePC2);
             this.groupBoxEnginesPriceChange.Controls.Add(this.labelEnginePC1);
-            this.groupBoxEnginesPriceChange.Location = new System.Drawing.Point(789, 402);
+            this.groupBoxEnginesPriceChange.Location = new System.Drawing.Point(789, 383);
             this.groupBoxEnginesPriceChange.Name = "groupBoxEnginesPriceChange";
-            this.groupBoxEnginesPriceChange.Size = new System.Drawing.Size(124, 126);
+            this.groupBoxEnginesPriceChange.Size = new System.Drawing.Size(124, 120);
             this.groupBoxEnginesPriceChange.TabIndex = 13;
             this.groupBoxEnginesPriceChange.TabStop = false;
             this.groupBoxEnginesPriceChange.Text = "Price Change";
@@ -316,7 +318,7 @@
             // 
             this.labelEnginePC4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelEnginePC4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEnginePC4.Location = new System.Drawing.Point(12, 90);
+            this.labelEnginePC4.Location = new System.Drawing.Point(12, 93);
             this.labelEnginePC4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEnginePC4.Name = "labelEnginePC4";
             this.labelEnginePC4.Size = new System.Drawing.Size(100, 20);
@@ -327,7 +329,7 @@
             // 
             this.labelEnginePC3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelEnginePC3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEnginePC3.Location = new System.Drawing.Point(12, 65);
+            this.labelEnginePC3.Location = new System.Drawing.Point(12, 69);
             this.labelEnginePC3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEnginePC3.Name = "labelEnginePC3";
             this.labelEnginePC3.Size = new System.Drawing.Size(100, 20);
@@ -338,7 +340,7 @@
             // 
             this.labelEnginePC2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelEnginePC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEnginePC2.Location = new System.Drawing.Point(12, 41);
+            this.labelEnginePC2.Location = new System.Drawing.Point(12, 45);
             this.labelEnginePC2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEnginePC2.Name = "labelEnginePC2";
             this.labelEnginePC2.Size = new System.Drawing.Size(100, 20);
@@ -349,7 +351,7 @@
             // 
             this.labelEnginePC1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelEnginePC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEnginePC1.Location = new System.Drawing.Point(12, 17);
+            this.labelEnginePC1.Location = new System.Drawing.Point(12, 21);
             this.labelEnginePC1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEnginePC1.Name = "labelEnginePC1";
             this.labelEnginePC1.Size = new System.Drawing.Size(100, 20);
@@ -362,9 +364,9 @@
             this.groupBoxEnginesPoints.Controls.Add(this.labelEngine3);
             this.groupBoxEnginesPoints.Controls.Add(this.labelEngine2);
             this.groupBoxEnginesPoints.Controls.Add(this.labelEngine1);
-            this.groupBoxEnginesPoints.Location = new System.Drawing.Point(691, 402);
+            this.groupBoxEnginesPoints.Location = new System.Drawing.Point(691, 383);
             this.groupBoxEnginesPoints.Name = "groupBoxEnginesPoints";
-            this.groupBoxEnginesPoints.Size = new System.Drawing.Size(80, 126);
+            this.groupBoxEnginesPoints.Size = new System.Drawing.Size(80, 120);
             this.groupBoxEnginesPoints.TabIndex = 12;
             this.groupBoxEnginesPoints.TabStop = false;
             this.groupBoxEnginesPoints.Text = "Points";
@@ -373,7 +375,7 @@
             // 
             this.labelEngine4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelEngine4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEngine4.Location = new System.Drawing.Point(13, 90);
+            this.labelEngine4.Location = new System.Drawing.Point(12, 93);
             this.labelEngine4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEngine4.Name = "labelEngine4";
             this.labelEngine4.Size = new System.Drawing.Size(54, 20);
@@ -384,7 +386,7 @@
             // 
             this.labelEngine3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelEngine3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEngine3.Location = new System.Drawing.Point(13, 65);
+            this.labelEngine3.Location = new System.Drawing.Point(12, 69);
             this.labelEngine3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEngine3.Name = "labelEngine3";
             this.labelEngine3.Size = new System.Drawing.Size(54, 20);
@@ -395,7 +397,7 @@
             // 
             this.labelEngine2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelEngine2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEngine2.Location = new System.Drawing.Point(13, 41);
+            this.labelEngine2.Location = new System.Drawing.Point(12, 45);
             this.labelEngine2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEngine2.Name = "labelEngine2";
             this.labelEngine2.Size = new System.Drawing.Size(54, 20);
@@ -406,7 +408,7 @@
             // 
             this.labelEngine1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelEngine1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEngine1.Location = new System.Drawing.Point(13, 17);
+            this.labelEngine1.Location = new System.Drawing.Point(12, 21);
             this.labelEngine1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEngine1.Name = "labelEngine1";
             this.labelEngine1.Size = new System.Drawing.Size(54, 20);
@@ -419,9 +421,9 @@
             this.groupBoxEngines.Controls.Add(this.label32);
             this.groupBoxEngines.Controls.Add(this.label33);
             this.groupBoxEngines.Controls.Add(this.label34);
-            this.groupBoxEngines.Location = new System.Drawing.Point(568, 402);
+            this.groupBoxEngines.Location = new System.Drawing.Point(568, 383);
             this.groupBoxEngines.Name = "groupBoxEngines";
-            this.groupBoxEngines.Size = new System.Drawing.Size(103, 126);
+            this.groupBoxEngines.Size = new System.Drawing.Size(103, 120);
             this.groupBoxEngines.TabIndex = 11;
             this.groupBoxEngines.TabStop = false;
             this.groupBoxEngines.Text = "Engines";
@@ -429,7 +431,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(6, 22);
+            this.label31.Location = new System.Drawing.Point(4, 26);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(41, 13);
             this.label31.TabIndex = 23;
@@ -438,7 +440,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(6, 46);
+            this.label32.Location = new System.Drawing.Point(4, 50);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(41, 13);
             this.label32.TabIndex = 22;
@@ -447,7 +449,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(6, 71);
+            this.label33.Location = new System.Drawing.Point(4, 74);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(41, 13);
             this.label33.TabIndex = 21;
@@ -456,7 +458,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(6, 95);
+            this.label34.Location = new System.Drawing.Point(4, 98);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(41, 13);
             this.label34.TabIndex = 20;
@@ -474,9 +476,9 @@
             this.groupBoxTeamPriceChange.Controls.Add(this.labelTeamPC3);
             this.groupBoxTeamPriceChange.Controls.Add(this.labelTeamPC2);
             this.groupBoxTeamPriceChange.Controls.Add(this.labelTeamPC1);
-            this.groupBoxTeamPriceChange.Location = new System.Drawing.Point(789, 54);
+            this.groupBoxTeamPriceChange.Location = new System.Drawing.Point(789, 70);
             this.groupBoxTeamPriceChange.Name = "groupBoxTeamPriceChange";
-            this.groupBoxTeamPriceChange.Size = new System.Drawing.Size(124, 271);
+            this.groupBoxTeamPriceChange.Size = new System.Drawing.Size(124, 262);
             this.groupBoxTeamPriceChange.TabIndex = 10;
             this.groupBoxTeamPriceChange.TabStop = false;
             this.groupBoxTeamPriceChange.Text = "Price Change";
@@ -485,7 +487,7 @@
             // 
             this.labelTeamPC10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeamPC10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeamPC10.Location = new System.Drawing.Point(12, 235);
+            this.labelTeamPC10.Location = new System.Drawing.Point(12, 238);
             this.labelTeamPC10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeamPC10.Name = "labelTeamPC10";
             this.labelTeamPC10.Size = new System.Drawing.Size(100, 20);
@@ -496,7 +498,7 @@
             // 
             this.labelTeamPC9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeamPC9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeamPC9.Location = new System.Drawing.Point(12, 210);
+            this.labelTeamPC9.Location = new System.Drawing.Point(12, 214);
             this.labelTeamPC9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeamPC9.Name = "labelTeamPC9";
             this.labelTeamPC9.Size = new System.Drawing.Size(100, 20);
@@ -507,7 +509,7 @@
             // 
             this.labelTeamPC5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeamPC5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeamPC5.Location = new System.Drawing.Point(12, 113);
+            this.labelTeamPC5.Location = new System.Drawing.Point(12, 118);
             this.labelTeamPC5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeamPC5.Name = "labelTeamPC5";
             this.labelTeamPC5.Size = new System.Drawing.Size(100, 20);
@@ -518,7 +520,7 @@
             // 
             this.labelTeamPC6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeamPC6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeamPC6.Location = new System.Drawing.Point(12, 137);
+            this.labelTeamPC6.Location = new System.Drawing.Point(12, 142);
             this.labelTeamPC6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeamPC6.Name = "labelTeamPC6";
             this.labelTeamPC6.Size = new System.Drawing.Size(100, 20);
@@ -529,7 +531,7 @@
             // 
             this.labelTeamPC7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeamPC7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeamPC7.Location = new System.Drawing.Point(12, 162);
+            this.labelTeamPC7.Location = new System.Drawing.Point(12, 166);
             this.labelTeamPC7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeamPC7.Name = "labelTeamPC7";
             this.labelTeamPC7.Size = new System.Drawing.Size(100, 20);
@@ -540,7 +542,7 @@
             // 
             this.labelTeamPC8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeamPC8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeamPC8.Location = new System.Drawing.Point(12, 186);
+            this.labelTeamPC8.Location = new System.Drawing.Point(12, 190);
             this.labelTeamPC8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeamPC8.Name = "labelTeamPC8";
             this.labelTeamPC8.Size = new System.Drawing.Size(100, 20);
@@ -551,7 +553,7 @@
             // 
             this.labelTeamPC4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeamPC4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeamPC4.Location = new System.Drawing.Point(12, 89);
+            this.labelTeamPC4.Location = new System.Drawing.Point(12, 94);
             this.labelTeamPC4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeamPC4.Name = "labelTeamPC4";
             this.labelTeamPC4.Size = new System.Drawing.Size(100, 20);
@@ -562,7 +564,7 @@
             // 
             this.labelTeamPC3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeamPC3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeamPC3.Location = new System.Drawing.Point(12, 64);
+            this.labelTeamPC3.Location = new System.Drawing.Point(12, 70);
             this.labelTeamPC3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeamPC3.Name = "labelTeamPC3";
             this.labelTeamPC3.Size = new System.Drawing.Size(100, 20);
@@ -573,7 +575,7 @@
             // 
             this.labelTeamPC2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeamPC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeamPC2.Location = new System.Drawing.Point(12, 40);
+            this.labelTeamPC2.Location = new System.Drawing.Point(12, 46);
             this.labelTeamPC2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeamPC2.Name = "labelTeamPC2";
             this.labelTeamPC2.Size = new System.Drawing.Size(100, 20);
@@ -584,7 +586,7 @@
             // 
             this.labelTeamPC1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeamPC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeamPC1.Location = new System.Drawing.Point(12, 16);
+            this.labelTeamPC1.Location = new System.Drawing.Point(12, 22);
             this.labelTeamPC1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeamPC1.Name = "labelTeamPC1";
             this.labelTeamPC1.Size = new System.Drawing.Size(100, 20);
@@ -603,9 +605,9 @@
             this.groupBoxTeamPoints.Controls.Add(this.labelTeam3);
             this.groupBoxTeamPoints.Controls.Add(this.labelTeam2);
             this.groupBoxTeamPoints.Controls.Add(this.labelTeam1);
-            this.groupBoxTeamPoints.Location = new System.Drawing.Point(691, 54);
+            this.groupBoxTeamPoints.Location = new System.Drawing.Point(691, 70);
             this.groupBoxTeamPoints.Name = "groupBoxTeamPoints";
-            this.groupBoxTeamPoints.Size = new System.Drawing.Size(80, 271);
+            this.groupBoxTeamPoints.Size = new System.Drawing.Size(80, 262);
             this.groupBoxTeamPoints.TabIndex = 9;
             this.groupBoxTeamPoints.TabStop = false;
             this.groupBoxTeamPoints.Text = "Points";
@@ -614,7 +616,7 @@
             // 
             this.labelTeam10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeam10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeam10.Location = new System.Drawing.Point(13, 235);
+            this.labelTeam10.Location = new System.Drawing.Point(12, 238);
             this.labelTeam10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeam10.Name = "labelTeam10";
             this.labelTeam10.Size = new System.Drawing.Size(54, 20);
@@ -625,7 +627,7 @@
             // 
             this.labelTeam9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeam9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeam9.Location = new System.Drawing.Point(13, 210);
+            this.labelTeam9.Location = new System.Drawing.Point(12, 214);
             this.labelTeam9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeam9.Name = "labelTeam9";
             this.labelTeam9.Size = new System.Drawing.Size(54, 20);
@@ -636,7 +638,7 @@
             // 
             this.labelTeam5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeam5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeam5.Location = new System.Drawing.Point(13, 113);
+            this.labelTeam5.Location = new System.Drawing.Point(12, 118);
             this.labelTeam5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeam5.Name = "labelTeam5";
             this.labelTeam5.Size = new System.Drawing.Size(54, 20);
@@ -647,7 +649,7 @@
             // 
             this.labelTeam6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeam6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeam6.Location = new System.Drawing.Point(13, 137);
+            this.labelTeam6.Location = new System.Drawing.Point(12, 142);
             this.labelTeam6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeam6.Name = "labelTeam6";
             this.labelTeam6.Size = new System.Drawing.Size(54, 20);
@@ -658,7 +660,7 @@
             // 
             this.labelTeam7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeam7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeam7.Location = new System.Drawing.Point(13, 162);
+            this.labelTeam7.Location = new System.Drawing.Point(12, 166);
             this.labelTeam7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeam7.Name = "labelTeam7";
             this.labelTeam7.Size = new System.Drawing.Size(54, 20);
@@ -669,7 +671,7 @@
             // 
             this.labelTeam8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeam8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeam8.Location = new System.Drawing.Point(13, 186);
+            this.labelTeam8.Location = new System.Drawing.Point(12, 190);
             this.labelTeam8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeam8.Name = "labelTeam8";
             this.labelTeam8.Size = new System.Drawing.Size(54, 20);
@@ -680,7 +682,7 @@
             // 
             this.labelTeam4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeam4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeam4.Location = new System.Drawing.Point(13, 89);
+            this.labelTeam4.Location = new System.Drawing.Point(12, 94);
             this.labelTeam4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeam4.Name = "labelTeam4";
             this.labelTeam4.Size = new System.Drawing.Size(54, 20);
@@ -691,7 +693,7 @@
             // 
             this.labelTeam3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeam3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeam3.Location = new System.Drawing.Point(13, 64);
+            this.labelTeam3.Location = new System.Drawing.Point(12, 70);
             this.labelTeam3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeam3.Name = "labelTeam3";
             this.labelTeam3.Size = new System.Drawing.Size(54, 20);
@@ -702,7 +704,7 @@
             // 
             this.labelTeam2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeam2.Location = new System.Drawing.Point(13, 40);
+            this.labelTeam2.Location = new System.Drawing.Point(12, 46);
             this.labelTeam2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeam2.Name = "labelTeam2";
             this.labelTeam2.Size = new System.Drawing.Size(54, 20);
@@ -713,7 +715,7 @@
             // 
             this.labelTeam1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTeam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTeam1.Location = new System.Drawing.Point(13, 16);
+            this.labelTeam1.Location = new System.Drawing.Point(12, 22);
             this.labelTeam1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTeam1.Name = "labelTeam1";
             this.labelTeam1.Size = new System.Drawing.Size(54, 20);
@@ -732,9 +734,9 @@
             this.groupBoxTeam.Controls.Add(this.label28);
             this.groupBoxTeam.Controls.Add(this.label29);
             this.groupBoxTeam.Controls.Add(this.label30);
-            this.groupBoxTeam.Location = new System.Drawing.Point(568, 54);
+            this.groupBoxTeam.Location = new System.Drawing.Point(568, 70);
             this.groupBoxTeam.Name = "groupBoxTeam";
-            this.groupBoxTeam.Size = new System.Drawing.Size(103, 271);
+            this.groupBoxTeam.Size = new System.Drawing.Size(103, 262);
             this.groupBoxTeam.TabIndex = 8;
             this.groupBoxTeam.TabStop = false;
             this.groupBoxTeam.Text = "Teams";
@@ -742,7 +744,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 22);
+            this.label21.Location = new System.Drawing.Point(6, 27);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(41, 13);
             this.label21.TabIndex = 19;
@@ -751,7 +753,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 46);
+            this.label22.Location = new System.Drawing.Point(4, 51);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(41, 13);
             this.label22.TabIndex = 18;
@@ -760,7 +762,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 71);
+            this.label23.Location = new System.Drawing.Point(4, 75);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(41, 13);
             this.label23.TabIndex = 17;
@@ -769,16 +771,17 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 95);
+            this.label24.Location = new System.Drawing.Point(4, 99);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(41, 13);
             this.label24.TabIndex = 16;
             this.label24.Text = "label24";
+            this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 119);
+            this.label25.Location = new System.Drawing.Point(4, 123);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(41, 13);
             this.label25.TabIndex = 15;
@@ -787,7 +790,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 144);
+            this.label26.Location = new System.Drawing.Point(4, 147);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(41, 13);
             this.label26.TabIndex = 14;
@@ -796,7 +799,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 168);
+            this.label27.Location = new System.Drawing.Point(4, 171);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(41, 13);
             this.label27.TabIndex = 13;
@@ -805,25 +808,27 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 193);
+            this.label28.Location = new System.Drawing.Point(4, 195);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(41, 13);
             this.label28.TabIndex = 12;
             this.label28.Text = "label28";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 217);
+            this.label29.Location = new System.Drawing.Point(4, 219);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(41, 13);
             this.label29.TabIndex = 11;
             this.label29.Text = "label29";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 241);
+            this.label30.Location = new System.Drawing.Point(4, 243);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(41, 13);
             this.label30.TabIndex = 10;
@@ -851,9 +856,9 @@
             this.groupBoxPriceChange.Controls.Add(this.labelDriverPC3);
             this.groupBoxPriceChange.Controls.Add(this.labelDriverPC2);
             this.groupBoxPriceChange.Controls.Add(this.labelDriverPC1);
-            this.groupBoxPriceChange.Location = new System.Drawing.Point(433, 54);
+            this.groupBoxPriceChange.Location = new System.Drawing.Point(433, 70);
             this.groupBoxPriceChange.Name = "groupBoxPriceChange";
-            this.groupBoxPriceChange.Size = new System.Drawing.Size(116, 516);
+            this.groupBoxPriceChange.Size = new System.Drawing.Size(116, 506);
             this.groupBoxPriceChange.TabIndex = 7;
             this.groupBoxPriceChange.TabStop = false;
             this.groupBoxPriceChange.Text = "Price Change";
@@ -862,7 +867,7 @@
             // 
             this.labelDriverPC20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC20.Location = new System.Drawing.Point(12, 480);
+            this.labelDriverPC20.Location = new System.Drawing.Point(12, 478);
             this.labelDriverPC20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC20.Name = "labelDriverPC20";
             this.labelDriverPC20.Size = new System.Drawing.Size(92, 20);
@@ -873,7 +878,7 @@
             // 
             this.labelDriverPC19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC19.Location = new System.Drawing.Point(12, 455);
+            this.labelDriverPC19.Location = new System.Drawing.Point(12, 454);
             this.labelDriverPC19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC19.Name = "labelDriverPC19";
             this.labelDriverPC19.Size = new System.Drawing.Size(92, 20);
@@ -884,7 +889,7 @@
             // 
             this.labelDriverPC18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC18.Location = new System.Drawing.Point(12, 431);
+            this.labelDriverPC18.Location = new System.Drawing.Point(12, 430);
             this.labelDriverPC18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC18.Name = "labelDriverPC18";
             this.labelDriverPC18.Size = new System.Drawing.Size(92, 20);
@@ -895,7 +900,7 @@
             // 
             this.labelDriverPC17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC17.Location = new System.Drawing.Point(12, 407);
+            this.labelDriverPC17.Location = new System.Drawing.Point(12, 406);
             this.labelDriverPC17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC17.Name = "labelDriverPC17";
             this.labelDriverPC17.Size = new System.Drawing.Size(92, 20);
@@ -928,7 +933,7 @@
             // 
             this.labelDriverPC14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC14.Location = new System.Drawing.Point(12, 333);
+            this.labelDriverPC14.Location = new System.Drawing.Point(12, 334);
             this.labelDriverPC14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC14.Name = "labelDriverPC14";
             this.labelDriverPC14.Size = new System.Drawing.Size(92, 20);
@@ -939,7 +944,7 @@
             // 
             this.labelDriverPC13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC13.Location = new System.Drawing.Point(12, 309);
+            this.labelDriverPC13.Location = new System.Drawing.Point(12, 310);
             this.labelDriverPC13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC13.Name = "labelDriverPC13";
             this.labelDriverPC13.Size = new System.Drawing.Size(92, 20);
@@ -950,7 +955,7 @@
             // 
             this.labelDriverPC12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC12.Location = new System.Drawing.Point(12, 285);
+            this.labelDriverPC12.Location = new System.Drawing.Point(12, 286);
             this.labelDriverPC12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC12.Name = "labelDriverPC12";
             this.labelDriverPC12.Size = new System.Drawing.Size(92, 20);
@@ -961,7 +966,7 @@
             // 
             this.labelDriverPC11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC11.Location = new System.Drawing.Point(12, 260);
+            this.labelDriverPC11.Location = new System.Drawing.Point(12, 262);
             this.labelDriverPC11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC11.Name = "labelDriverPC11";
             this.labelDriverPC11.Size = new System.Drawing.Size(92, 20);
@@ -972,7 +977,7 @@
             // 
             this.labelDriverPC10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC10.Location = new System.Drawing.Point(12, 236);
+            this.labelDriverPC10.Location = new System.Drawing.Point(12, 238);
             this.labelDriverPC10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC10.Name = "labelDriverPC10";
             this.labelDriverPC10.Size = new System.Drawing.Size(92, 20);
@@ -983,7 +988,7 @@
             // 
             this.labelDriverPC9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC9.Location = new System.Drawing.Point(12, 211);
+            this.labelDriverPC9.Location = new System.Drawing.Point(12, 214);
             this.labelDriverPC9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC9.Name = "labelDriverPC9";
             this.labelDriverPC9.Size = new System.Drawing.Size(92, 20);
@@ -994,7 +999,7 @@
             // 
             this.labelDriverPC5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC5.Location = new System.Drawing.Point(12, 114);
+            this.labelDriverPC5.Location = new System.Drawing.Point(12, 118);
             this.labelDriverPC5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC5.Name = "labelDriverPC5";
             this.labelDriverPC5.Size = new System.Drawing.Size(92, 20);
@@ -1005,7 +1010,7 @@
             // 
             this.labelDriverPC6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC6.Location = new System.Drawing.Point(12, 138);
+            this.labelDriverPC6.Location = new System.Drawing.Point(12, 142);
             this.labelDriverPC6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC6.Name = "labelDriverPC6";
             this.labelDriverPC6.Size = new System.Drawing.Size(92, 20);
@@ -1016,7 +1021,7 @@
             // 
             this.labelDriverPC7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC7.Location = new System.Drawing.Point(12, 163);
+            this.labelDriverPC7.Location = new System.Drawing.Point(12, 166);
             this.labelDriverPC7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC7.Name = "labelDriverPC7";
             this.labelDriverPC7.Size = new System.Drawing.Size(92, 20);
@@ -1027,7 +1032,7 @@
             // 
             this.labelDriverPC8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC8.Location = new System.Drawing.Point(12, 187);
+            this.labelDriverPC8.Location = new System.Drawing.Point(12, 190);
             this.labelDriverPC8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC8.Name = "labelDriverPC8";
             this.labelDriverPC8.Size = new System.Drawing.Size(92, 20);
@@ -1038,7 +1043,7 @@
             // 
             this.labelDriverPC4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC4.Location = new System.Drawing.Point(12, 90);
+            this.labelDriverPC4.Location = new System.Drawing.Point(12, 94);
             this.labelDriverPC4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC4.Name = "labelDriverPC4";
             this.labelDriverPC4.Size = new System.Drawing.Size(92, 20);
@@ -1049,7 +1054,7 @@
             // 
             this.labelDriverPC3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC3.Location = new System.Drawing.Point(12, 65);
+            this.labelDriverPC3.Location = new System.Drawing.Point(12, 70);
             this.labelDriverPC3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC3.Name = "labelDriverPC3";
             this.labelDriverPC3.Size = new System.Drawing.Size(92, 20);
@@ -1060,7 +1065,7 @@
             // 
             this.labelDriverPC2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC2.Location = new System.Drawing.Point(12, 41);
+            this.labelDriverPC2.Location = new System.Drawing.Point(12, 46);
             this.labelDriverPC2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC2.Name = "labelDriverPC2";
             this.labelDriverPC2.Size = new System.Drawing.Size(92, 20);
@@ -1071,7 +1076,7 @@
             // 
             this.labelDriverPC1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriverPC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriverPC1.Location = new System.Drawing.Point(12, 17);
+            this.labelDriverPC1.Location = new System.Drawing.Point(12, 22);
             this.labelDriverPC1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriverPC1.Name = "labelDriverPC1";
             this.labelDriverPC1.Size = new System.Drawing.Size(92, 20);
@@ -1100,9 +1105,9 @@
             this.groupBoxPoints.Controls.Add(this.labelDriver3);
             this.groupBoxPoints.Controls.Add(this.labelDriver2);
             this.groupBoxPoints.Controls.Add(this.labelDriver1);
-            this.groupBoxPoints.Location = new System.Drawing.Point(334, 54);
+            this.groupBoxPoints.Location = new System.Drawing.Point(334, 70);
             this.groupBoxPoints.Name = "groupBoxPoints";
-            this.groupBoxPoints.Size = new System.Drawing.Size(80, 516);
+            this.groupBoxPoints.Size = new System.Drawing.Size(80, 507);
             this.groupBoxPoints.TabIndex = 6;
             this.groupBoxPoints.TabStop = false;
             this.groupBoxPoints.Text = "Points";
@@ -1111,7 +1116,7 @@
             // 
             this.labelDriver20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver20.Location = new System.Drawing.Point(13, 480);
+            this.labelDriver20.Location = new System.Drawing.Point(12, 478);
             this.labelDriver20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver20.Name = "labelDriver20";
             this.labelDriver20.Size = new System.Drawing.Size(54, 20);
@@ -1122,7 +1127,7 @@
             // 
             this.labelDriver19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver19.Location = new System.Drawing.Point(13, 455);
+            this.labelDriver19.Location = new System.Drawing.Point(12, 454);
             this.labelDriver19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver19.Name = "labelDriver19";
             this.labelDriver19.Size = new System.Drawing.Size(54, 20);
@@ -1133,7 +1138,7 @@
             // 
             this.labelDriver18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver18.Location = new System.Drawing.Point(13, 431);
+            this.labelDriver18.Location = new System.Drawing.Point(12, 430);
             this.labelDriver18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver18.Name = "labelDriver18";
             this.labelDriver18.Size = new System.Drawing.Size(54, 20);
@@ -1144,7 +1149,7 @@
             // 
             this.labelDriver17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver17.Location = new System.Drawing.Point(13, 407);
+            this.labelDriver17.Location = new System.Drawing.Point(12, 406);
             this.labelDriver17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver17.Name = "labelDriver17";
             this.labelDriver17.Size = new System.Drawing.Size(54, 20);
@@ -1155,7 +1160,7 @@
             // 
             this.labelDriver16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver16.Location = new System.Drawing.Point(13, 382);
+            this.labelDriver16.Location = new System.Drawing.Point(12, 382);
             this.labelDriver16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver16.Name = "labelDriver16";
             this.labelDriver16.Size = new System.Drawing.Size(54, 20);
@@ -1166,7 +1171,7 @@
             // 
             this.labelDriver15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver15.Location = new System.Drawing.Point(13, 358);
+            this.labelDriver15.Location = new System.Drawing.Point(12, 358);
             this.labelDriver15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver15.Name = "labelDriver15";
             this.labelDriver15.Size = new System.Drawing.Size(54, 20);
@@ -1177,7 +1182,7 @@
             // 
             this.labelDriver14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver14.Location = new System.Drawing.Point(13, 333);
+            this.labelDriver14.Location = new System.Drawing.Point(12, 334);
             this.labelDriver14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver14.Name = "labelDriver14";
             this.labelDriver14.Size = new System.Drawing.Size(54, 20);
@@ -1188,7 +1193,7 @@
             // 
             this.labelDriver13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver13.Location = new System.Drawing.Point(13, 309);
+            this.labelDriver13.Location = new System.Drawing.Point(12, 310);
             this.labelDriver13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver13.Name = "labelDriver13";
             this.labelDriver13.Size = new System.Drawing.Size(54, 20);
@@ -1199,7 +1204,7 @@
             // 
             this.labelDriver12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver12.Location = new System.Drawing.Point(13, 285);
+            this.labelDriver12.Location = new System.Drawing.Point(12, 286);
             this.labelDriver12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver12.Name = "labelDriver12";
             this.labelDriver12.Size = new System.Drawing.Size(54, 20);
@@ -1210,7 +1215,7 @@
             // 
             this.labelDriver11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver11.Location = new System.Drawing.Point(13, 260);
+            this.labelDriver11.Location = new System.Drawing.Point(12, 262);
             this.labelDriver11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver11.Name = "labelDriver11";
             this.labelDriver11.Size = new System.Drawing.Size(54, 20);
@@ -1221,7 +1226,7 @@
             // 
             this.labelDriver10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver10.Location = new System.Drawing.Point(13, 236);
+            this.labelDriver10.Location = new System.Drawing.Point(12, 238);
             this.labelDriver10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver10.Name = "labelDriver10";
             this.labelDriver10.Size = new System.Drawing.Size(54, 20);
@@ -1232,7 +1237,7 @@
             // 
             this.labelDriver9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver9.Location = new System.Drawing.Point(13, 211);
+            this.labelDriver9.Location = new System.Drawing.Point(12, 214);
             this.labelDriver9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver9.Name = "labelDriver9";
             this.labelDriver9.Size = new System.Drawing.Size(54, 20);
@@ -1243,7 +1248,7 @@
             // 
             this.labelDriver5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver5.Location = new System.Drawing.Point(13, 114);
+            this.labelDriver5.Location = new System.Drawing.Point(12, 118);
             this.labelDriver5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver5.Name = "labelDriver5";
             this.labelDriver5.Size = new System.Drawing.Size(54, 20);
@@ -1254,7 +1259,7 @@
             // 
             this.labelDriver6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver6.Location = new System.Drawing.Point(13, 138);
+            this.labelDriver6.Location = new System.Drawing.Point(12, 142);
             this.labelDriver6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver6.Name = "labelDriver6";
             this.labelDriver6.Size = new System.Drawing.Size(54, 20);
@@ -1265,7 +1270,7 @@
             // 
             this.labelDriver7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver7.Location = new System.Drawing.Point(13, 163);
+            this.labelDriver7.Location = new System.Drawing.Point(12, 166);
             this.labelDriver7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver7.Name = "labelDriver7";
             this.labelDriver7.Size = new System.Drawing.Size(54, 20);
@@ -1276,7 +1281,7 @@
             // 
             this.labelDriver8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver8.Location = new System.Drawing.Point(13, 187);
+            this.labelDriver8.Location = new System.Drawing.Point(12, 190);
             this.labelDriver8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver8.Name = "labelDriver8";
             this.labelDriver8.Size = new System.Drawing.Size(54, 20);
@@ -1287,7 +1292,7 @@
             // 
             this.labelDriver4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver4.Location = new System.Drawing.Point(13, 90);
+            this.labelDriver4.Location = new System.Drawing.Point(12, 94);
             this.labelDriver4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver4.Name = "labelDriver4";
             this.labelDriver4.Size = new System.Drawing.Size(54, 20);
@@ -1298,7 +1303,7 @@
             // 
             this.labelDriver3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver3.Location = new System.Drawing.Point(13, 65);
+            this.labelDriver3.Location = new System.Drawing.Point(12, 70);
             this.labelDriver3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver3.Name = "labelDriver3";
             this.labelDriver3.Size = new System.Drawing.Size(54, 20);
@@ -1309,7 +1314,7 @@
             // 
             this.labelDriver2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver2.Location = new System.Drawing.Point(13, 41);
+            this.labelDriver2.Location = new System.Drawing.Point(12, 46);
             this.labelDriver2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver2.Name = "labelDriver2";
             this.labelDriver2.Size = new System.Drawing.Size(54, 20);
@@ -1320,7 +1325,7 @@
             // 
             this.labelDriver1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDriver1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDriver1.Location = new System.Drawing.Point(13, 17);
+            this.labelDriver1.Location = new System.Drawing.Point(12, 22);
             this.labelDriver1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDriver1.Name = "labelDriver1";
             this.labelDriver1.Size = new System.Drawing.Size(54, 20);
@@ -1349,9 +1354,9 @@
             this.groupBoxRace.Controls.Add(this.comboBox23);
             this.groupBoxRace.Controls.Add(this.comboBox22);
             this.groupBoxRace.Controls.Add(this.comboBox21);
-            this.groupBoxRace.Location = new System.Drawing.Point(236, 54);
+            this.groupBoxRace.Location = new System.Drawing.Point(236, 70);
             this.groupBoxRace.Name = "groupBoxRace";
-            this.groupBoxRace.Size = new System.Drawing.Size(80, 516);
+            this.groupBoxRace.Size = new System.Drawing.Size(80, 507);
             this.groupBoxRace.TabIndex = 5;
             this.groupBoxRace.TabStop = false;
             this.groupBoxRace.Text = "Race";
@@ -1360,7 +1365,7 @@
             // 
             this.comboBox40.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox40.FormattingEnabled = true;
-            this.comboBox40.Location = new System.Drawing.Point(12, 485);
+            this.comboBox40.Location = new System.Drawing.Point(12, 478);
             this.comboBox40.Name = "comboBox40";
             this.comboBox40.Size = new System.Drawing.Size(55, 21);
             this.comboBox40.TabIndex = 19;
@@ -1370,7 +1375,7 @@
             // 
             this.comboBox39.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox39.FormattingEnabled = true;
-            this.comboBox39.Location = new System.Drawing.Point(12, 461);
+            this.comboBox39.Location = new System.Drawing.Point(12, 454);
             this.comboBox39.Name = "comboBox39";
             this.comboBox39.Size = new System.Drawing.Size(55, 21);
             this.comboBox39.TabIndex = 18;
@@ -1380,7 +1385,7 @@
             // 
             this.comboBox38.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox38.FormattingEnabled = true;
-            this.comboBox38.Location = new System.Drawing.Point(12, 436);
+            this.comboBox38.Location = new System.Drawing.Point(12, 430);
             this.comboBox38.Name = "comboBox38";
             this.comboBox38.Size = new System.Drawing.Size(55, 21);
             this.comboBox38.TabIndex = 17;
@@ -1390,7 +1395,7 @@
             // 
             this.comboBox37.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox37.FormattingEnabled = true;
-            this.comboBox37.Location = new System.Drawing.Point(12, 412);
+            this.comboBox37.Location = new System.Drawing.Point(12, 406);
             this.comboBox37.Name = "comboBox37";
             this.comboBox37.Size = new System.Drawing.Size(55, 21);
             this.comboBox37.TabIndex = 16;
@@ -1400,7 +1405,7 @@
             // 
             this.comboBox36.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox36.FormattingEnabled = true;
-            this.comboBox36.Location = new System.Drawing.Point(12, 388);
+            this.comboBox36.Location = new System.Drawing.Point(12, 382);
             this.comboBox36.Name = "comboBox36";
             this.comboBox36.Size = new System.Drawing.Size(55, 21);
             this.comboBox36.TabIndex = 15;
@@ -1410,7 +1415,7 @@
             // 
             this.comboBox35.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox35.FormattingEnabled = true;
-            this.comboBox35.Location = new System.Drawing.Point(12, 363);
+            this.comboBox35.Location = new System.Drawing.Point(12, 358);
             this.comboBox35.Name = "comboBox35";
             this.comboBox35.Size = new System.Drawing.Size(55, 21);
             this.comboBox35.TabIndex = 14;
@@ -1420,7 +1425,7 @@
             // 
             this.comboBox34.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox34.FormattingEnabled = true;
-            this.comboBox34.Location = new System.Drawing.Point(12, 339);
+            this.comboBox34.Location = new System.Drawing.Point(12, 334);
             this.comboBox34.Name = "comboBox34";
             this.comboBox34.Size = new System.Drawing.Size(55, 21);
             this.comboBox34.TabIndex = 13;
@@ -1430,7 +1435,7 @@
             // 
             this.comboBox33.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox33.FormattingEnabled = true;
-            this.comboBox33.Location = new System.Drawing.Point(12, 314);
+            this.comboBox33.Location = new System.Drawing.Point(12, 310);
             this.comboBox33.Name = "comboBox33";
             this.comboBox33.Size = new System.Drawing.Size(55, 21);
             this.comboBox33.TabIndex = 12;
@@ -1440,7 +1445,7 @@
             // 
             this.comboBox32.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox32.FormattingEnabled = true;
-            this.comboBox32.Location = new System.Drawing.Point(12, 290);
+            this.comboBox32.Location = new System.Drawing.Point(12, 286);
             this.comboBox32.Name = "comboBox32";
             this.comboBox32.Size = new System.Drawing.Size(55, 21);
             this.comboBox32.TabIndex = 11;
@@ -1450,7 +1455,7 @@
             // 
             this.comboBox31.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox31.FormattingEnabled = true;
-            this.comboBox31.Location = new System.Drawing.Point(12, 266);
+            this.comboBox31.Location = new System.Drawing.Point(12, 262);
             this.comboBox31.Name = "comboBox31";
             this.comboBox31.Size = new System.Drawing.Size(55, 21);
             this.comboBox31.TabIndex = 10;
@@ -1460,7 +1465,7 @@
             // 
             this.comboBox30.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox30.FormattingEnabled = true;
-            this.comboBox30.Location = new System.Drawing.Point(12, 241);
+            this.comboBox30.Location = new System.Drawing.Point(12, 238);
             this.comboBox30.Name = "comboBox30";
             this.comboBox30.Size = new System.Drawing.Size(55, 21);
             this.comboBox30.TabIndex = 9;
@@ -1470,7 +1475,7 @@
             // 
             this.comboBox29.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox29.FormattingEnabled = true;
-            this.comboBox29.Location = new System.Drawing.Point(12, 217);
+            this.comboBox29.Location = new System.Drawing.Point(12, 214);
             this.comboBox29.Name = "comboBox29";
             this.comboBox29.Size = new System.Drawing.Size(55, 21);
             this.comboBox29.TabIndex = 8;
@@ -1480,7 +1485,7 @@
             // 
             this.comboBox28.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox28.FormattingEnabled = true;
-            this.comboBox28.Location = new System.Drawing.Point(12, 193);
+            this.comboBox28.Location = new System.Drawing.Point(12, 190);
             this.comboBox28.Name = "comboBox28";
             this.comboBox28.Size = new System.Drawing.Size(55, 21);
             this.comboBox28.TabIndex = 7;
@@ -1490,7 +1495,7 @@
             // 
             this.comboBox27.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox27.FormattingEnabled = true;
-            this.comboBox27.Location = new System.Drawing.Point(12, 168);
+            this.comboBox27.Location = new System.Drawing.Point(12, 166);
             this.comboBox27.Name = "comboBox27";
             this.comboBox27.Size = new System.Drawing.Size(55, 21);
             this.comboBox27.TabIndex = 6;
@@ -1500,7 +1505,7 @@
             // 
             this.comboBox26.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox26.FormattingEnabled = true;
-            this.comboBox26.Location = new System.Drawing.Point(12, 144);
+            this.comboBox26.Location = new System.Drawing.Point(12, 142);
             this.comboBox26.Name = "comboBox26";
             this.comboBox26.Size = new System.Drawing.Size(55, 21);
             this.comboBox26.TabIndex = 5;
@@ -1510,7 +1515,7 @@
             // 
             this.comboBox25.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox25.FormattingEnabled = true;
-            this.comboBox25.Location = new System.Drawing.Point(12, 119);
+            this.comboBox25.Location = new System.Drawing.Point(12, 118);
             this.comboBox25.Name = "comboBox25";
             this.comboBox25.Size = new System.Drawing.Size(55, 21);
             this.comboBox25.TabIndex = 4;
@@ -1520,7 +1525,7 @@
             // 
             this.comboBox24.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox24.FormattingEnabled = true;
-            this.comboBox24.Location = new System.Drawing.Point(12, 95);
+            this.comboBox24.Location = new System.Drawing.Point(12, 94);
             this.comboBox24.Name = "comboBox24";
             this.comboBox24.Size = new System.Drawing.Size(55, 21);
             this.comboBox24.TabIndex = 3;
@@ -1530,7 +1535,7 @@
             // 
             this.comboBox23.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox23.FormattingEnabled = true;
-            this.comboBox23.Location = new System.Drawing.Point(12, 71);
+            this.comboBox23.Location = new System.Drawing.Point(12, 70);
             this.comboBox23.Name = "comboBox23";
             this.comboBox23.Size = new System.Drawing.Size(55, 21);
             this.comboBox23.TabIndex = 2;
@@ -1550,7 +1555,7 @@
             // 
             this.comboBox21.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox21.FormattingEnabled = true;
-            this.comboBox21.Location = new System.Drawing.Point(12, 20);
+            this.comboBox21.Location = new System.Drawing.Point(12, 22);
             this.comboBox21.Name = "comboBox21";
             this.comboBox21.Size = new System.Drawing.Size(55, 21);
             this.comboBox21.TabIndex = 0;
@@ -1578,9 +1583,9 @@
             this.groupBoxQualification.Controls.Add(this.comboBox3);
             this.groupBoxQualification.Controls.Add(this.comboBox2);
             this.groupBoxQualification.Controls.Add(this.comboBox1);
-            this.groupBoxQualification.Location = new System.Drawing.Point(137, 54);
+            this.groupBoxQualification.Location = new System.Drawing.Point(137, 70);
             this.groupBoxQualification.Name = "groupBoxQualification";
-            this.groupBoxQualification.Size = new System.Drawing.Size(80, 516);
+            this.groupBoxQualification.Size = new System.Drawing.Size(80, 506);
             this.groupBoxQualification.TabIndex = 4;
             this.groupBoxQualification.TabStop = false;
             this.groupBoxQualification.Text = "Qualification";
@@ -1589,7 +1594,7 @@
             // 
             this.comboBox20.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox20.FormattingEnabled = true;
-            this.comboBox20.Location = new System.Drawing.Point(12, 485);
+            this.comboBox20.Location = new System.Drawing.Point(12, 478);
             this.comboBox20.Name = "comboBox20";
             this.comboBox20.Size = new System.Drawing.Size(55, 21);
             this.comboBox20.TabIndex = 19;
@@ -1599,7 +1604,7 @@
             // 
             this.comboBox19.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox19.FormattingEnabled = true;
-            this.comboBox19.Location = new System.Drawing.Point(12, 461);
+            this.comboBox19.Location = new System.Drawing.Point(12, 454);
             this.comboBox19.Name = "comboBox19";
             this.comboBox19.Size = new System.Drawing.Size(55, 21);
             this.comboBox19.TabIndex = 18;
@@ -1609,7 +1614,7 @@
             // 
             this.comboBox18.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox18.FormattingEnabled = true;
-            this.comboBox18.Location = new System.Drawing.Point(12, 436);
+            this.comboBox18.Location = new System.Drawing.Point(12, 430);
             this.comboBox18.Name = "comboBox18";
             this.comboBox18.Size = new System.Drawing.Size(55, 21);
             this.comboBox18.TabIndex = 17;
@@ -1619,7 +1624,7 @@
             // 
             this.comboBox17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Location = new System.Drawing.Point(12, 412);
+            this.comboBox17.Location = new System.Drawing.Point(12, 406);
             this.comboBox17.Name = "comboBox17";
             this.comboBox17.Size = new System.Drawing.Size(55, 21);
             this.comboBox17.TabIndex = 16;
@@ -1629,7 +1634,7 @@
             // 
             this.comboBox16.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Location = new System.Drawing.Point(12, 388);
+            this.comboBox16.Location = new System.Drawing.Point(12, 382);
             this.comboBox16.Name = "comboBox16";
             this.comboBox16.Size = new System.Drawing.Size(55, 21);
             this.comboBox16.TabIndex = 15;
@@ -1639,7 +1644,7 @@
             // 
             this.comboBox15.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Location = new System.Drawing.Point(12, 363);
+            this.comboBox15.Location = new System.Drawing.Point(12, 358);
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(55, 21);
             this.comboBox15.TabIndex = 14;
@@ -1649,7 +1654,7 @@
             // 
             this.comboBox14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(12, 339);
+            this.comboBox14.Location = new System.Drawing.Point(12, 334);
             this.comboBox14.Name = "comboBox14";
             this.comboBox14.Size = new System.Drawing.Size(55, 21);
             this.comboBox14.TabIndex = 13;
@@ -1659,7 +1664,7 @@
             // 
             this.comboBox13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(12, 314);
+            this.comboBox13.Location = new System.Drawing.Point(12, 310);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(55, 21);
             this.comboBox13.TabIndex = 12;
@@ -1669,7 +1674,7 @@
             // 
             this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(12, 290);
+            this.comboBox12.Location = new System.Drawing.Point(12, 286);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(55, 21);
             this.comboBox12.TabIndex = 11;
@@ -1679,7 +1684,7 @@
             // 
             this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(12, 266);
+            this.comboBox11.Location = new System.Drawing.Point(12, 262);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(55, 21);
             this.comboBox11.TabIndex = 10;
@@ -1689,7 +1694,7 @@
             // 
             this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(12, 241);
+            this.comboBox10.Location = new System.Drawing.Point(12, 238);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(55, 21);
             this.comboBox10.TabIndex = 9;
@@ -1699,7 +1704,7 @@
             // 
             this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(12, 217);
+            this.comboBox9.Location = new System.Drawing.Point(12, 214);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(55, 21);
             this.comboBox9.TabIndex = 8;
@@ -1709,7 +1714,7 @@
             // 
             this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(12, 193);
+            this.comboBox8.Location = new System.Drawing.Point(12, 190);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(55, 21);
             this.comboBox8.TabIndex = 7;
@@ -1719,7 +1724,7 @@
             // 
             this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(12, 168);
+            this.comboBox7.Location = new System.Drawing.Point(12, 166);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(55, 21);
             this.comboBox7.TabIndex = 6;
@@ -1729,7 +1734,7 @@
             // 
             this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(12, 144);
+            this.comboBox6.Location = new System.Drawing.Point(12, 142);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(55, 21);
             this.comboBox6.TabIndex = 5;
@@ -1739,7 +1744,7 @@
             // 
             this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(12, 119);
+            this.comboBox5.Location = new System.Drawing.Point(12, 118);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(55, 21);
             this.comboBox5.TabIndex = 4;
@@ -1749,7 +1754,7 @@
             // 
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(12, 95);
+            this.comboBox4.Location = new System.Drawing.Point(12, 94);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(55, 21);
             this.comboBox4.TabIndex = 3;
@@ -1759,7 +1764,7 @@
             // 
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(12, 71);
+            this.comboBox3.Location = new System.Drawing.Point(12, 70);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(55, 21);
             this.comboBox3.TabIndex = 2;
@@ -1797,7 +1802,7 @@
             this.groupBoxRaceControl.Controls.Add(this.labelBudget);
             this.groupBoxRaceControl.Location = new System.Drawing.Point(137, 5);
             this.groupBoxRaceControl.Name = "groupBoxRaceControl";
-            this.groupBoxRaceControl.Size = new System.Drawing.Size(776, 44);
+            this.groupBoxRaceControl.Size = new System.Drawing.Size(776, 59);
             this.groupBoxRaceControl.TabIndex = 3;
             this.groupBoxRaceControl.TabStop = false;
             this.groupBoxRaceControl.Text = "Race Control";
@@ -1805,7 +1810,7 @@
             // labelGPStage
             // 
             this.labelGPStage.AutoSize = true;
-            this.labelGPStage.Location = new System.Drawing.Point(194, 15);
+            this.labelGPStage.Location = new System.Drawing.Point(194, 23);
             this.labelGPStage.Name = "labelGPStage";
             this.labelGPStage.Size = new System.Drawing.Size(56, 13);
             this.labelGPStage.TabIndex = 20;
@@ -1815,7 +1820,7 @@
             // 
             this.comboBoxGPRace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGPRace.FormattingEnabled = true;
-            this.comboBoxGPRace.Location = new System.Drawing.Point(256, 12);
+            this.comboBoxGPRace.Location = new System.Drawing.Point(256, 20);
             this.comboBoxGPRace.Name = "comboBoxGPRace";
             this.comboBoxGPRace.Size = new System.Drawing.Size(103, 21);
             this.comboBoxGPRace.TabIndex = 8;
@@ -1826,7 +1831,7 @@
             this.checkBoxRaceSetup.AutoSize = true;
             this.checkBoxRaceSetup.Checked = true;
             this.checkBoxRaceSetup.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxRaceSetup.Location = new System.Drawing.Point(689, 15);
+            this.checkBoxRaceSetup.Location = new System.Drawing.Point(689, 22);
             this.checkBoxRaceSetup.Name = "checkBoxRaceSetup";
             this.checkBoxRaceSetup.Size = new System.Drawing.Size(81, 17);
             this.checkBoxRaceSetup.TabIndex = 7;
@@ -1836,7 +1841,7 @@
             // 
             // numericUpDownPointThreshold
             // 
-            this.numericUpDownPointThreshold.Location = new System.Drawing.Point(498, 14);
+            this.numericUpDownPointThreshold.Location = new System.Drawing.Point(498, 21);
             this.numericUpDownPointThreshold.Name = "numericUpDownPointThreshold";
             this.numericUpDownPointThreshold.Size = new System.Drawing.Size(46, 20);
             this.numericUpDownPointThreshold.TabIndex = 6;
@@ -1855,7 +1860,7 @@
             0,
             0,
             65536});
-            this.numericUpDownBudget.Location = new System.Drawing.Point(111, 13);
+            this.numericUpDownBudget.Location = new System.Drawing.Point(111, 21);
             this.numericUpDownBudget.Name = "numericUpDownBudget";
             this.numericUpDownBudget.Size = new System.Drawing.Size(55, 20);
             this.numericUpDownBudget.TabIndex = 5;
@@ -1871,7 +1876,7 @@
             this.checkBoxPointThreshold.AutoSize = true;
             this.checkBoxPointThreshold.Checked = true;
             this.checkBoxPointThreshold.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxPointThreshold.Location = new System.Drawing.Point(567, 14);
+            this.checkBoxPointThreshold.Location = new System.Drawing.Point(567, 22);
             this.checkBoxPointThreshold.Name = "checkBoxPointThreshold";
             this.checkBoxPointThreshold.Size = new System.Drawing.Size(105, 17);
             this.checkBoxPointThreshold.TabIndex = 4;
@@ -1882,7 +1887,7 @@
             // labelPointsThereshold
             // 
             this.labelPointsThereshold.AutoSize = true;
-            this.labelPointsThereshold.Location = new System.Drawing.Point(406, 16);
+            this.labelPointsThereshold.Location = new System.Drawing.Point(406, 23);
             this.labelPointsThereshold.Name = "labelPointsThereshold";
             this.labelPointsThereshold.Size = new System.Drawing.Size(86, 13);
             this.labelPointsThereshold.TabIndex = 3;
@@ -1891,15 +1896,16 @@
             // labelBudget
             // 
             this.labelBudget.AutoSize = true;
-            this.labelBudget.Location = new System.Drawing.Point(64, 15);
+            this.labelBudget.Location = new System.Drawing.Point(64, 23);
             this.labelBudget.Name = "labelBudget";
             this.labelBudget.Size = new System.Drawing.Size(41, 13);
             this.labelBudget.TabIndex = 2;
             this.labelBudget.Text = "Budget";
+            this.labelBudget.Click += new System.EventHandler(this.labelBudget_Click);
             // 
             // buttonSimulate
             // 
-            this.buttonSimulate.Location = new System.Drawing.Point(15, 585);
+            this.buttonSimulate.Location = new System.Drawing.Point(15, 587);
             this.buttonSimulate.Name = "buttonSimulate";
             this.buttonSimulate.Size = new System.Drawing.Size(103, 20);
             this.buttonSimulate.TabIndex = 2;
@@ -1909,7 +1915,7 @@
             // 
             // buttonReload
             // 
-            this.buttonReload.Location = new System.Drawing.Point(14, 16);
+            this.buttonReload.Location = new System.Drawing.Point(15, 28);
             this.buttonReload.Name = "buttonReload";
             this.buttonReload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.buttonReload.Size = new System.Drawing.Size(103, 20);
@@ -1940,9 +1946,9 @@
             this.groupBoxDrivers.Controls.Add(this.label3);
             this.groupBoxDrivers.Controls.Add(this.label2);
             this.groupBoxDrivers.Controls.Add(this.label1);
-            this.groupBoxDrivers.Location = new System.Drawing.Point(15, 54);
+            this.groupBoxDrivers.Location = new System.Drawing.Point(15, 70);
             this.groupBoxDrivers.Name = "groupBoxDrivers";
-            this.groupBoxDrivers.Size = new System.Drawing.Size(103, 516);
+            this.groupBoxDrivers.Size = new System.Drawing.Size(103, 506);
             this.groupBoxDrivers.TabIndex = 0;
             this.groupBoxDrivers.TabStop = false;
             this.groupBoxDrivers.Text = "Drivers";
@@ -1950,7 +1956,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(4, 485);
+            this.label20.Location = new System.Drawing.Point(4, 481);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(41, 13);
             this.label20.TabIndex = 19;
@@ -1959,7 +1965,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(4, 461);
+            this.label19.Location = new System.Drawing.Point(4, 457);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(41, 13);
             this.label19.TabIndex = 18;
@@ -1968,7 +1974,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(4, 436);
+            this.label18.Location = new System.Drawing.Point(4, 433);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(41, 13);
             this.label18.TabIndex = 17;
@@ -1977,7 +1983,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(4, 412);
+            this.label17.Location = new System.Drawing.Point(4, 409);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(41, 13);
             this.label17.TabIndex = 16;
@@ -1986,7 +1992,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(4, 388);
+            this.label16.Location = new System.Drawing.Point(4, 385);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(41, 13);
             this.label16.TabIndex = 15;
@@ -1995,7 +2001,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(4, 363);
+            this.label15.Location = new System.Drawing.Point(4, 361);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(41, 13);
             this.label15.TabIndex = 14;
@@ -2004,7 +2010,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(4, 339);
+            this.label14.Location = new System.Drawing.Point(4, 337);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(41, 13);
             this.label14.TabIndex = 13;
@@ -2013,7 +2019,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(4, 314);
+            this.label13.Location = new System.Drawing.Point(4, 313);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(41, 13);
             this.label13.TabIndex = 12;
@@ -2022,7 +2028,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 290);
+            this.label12.Location = new System.Drawing.Point(4, 289);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(41, 13);
             this.label12.TabIndex = 11;
@@ -2031,7 +2037,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(4, 266);
+            this.label11.Location = new System.Drawing.Point(4, 265);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 13);
             this.label11.TabIndex = 10;
@@ -2067,7 +2073,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 168);
+            this.label7.Location = new System.Drawing.Point(4, 169);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 6;
@@ -2076,7 +2082,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 144);
+            this.label6.Location = new System.Drawing.Point(4, 145);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 5;
@@ -2085,7 +2091,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 119);
+            this.label5.Location = new System.Drawing.Point(4, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 4;
@@ -2094,7 +2100,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 95);
+            this.label4.Location = new System.Drawing.Point(4, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 3;
@@ -2103,7 +2109,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 71);
+            this.label3.Location = new System.Drawing.Point(4, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 2;
@@ -2112,7 +2118,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 46);
+            this.label2.Location = new System.Drawing.Point(4, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 1;
@@ -2121,27 +2127,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 22);
+            this.label1.Location = new System.Drawing.Point(4, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(928, 625);
+            this.tabPage2.Size = new System.Drawing.Size(928, 615);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Help";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(928, 615);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Graphics";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 651);
+            this.ClientSize = new System.Drawing.Size(936, 641);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Formula 1 V.0.4 In Progress";
@@ -2342,6 +2359,7 @@
         private System.Windows.Forms.CheckBox checkBoxRaceSetup;
         private System.Windows.Forms.ComboBox comboBoxGPRace;
         private System.Windows.Forms.Label labelGPStage;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
 
