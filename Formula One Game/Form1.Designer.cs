@@ -199,6 +199,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBoxEnginesPriceChange.SuspendLayout();
@@ -221,6 +222,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
@@ -307,7 +309,7 @@
             this.groupBoxEnginesPriceChange.Controls.Add(this.labelEnginePC1);
             this.groupBoxEnginesPriceChange.Location = new System.Drawing.Point(789, 383);
             this.groupBoxEnginesPriceChange.Name = "groupBoxEnginesPriceChange";
-            this.groupBoxEnginesPriceChange.Size = new System.Drawing.Size(124, 127);
+            this.groupBoxEnginesPriceChange.Size = new System.Drawing.Size(124, 120);
             this.groupBoxEnginesPriceChange.TabIndex = 13;
             this.groupBoxEnginesPriceChange.TabStop = false;
             this.groupBoxEnginesPriceChange.Text = "Price Change";
@@ -364,7 +366,7 @@
             this.groupBoxEnginesPoints.Controls.Add(this.labelEngine1);
             this.groupBoxEnginesPoints.Location = new System.Drawing.Point(691, 383);
             this.groupBoxEnginesPoints.Name = "groupBoxEnginesPoints";
-            this.groupBoxEnginesPoints.Size = new System.Drawing.Size(80, 127);
+            this.groupBoxEnginesPoints.Size = new System.Drawing.Size(80, 120);
             this.groupBoxEnginesPoints.TabIndex = 12;
             this.groupBoxEnginesPoints.TabStop = false;
             this.groupBoxEnginesPoints.Text = "Points";
@@ -373,7 +375,7 @@
             // 
             this.labelEngine4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelEngine4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEngine4.Location = new System.Drawing.Point(13, 93);
+            this.labelEngine4.Location = new System.Drawing.Point(12, 93);
             this.labelEngine4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEngine4.Name = "labelEngine4";
             this.labelEngine4.Size = new System.Drawing.Size(54, 20);
@@ -421,7 +423,7 @@
             this.groupBoxEngines.Controls.Add(this.label34);
             this.groupBoxEngines.Location = new System.Drawing.Point(568, 383);
             this.groupBoxEngines.Name = "groupBoxEngines";
-            this.groupBoxEngines.Size = new System.Drawing.Size(103, 127);
+            this.groupBoxEngines.Size = new System.Drawing.Size(103, 120);
             this.groupBoxEngines.TabIndex = 11;
             this.groupBoxEngines.TabStop = false;
             this.groupBoxEngines.Text = "Engines";
@@ -2142,6 +2144,16 @@
             this.tabPage2.Text = "Help";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(928, 615);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Graphics";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2347,6 +2359,7 @@
         private System.Windows.Forms.CheckBox checkBoxRaceSetup;
         private System.Windows.Forms.ComboBox comboBoxGPRace;
         private System.Windows.Forms.Label labelGPStage;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
 
